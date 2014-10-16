@@ -11,6 +11,10 @@ siendo la principal caracteristica del sistema la  de convertir cualquier copter
 y vehiculo rover terreste en una unidad autonoma.
 
 				Caracteristicas del Modulo AutoPiloto del Drone
+-Sistema de Control
+El sistema de control del donre debera implementar  RCS-2 (Real Time Control System) para sistema autonomos de control 
+(control inteligente)
+
 -capacidad de ejecutar comandos (navegacion/reconocimiento/mapeo/operativos ) recibido
   de otros Drones
 -capacidad de comandar otros drones mediante el envio de comandos (navegacion/reconocimiento/mapeo/operativos ) 
