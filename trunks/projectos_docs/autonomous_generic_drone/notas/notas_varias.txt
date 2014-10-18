@@ -1,0 +1,54 @@
+														Notas varias 
+Optimizacion Codigo (Cache Frendly code)
+Hola chicos como estan, estaba buscando algunos papers o articulos sobre optimizacion de codigo C++
+(Cache Friendly), encontre estos links y algunos manuales manuales especialemente este sitio:
+http://www.agner.org/optimize/optimizing_cpp.pdf
+http://www.agner.org/optimize
+Que tiene optimizaciones de todo tipo desde conceptos como
+Cache Friendly
+Line Sharing
+Locally Principle
+..
+Otros Sitios de stackOverFlow que estan muy buenos y que tambien hacen referencia al proceso de escribir codigo optimizado (sin contar con la graciosa referencia a este sitio : http://macton.smugmug.com/gallery/8936708_T6zQX?_escaped_fragment_=i%3D593426709%26k%3DZX4pZ#!i=593426709&k=ZX4pZ) el cual es gracioso por lo comentarios ("me sangran los ojos de ver el codigo!" muy bueno, y los correspondientes comentarios).
+Links de StackOverFlow:
+http://stackoverflow.com/questions/16699247/what-is-cache-friendly-code
+
+Este sitio que es bastante bueno tambien:
+http://stackoverflow.com/questions/16699247/what-is-cache-friendly-code
+
+Que da ejemplos de cache friendly code, de codigo que no es cache friendly y como transformarlo.
+Saludos espero les resulte interesante.
+													
+															Tecnologias
+Tambien les paso el listado de posibles tecnologias que vamos a usar:
+									Comunicacion (middleWare):
+OpenDDS
+ProtocolBuffer(libreria de serializacion)
+NanoProtocolBuffer(libreria de serializacion para sistemas embedidos limitado de recursos)
+RtlLib (Implementacion del Protocolo Rtp)
+										Paralel Computing
+OpenCL
+											Machine Learning:
+DCLib++
+ml++
+												Calculo Numerico
+Eigen++
+												ComputerVision
+OpenCV
+												Interface Grafica
+Qt 5 (TBD)
+Para los modulos de SLAM y otros submodilos de computer vision no esta definido todavia, pero tenemos codigo externo que habra que validarlo y probar
+													Testing
+Gtest/GMock
+												Lenguaje
+C/C++/CMake (para el building de software)
+CAN(Esto tiene que verse , por si tenemos que crear un modulo de interface con el hardware externo)
+CanFestival/CanOpen (TBD)
+											Sistema Operativo :
+Ubuntu 14.04 64 Bits (server?)
+										Procesamiento de video e Imagenes
+Aqui  no hay nada definido.
+Y Por ultimo, las utilidades de siempre
+Jenkins
+Valgrind
+CPPCHECK
