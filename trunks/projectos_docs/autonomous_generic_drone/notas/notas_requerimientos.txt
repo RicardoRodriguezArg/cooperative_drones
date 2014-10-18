@@ -14,24 +14,25 @@ y vehiculo rover terreste en una unidad autonoma.
 Requerimiento de Sistema:
 El sistema del drone debera implementar  4D/RCS Reference Model Architecture para su arquitectura de software a 
 todos los niveles.
+
 -Sistema de Control
+-FDIR (Fault Detection) inteligente y adapatble a los diferentes tipos de sensores
 El sistema de control del donre debera implementar  RCS-2 (Real Time Control System) para sistema autonomos de control 
 (control inteligente) [validar este requerimiento]
 
 -capacidad de ejecutar comandos (navegacion/reconocimiento/mapeo/operativos ) recibido
-  de otros Drones
+  de otros Drones(exclusivamente DDS)
 -capacidad de comandar otros drones mediante el envio de comandos (navegacion/reconocimiento/mapeo/operativos ) 
 -capacidad de ejecutar comandos enviados por la estacion terrena
 -capacidad de despegue autonomo
 -capacidad de aterrizaje autonomo
--FDIR (Fault Detection) inteligente y adapatble a los diferentes tipos de sensores
 -capacidad de navegacion asistida (remotamente)
 -capacidad de recibir planning de mision en tiempo real
 -capacidad de recibir planning premision (Premision)
 -capacidad de trabajar sin GPS (Requerimiento NO Funcional)
 -capacidad de trabajar asistido con GPS
 -Capacidad de trabajar con IMU 
--capacidad de trabajar sin IMU
+
 -navegacion atravez de landmark establecidos en tiempo real
 -capacidad de comunicarse con otros drones en tiempo real atravez del protocolo DDS
 -capacidad de comunicarse con la estacion terrena en tiempo real atravez del protocolo DDS
@@ -55,8 +56,10 @@ mapas
 -capacidad de multitracking (???)
 -capaciadd de odometria visual usando triangulacion de otros drones (en caso de que se trabaje sin telemetro)
 -image feature detection
+-sistema debera implementar SLAM 
 				Fotogrametria
--debera permitir fotogrametria de close range (ref: Foerstner and Steffen, 2007 Barazzetti et al. 2010 a Irschara et al., 2010; Pierrot eseilligny and Clery ,2011).)
+-debera permitir fotogrametria de close range (ref: Foerstner and Steffen,
+2007 Barazzetti et al. 2010 a Irschara et al., 2010; Pierrot eseilligny and Clery ,2011).)
 
 				camaras 
 -capacidad de crear mapas de entorno con cualquier tipo de camara convencional
@@ -68,7 +71,7 @@ mapas
 				video
 -capacidad de trabajar con video de formato H.264/H.265/MPJEG
 -capacidad de emitir video con metadatos (MXF/KLV) (* definir los metadatos que debe tener la imagen)
--capacidad de trabajar con cualquier tipo de camara
+-capacidad de trabajar con cualquier tipo de camara standar del mercado
 
 					Requerimientos de Software
 El software debe correr o ser ejecutado un una SBC con de multiprocesamiento (GPU) usando el standar OpenCl para 
