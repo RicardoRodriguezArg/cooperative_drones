@@ -11,6 +11,13 @@ siendo la principal caracteristica del sistema la  de convertir cualquier copter
 y vehiculo rover terreste en una unidad autonoma.
 
 				Caracteristicas del Modulo AutoPiloto del Drone
+Requerimiento de Sistema:
+El sistema del drone debera implementar  4D/RCS Reference Model Architecture para su arquitectura de software a 
+todos los niveles.
+-Sistema de Control
+El sistema de control del donre debera implementar  RCS-2 (Real Time Control System) para sistema autonomos de control 
+(control inteligente) [validar este requerimiento]
+
 -capacidad de ejecutar comandos (navegacion/reconocimiento/mapeo/operativos ) recibido
   de otros Drones
 -capacidad de comandar otros drones mediante el envio de comandos (navegacion/reconocimiento/mapeo/operativos ) 
