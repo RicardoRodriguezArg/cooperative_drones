@@ -1,14 +1,12 @@
 			Generic Drone (Aereo/Rover Terrestre)
 			     Notas sobre requerimientos 
 -Definicion:
-El sistema de Generic Drone, es un sistema de software que se integra a un drone (aereo o terrestre)
-y lo transforma a este en un sistema autonomo capaz de ejecutar comandos y misiones.
+Generic Drone, es un sistema de software que se integra a un drone (aereo o terrestre)
+y transforma a este en un sistema autonomo capaz de ejecutar comandos y misiones.
 Permitiendo la navegacion autonoma (aerea / terrestre) , identificando obstaculos y evitandolos, todo este 
 procesamiento es realizado en tiempo real. Estos comadnos o misiones pueden ser establecidos en
 tiempo real mediante estacion terrena envio de comandos o mediante señales visuales directamente al drone.
-Este drone tiene la caracteristica de poder comandar otros drones si el caso lo especifica,
-siendo la principal caracteristica del sistema la  de convertir cualquier coptero (tanto quadricoptero/ tricoptero) 
-y vehiculo rover terreste en una unidad autonoma.
+Este drone tiene la caracteristica de poder comandar otros drones si el caso lo especifica
 
 				Caracteristicas del Modulo AutoPiloto del Drone
 Requerimiento de Sistema:
@@ -17,7 +15,7 @@ todos los niveles.
 
 -Sistema de Control
 -FDIR (Fault Detection) inteligente y adapatble a los diferentes tipos de sensores
-El sistema de control del donre debera implementar  RCS-2 (Real Time Control System) para sistema autonomos de control 
+El sistema de control del drone debera implementar  RCS-2 (Real Time Control System) para sistema autonomos de control 
 (control inteligente) [validar este requerimiento]
 
 -capacidad de ejecutar comandos (navegacion/reconocimiento/mapeo/operativos ) recibido
