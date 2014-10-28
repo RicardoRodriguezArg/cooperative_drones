@@ -5,8 +5,10 @@ Generic Drone, es un sistema de software que se integra a un drone (aereo o terr
 y transforma a este en un sistema autonomo capaz de ejecutar comandos y misiones.
 Permitiendo la navegacion autonoma (aerea / terrestre) , identificando obstaculos y evitandolos, todo este 
 procesamiento es realizado en tiempo real. Estos comadnos o misiones pueden ser establecidos en
-tiempo real mediante estacion terrena envio de comandos o mediante señales visuales directamente al drone.
-Este drone tiene la caracteristica de poder comandar otros drones si el caso lo especifica
+tiempo real, mediante estacion terrena la cual suministrara los comandos via remota (envio de comandos) o mediante
+señales visuales directamente al drone.
+Este drone tiene la caracteristica de poder comandar otros drones si el caso lo especifica y trabajar en forma de colmena.
+(integrandose cooperativamente)
 
 				Caracteristicas del Modulo AutoPiloto del Drone
 Requerimiento de Sistema:
@@ -24,12 +26,12 @@ El sistema de control del drone debera implementar  RCS-2 (Real Time Control Sys
 -capacidad de ejecutar comandos enviados por la estacion terrena
 -capacidad de despegue autonomo
 -capacidad de aterrizaje autonomo
--capacidad de navegacion asistida (remotamente)
+-capacidad de navegacion asistida (recepcion remota de comandos)
 -capacidad de recibir planning de mision en tiempo real
--capacidad de recibir planning premision (Premision)
+
 -capacidad de trabajar sin GPS (Requerimiento NO Funcional)
 -capacidad de trabajar asistido con GPS
--Capacidad de trabajar con IMU 
+-El sistema de control debera trabajar con IMU 
 
 -navegacion atravez de landmark establecidos en tiempo real
 -capacidad de comunicarse con otros drones en tiempo real atravez del protocolo DDS
@@ -37,7 +39,7 @@ El sistema de control del drone debera implementar  RCS-2 (Real Time Control Sys
 -capacidad de transmitir en tiempo real datos atravez de wifi
 -capacidad de transmitir en tiempo real video atravez de wifi
 -capacaid de transmitir a 100 mts alrededor del drone 
--capacidad de navegar usando patrones de navegacion (*)
+-capacidad de navegar usando patrones de navegacion para nagevar un area determina
 mapas
 -capacidad de generar mapas ortograficos en tiempo real
 -capacidad de referenciar modelo creado con landmark del terreno
@@ -48,13 +50,13 @@ mapas
 
 					ComputerVision Features
 -Capacidad de reconocer objetivos preestablecidos (3D object recognition) en tiempo real
--capacidad de analisis de imagen en tiempo real
--Capacidad de interpretar comandos visuales por parte del operador
--capacidad de tracking segun ROI establecido por usuario
--capacidad de multitracking (???)
+-capacidad de analisis de imagen en tiempo real (pattern recognition) desde base de datos
+-Capacidad de interpretar comandos visuales por parte del operador (lenguaje de señas)
+-capacidad de tracking segun ROI establecido por usuario (autotracking simple)
+-capacidad de multitracking (seleccion de multiples ROI en pantalla)
 -capaciadd de odometria visual usando triangulacion de otros drones (en caso de que se trabaje sin telemetro)
--image feature detection
--sistema debera implementar SLAM 
+
+-sistema debera implementar Monocular SLAM 
 				Fotogrametria
 -debera permitir fotogrametria de close range (ref: Foerstner and Steffen,
 2007 Barazzetti et al. 2010 a Irschara et al., 2010; Pierrot eseilligny and Clery ,2011).)
@@ -70,7 +72,8 @@ mapas
 -capacidad de trabajar con video de formato H.264/H.265/MPJEG
 -capacidad de emitir video con metadatos (MXF/KLV) (* definir los metadatos que debe tener la imagen)
 -capacidad de trabajar con cualquier tipo de camara standar del mercado
-
+						Metadatos de Video
+						
 					Requerimientos de Software
 El software debe correr o ser ejecutado un una SBC con de multiprocesamiento (GPU) usando el standar OpenCl para 
 hardware HPM
@@ -81,7 +84,7 @@ hardware HPM
 -debera poseer gimbal para camaras
 -Monitor de Energia
 -Payload Requerido 1 kg
-
+-autonomia de energia 45 minutos
 Referencias:
 
 
