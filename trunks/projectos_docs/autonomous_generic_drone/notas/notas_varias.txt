@@ -72,3 +72,7 @@ paper autonomous navigation using slam
 http://pdf.aminer.org/000/352/172/high_accuracy_navigation_using_laser_range_sensors_in_outdoor_applications.pdf
 gps dennied
 http://rpg.ifi.uzh.ch/docs/JFR11_weiss.pdf
+
+
+3d reconstruccion:
+http://www.researchgate.net/post/Camera_Calibration_and_3D_Reconstruction-Can_Anyone_Help
