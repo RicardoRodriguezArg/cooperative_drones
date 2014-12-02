@@ -76,3 +76,8 @@ http://rpg.ifi.uzh.ch/docs/JFR11_weiss.pdf
 
 3d reconstruccion:
 http://www.researchgate.net/post/Camera_Calibration_and_3D_Reconstruction-Can_Anyone_Help
+
+Lib Structure from motion
+http://openmvg.readthedocs.org/en/latest/dependencies/osi_clp/
+
+
