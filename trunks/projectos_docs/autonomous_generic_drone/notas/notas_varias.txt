@@ -52,3 +52,23 @@ Y Por ultimo, las utilidades de siempre
 Jenkins
 Valgrind
 CPPCHECK
+
+
+Referencias varias:
+http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-412j-cognitive-robotics-spring-2005/projects/1aslam_blas_repo.pdf
+http://cdn.intechopen.com/pdfs-wm/10252.pdf
+http://www.cs.berkeley.edu/~pabbeel/cs287-fa09/readings/Durrant-Whyte_Bailey_SLAM-tutorial-I.pdf
+codigo
+http://code.google.com/p/photoconsistency-visual-odometry/
+
+http://www.is.tuebingen.mpg.de/fileadmin/user_upload/files/publications/2013/Wang_IJRR_2013.pdf
+
+EKF/UKF
+https://github.com/jeremyfix/easykf/blob/master/examples/example-001.cc
+Gaussian Process
+http://www.dgp.toronto.edu/~jmwang/gpdm/
+
+paper autonomous navigation using slam
+http://pdf.aminer.org/000/352/172/high_accuracy_navigation_using_laser_range_sensors_in_outdoor_applications.pdf
+gps dennied
+http://rpg.ifi.uzh.ch/docs/JFR11_weiss.pdf
