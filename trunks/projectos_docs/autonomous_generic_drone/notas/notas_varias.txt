@@ -79,6 +79,11 @@ http://www.researchgate.net/post/Camera_Calibration_and_3D_Reconstruction-Can_An
 
 Lib Structure from motion
 http://openmvg.readthedocs.org/en/latest/dependencies/osi_clp/
+http://openmvg.readthedocs.org/en/latest/openMVG_Samples/openMVG_Samples/
 Watersheed Algorithm (Unsupervised algorithm)
 http://powerwatershed.sourceforge.net/
 
+
+Sistema de AutoPiloto para navegacion autonoma (Algoritmos de control biologicos):
+https://hal.archives-ouvertes.fr/file/index/docid/858087/filename/ch9_asteroids_chapter_preprint.pdf
+http://cdn.intechopen.com/pdfs-wm/12979.pdf
