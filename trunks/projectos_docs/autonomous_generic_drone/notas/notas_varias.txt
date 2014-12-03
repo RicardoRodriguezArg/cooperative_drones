@@ -79,5 +79,6 @@ http://www.researchgate.net/post/Camera_Calibration_and_3D_Reconstruction-Can_An
 
 Lib Structure from motion
 http://openmvg.readthedocs.org/en/latest/dependencies/osi_clp/
-
+Watersheed Algorithm (Unsupervised algorithm)
+http://powerwatershed.sourceforge.net/
 
