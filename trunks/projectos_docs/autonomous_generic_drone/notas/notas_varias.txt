@@ -87,3 +87,21 @@ http://powerwatershed.sourceforge.net/
 Sistema de AutoPiloto para navegacion autonoma (Algoritmos de control biologicos):
 https://hal.archives-ouvertes.fr/file/index/docid/858087/filename/ch9_asteroids_chapter_preprint.pdf
 http://cdn.intechopen.com/pdfs-wm/12979.pdf
+
+MULTIVARIABLE FEEDBACK CONTROL 
+http://en.wikipedia.org/wiki/Robust_control
+http://www.nt.ntnu.no/users/skoge/book.html
+http://www.ece.lsu.edu/kemin/essentials.htm
+
+SLAM
+http://www.cad.zju.edu.cn/home/gfzhang/projects/SLAM/ismar2013-paper293.pdf
+https://github.com/aharmat/mcptam
+Monocular Scene Reconstruction for Reliable Obstacle Detection and Robot Navigation, ECMR 2009
+https://www.tu-ilmenau.de/fileadmin/media/neurob/publications/conferences_int/2011/Einhorn-ECMR-2011.pdf
+http://code.google.com/p/openfabmap/
+http://docs.opencv.org/modules/contrib/doc/openfabmap.html
+https://www.openrobots.org/wiki/rtslam/Using
+https://www.youtube.com/watch?v=fLnd9ucUu9Y
+https://www.youtube.com/watch?v=mDe8MDa-Qm0
+MCPTAM
+https://github.com/aharmat/mcptam/wiki/Client-Server-Guide
