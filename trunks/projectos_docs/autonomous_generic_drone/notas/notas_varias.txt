@@ -105,3 +105,11 @@ https://www.youtube.com/watch?v=fLnd9ucUu9Y
 https://www.youtube.com/watch?v=mDe8MDa-Qm0
 MCPTAM
 https://github.com/aharmat/mcptam/wiki/Client-Server-Guide
+LQG/ltr tutorial
+http://www.uz.zgora.pl/~wpaszke/materialy/kss/lqrnotes.pdf
+http://www.mathworks.com/help/control/ref/lqg.html
+http://www.uz.zgora.pl/~wpaszke/materialy/kss/lqrnotes.pdf
+http://dspace.mit.edu/bitstream/handle/1721.1/2923/P-1542-16294732.pdf?sequence=1
+
+particle filter robot localization
+http://www.cim.mcgill.ca/~yiannis/particletutorial.pdf
