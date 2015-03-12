@@ -36,16 +36,16 @@
       <task id="11" name="Entender arquitectura Pub/Sub" note="" work="28800" start="20150206T000000Z" end="20150206T104000Z" work-start="20150206T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20150206T000000Z"/>
       </task>
-      <task id="12" name="Implementar Nodoc++ en ROS " note="implementacion de un nodo generico&#10;" work="57600" start="20150208T000000Z" end="20150210T170000Z" work-start="20150209T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="12" name="Implementar Nodoc++ en ROS " note="implementacion de un nodo generico&#10;" work="57600" start="20150208T000000Z" end="20150210T170000Z" work-start="20150209T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20150208T000000Z"/>
       </task>
-      <task id="13" name="ROS + GAZEBO -Implementacion Nodo" note="" work="57600" start="20150220T000000Z" end="20150223T170000Z" work-start="20150220T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="13" name="ROS + GAZEBO -Implementacion Nodo" note="" work="57600" start="20150220T000000Z" end="20150223T170000Z" work-start="20150220T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20150220T000000Z"/>
       </task>
       <task id="14" name="simular PID+ sensor altitud (Control de altitud)" note="" work="28800" duration="144000" start="20150216T000000Z" end="20150220T170000Z" work-start="20150216T080000Z" percent-complete="20" priority="0" type="normal" scheduling="fixed-duration">
         <constraint type="must-start-on" time="20150216T000000Z"/>
       </task>
-      <task id="15" name="simular quadcopter + fisica" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="15" name="simular quadcopter + fisica" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
     <task id="16" name="ODROID - XU3" note="" work="270900" start="20150205T000000Z" end="20150216T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <task id="17" name="Testear IMU -Implementacion y test driver" note="" work="40500" start="20150207T000000Z" end="20150210T111500Z" work-start="20150209T080000Z" percent-complete="20" priority="0" type="normal" scheduling="fixed-work">
@@ -74,12 +74,12 @@
         <task id="29" name="ejecuion de ejemplos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
       </task>
     </task>
-    <task id="30" name="Arquitectura Conceptual" note="" work="86400" start="20150205T000000Z" end="20150216T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="31" name="Definicion" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="32" name="Actualizacion" note="" work="28800" start="20150215T000000Z" end="20150216T170000Z" work-start="20150216T080000Z" percent-complete="50" priority="0" type="normal" scheduling="fixed-work">
+    <task id="30" name="Arquitectura Conceptual" note="" work="86400" start="20150205T000000Z" end="20150216T104000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="31" name="Definicion" note="" work="28800" start="20150205T000000Z" end="20150205T104000Z" work-start="20150205T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="32" name="Actualizacion" note="" work="28800" start="20150215T000000Z" end="20150216T104000Z" work-start="20150216T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20150215T000000Z"/>
       </task>
-      <task id="33" name="Documentacion" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="33" name="Documentacion" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="50" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
     <task id="34" name="Repositorio" note="" work="57600" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <task id="35" name="definicion de Repositorio" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
@@ -94,7 +94,7 @@
       </task>
       <task id="43" name="marketing de grupo" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="44" name="Control" note="" work="633600" start="20150205T000000Z" end="20150227T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="44" name="Control" note="" work="576000" start="20150205T000000Z" end="20150227T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <task id="45" name="PID implementacion c++" note="" work="288000" start="20150215T000000Z" end="20150227T170000Z" work-start="20150216T080000Z" percent-complete="20" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20150215T000000Z"/>
       </task>
@@ -102,97 +102,105 @@
         <task id="47" name="busqueda de libros y cursos online" note="" work="28800" start="20150205T000000Z" end="20150205T100000Z" work-start="20150205T080000Z" percent-complete="90" priority="0" type="normal" scheduling="fixed-work"/>
       </task>
       <task id="48" name="lqg/ltr conceptos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="49" name="actualizacion de arquitectura general" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="50" name="definicion de modelo de planta" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="51" name="definicion de control de altitud" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="52" name="definicion de control de pose de drone" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="53" name="arquitectura de control de altitud" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="54" name="arquitectura de control de pose" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="55" name="c++ implementacion Control Altitud" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="56" name="simulacion en gazebo + ROS" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="57" name="c++ implementacion control pose" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="58" name="simulacion gazebo + ros" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="49" name="definicion de modelo de planta" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="50" name="definicion de control de altitud" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="51" name="definicion de control de pose de drone" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="52" name="arquitectura de control de altitud" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="53" name="arquitectura de control de pose" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="54" name="c++ implementacion Control Altitud" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="55" name="c++ implementacion control pose" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="56" name="simulacion gazebo + ros" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="59" name="OpenCl" note="" work="115200" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="60" name="capacitacion" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="61" name="investigar aplicaciones. Mostrar ejemplos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="62" name="charla de GPGPU" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="63" name="definicion procesos que requieren opencl" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="57" name="OpenCl" note="" work="115200" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="58" name="capacitacion" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="59" name="investigar aplicaciones. Mostrar ejemplos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="60" name="charla de GPGPU" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="61" name="definicion procesos que requieren opencl" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="64" name="Founding" note="" work="316800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="65" name="analisis founding sites" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="66" name="analisis FONSOFT" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="67" name="Documentacion FONSOFT" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="68" name="Documentacion para Founding Sites" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="69" name="DDS" note="" work="201600" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <task id="70" name="Documentacion DDS -OMG" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="71" name="Patron Pub/Sub" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="72" name="capacitacion DDS" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="73" name="analisis en implementaciones OpenSource (c++)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="74" name="instalacion Implementacion OpenSource" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="75" name="Pruebas de concepto" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="76" name="ver OpenDDS" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="62" name="Founding" note="" work="316800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="63" name="analisis founding sites" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="64" name="analisis FONSOFT" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="65" name="Documentacion FONSOFT" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="66" name="Documentacion para Founding Sites" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="67" name="DDS" note="" work="201600" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="68" name="Documentacion DDS -OMG" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="69" name="Patron Pub/Sub" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="70" name="capacitacion DDS" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="71" name="analisis en implementaciones OpenSource (c++)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="72" name="instalacion Implementacion OpenSource" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="73" name="Pruebas de concepto" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="74" name="ver OpenDDS" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
       </task>
     </task>
-    <task id="77" name="VIDEO PROCESSING" note="" work="144000" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="78" name="investigacion protocolos de cuadros de videos (alternativos mxf)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="79" name="investigacion klv" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="80" name="investigacion h264" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="81" name="implementacion mxf +rtp (C++/OpenCl)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="82" name="implementacion h264 (C++/OpenCl)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="75" name="VIDEO PROCESSING" note="" work="144000" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="76" name="investigacion protocolos de cuadros de videos (alternativos mxf)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="77" name="investigacion klv" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="78" name="investigacion h264" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="79" name="implementacion mxf +rtp (C++/OpenCl)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="80" name="implementacion h264 (C++/OpenCl)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="83" name="Documentacion Proyecto" note="" work="201600" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="84" name="SDD - Control Autonomo de Drones" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="85" name="Investigar Licencias. Hacer cuadro resumen." note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="86" name="SDD - Sistema Cooperativo de Drones" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="87" name="ICD - CAD" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="88" name="ICD  - SCD" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="89" name="SRS -CAD" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="90" name="SRS -SCD" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="81" name="Documentacion Proyecto" note="" work="201600" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="82" name="SDD - Control Autonomo de Drones" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="83" name="Investigar Licencias. Hacer cuadro resumen." note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="84" name="SDD - Sistema Cooperativo de Drones" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="85" name="ICD - CAD" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="86" name="ICD  - SCD" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="87" name="SRS -CAD" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="88" name="SRS -SCD" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="91" name="SLAM" note="" work="86400" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="92" name="Analisis entre diferentes implementaciones" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="93" name="capacitacion slam" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="94" name="implementacion pruebas de concepto" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="89" name="SLAM" note="" work="86400" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="90" name="Analisis entre diferentes implementaciones" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="91" name="capacitacion slam" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="92" name="implementacion pruebas de concepto" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="95" name="COMPUTER VISION FEATURES" note="" work="172800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="96" name="autotracking investigacion" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="97" name="autotracking implementacion C++/OpenCl " note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="98" name="autotracking multiples objectivos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="99" name="Optical flow (lucas -kanade) c++/opencl/opencv" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="100" name="reconocimiento visual de comandos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="101" name="reconstruccion de mapas de terreno (multiples camaras)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="93" name="COMPUTER VISION FEATURES" note="" work="172800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="94" name="autotracking investigacion" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="95" name="autotracking implementacion C++/OpenCl " note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="96" name="autotracking multiples objectivos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="97" name="Optical flow (lucas -kanade) c++/opencl/opencv" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="98" name="reconocimiento visual de comandos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="99" name="reconstruccion de mapas de terreno (multiples camaras)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="102" name="PROTOCOLOS DE MENSAJERIA INTERNA" note="" work="86400" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="103" name="Definicion Protocolos Mensajes de Comandos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="104" name="definicion protoco de mensajes de eventos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="105" name="definicion de protocolo de telemetria" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="100" name="PROTOCOLOS DE MENSAJERIA INTERNA" note="" work="86400" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="101" name="Definicion Protocolos Mensajes de Comandos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="102" name="definicion protoco de mensajes de eventos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="103" name="definicion de protocolo de telemetria" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="104" name="CommonsLibs" note="" work="28800" start="20150312T000000Z" end="20150317T170000Z" work-start="20150312T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="105" name="Implementacion Acceptor-Connector Pattern(Comunicacion)" note="" work="28800" duration="115200" start="20150312T000000Z" end="20150317T170000Z" work-start="20150312T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20150312T000000Z"/>
+      </task>
     </task>
   </tasks>
   <resource-groups>
-    <group id="1" name="I+D" admin-name="" admin-phone="" admin-email=""/>
+    <group id="1" name="Desarrollo" admin-name="" admin-phone="" admin-email=""/>
     <group id="2" name="Marketing" admin-name="" admin-phone="" admin-email=""/>
-    <group id="3" name="Desarrollo" admin-name="" admin-phone="" admin-email=""/>
+    <group id="3" name="I+D" admin-name="" admin-phone="" admin-email=""/>
   </resource-groups>
   <resources>
-    <resource group="1" id="1" name="Ricardo Rodriguez" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
-    <resource group="1" id="2" name="Manani Jose" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
-    <resource group="1" id="3" name="Mosconi, Eduardo" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="3" id="1" name="Ricardo Rodriguez" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="3" id="2" name="Manani Jose" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="3" id="3" name="Mosconi, Eduardo" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
     <resource group="2" id="4" name="Rodriguez, Cristian" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
   </resources>
   <allocations>
+    <allocation task-id="105" resource-id="1" units="25"/>
+    <allocation task-id="33" resource-id="1" units="100"/>
+    <allocation task-id="32" resource-id="1" units="100"/>
+    <allocation task-id="31" resource-id="1" units="100"/>
+    <allocation task-id="15" resource-id="1" units="100"/>
     <allocation task-id="47" resource-id="1" units="100"/>
     <allocation task-id="45" resource-id="1" units="100"/>
     <allocation task-id="5" resource-id="1" units="100"/>
     <allocation task-id="4" resource-id="1" units="100"/>
     <allocation task-id="12" resource-id="1" units="100"/>
     <allocation task-id="16" resource-id="1" units="100"/>
-    <allocation task-id="102" resource-id="1" units="100"/>
-    <allocation task-id="95" resource-id="1" units="100"/>
-    <allocation task-id="91" resource-id="1" units="100"/>
-    <allocation task-id="83" resource-id="1" units="100"/>
+    <allocation task-id="100" resource-id="1" units="100"/>
+    <allocation task-id="93" resource-id="1" units="100"/>
+    <allocation task-id="89" resource-id="1" units="100"/>
+    <allocation task-id="81" resource-id="1" units="100"/>
     <allocation task-id="34" resource-id="1" units="100"/>
-    <allocation task-id="59" resource-id="1" units="100"/>
+    <allocation task-id="57" resource-id="1" units="100"/>
     <allocation task-id="44" resource-id="1" units="100"/>
     <allocation task-id="11" resource-id="1" units="100"/>
     <allocation task-id="10" resource-id="1" units="100"/>
@@ -200,36 +208,40 @@
     <allocation task-id="1" resource-id="1" units="100"/>
     <allocation task-id="3" resource-id="1" units="100"/>
     <allocation task-id="9" resource-id="1" units="100"/>
+    <allocation task-id="32" resource-id="2" units="100"/>
+    <allocation task-id="31" resource-id="2" units="100"/>
     <allocation task-id="47" resource-id="2" units="100"/>
-    <allocation task-id="85" resource-id="2" units="100"/>
-    <allocation task-id="102" resource-id="2" units="100"/>
-    <allocation task-id="95" resource-id="2" units="100"/>
-    <allocation task-id="91" resource-id="2" units="100"/>
     <allocation task-id="83" resource-id="2" units="100"/>
+    <allocation task-id="100" resource-id="2" units="100"/>
+    <allocation task-id="93" resource-id="2" units="100"/>
+    <allocation task-id="89" resource-id="2" units="100"/>
+    <allocation task-id="81" resource-id="2" units="100"/>
     <allocation task-id="34" resource-id="2" units="100"/>
-    <allocation task-id="77" resource-id="2" units="100"/>
+    <allocation task-id="75" resource-id="2" units="100"/>
     <allocation task-id="11" resource-id="2" units="100"/>
     <allocation task-id="10" resource-id="2" units="100"/>
     <allocation task-id="9" resource-id="2" units="100"/>
+    <allocation task-id="32" resource-id="3" units="100"/>
+    <allocation task-id="31" resource-id="3" units="100"/>
     <allocation task-id="47" resource-id="3" units="100"/>
-    <allocation task-id="62" resource-id="3" units="100"/>
-    <allocation task-id="61" resource-id="3" units="100"/>
-    <allocation task-id="102" resource-id="3" units="100"/>
-    <allocation task-id="83" resource-id="3" units="100"/>
-    <allocation task-id="34" resource-id="3" units="100"/>
+    <allocation task-id="60" resource-id="3" units="100"/>
     <allocation task-id="59" resource-id="3" units="100"/>
-    <allocation task-id="69" resource-id="3" units="100"/>
+    <allocation task-id="100" resource-id="3" units="100"/>
+    <allocation task-id="81" resource-id="3" units="100"/>
+    <allocation task-id="34" resource-id="3" units="100"/>
+    <allocation task-id="57" resource-id="3" units="100"/>
+    <allocation task-id="67" resource-id="3" units="100"/>
     <allocation task-id="11" resource-id="3" units="100"/>
     <allocation task-id="10" resource-id="3" units="100"/>
     <allocation task-id="9" resource-id="3" units="100"/>
     <allocation task-id="47" resource-id="4" units="100"/>
-    <allocation task-id="68" resource-id="4" units="100"/>
-    <allocation task-id="67" resource-id="4" units="100"/>
     <allocation task-id="66" resource-id="4" units="100"/>
     <allocation task-id="65" resource-id="4" units="100"/>
-    <allocation task-id="83" resource-id="4" units="100"/>
-    <allocation task-id="34" resource-id="4" units="100"/>
     <allocation task-id="64" resource-id="4" units="100"/>
+    <allocation task-id="63" resource-id="4" units="100"/>
+    <allocation task-id="81" resource-id="4" units="100"/>
+    <allocation task-id="34" resource-id="4" units="100"/>
+    <allocation task-id="62" resource-id="4" units="100"/>
     <allocation task-id="37" resource-id="4" units="100"/>
   </allocations>
 </project>
