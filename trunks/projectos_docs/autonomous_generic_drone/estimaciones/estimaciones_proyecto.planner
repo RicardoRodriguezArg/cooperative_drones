@@ -166,11 +166,14 @@
       <task id="102" name="definicion protoco de mensajes de eventos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
       <task id="103" name="definicion de protocolo de telemetria" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="104" name="CommonsLibs" note="" work="28800" start="20150312T000000Z" end="20150317T170000Z" work-start="20150312T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="105" name="Implementacion Acceptor-Connector Pattern(Comunicacion)" note="" work="28800" duration="115200" start="20150312T000000Z" end="20150317T170000Z" work-start="20150312T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+    <task id="104" name="CommonsLibs" note="" work="57600" start="20150205T000000Z" end="20150317T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="105" name="Implementacion Acceptor-Connector Pattern(Comunicacion)" note="" work="28800" duration="115200" start="20150312T000000Z" end="20150317T170000Z" work-start="20150312T080000Z" percent-complete="10" priority="1" type="normal" scheduling="fixed-duration">
         <constraint type="must-start-on" time="20150312T000000Z"/>
       </task>
+      <task id="106" name="Implementacion utiles_genericas" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="30" priority="1" type="normal" scheduling="fixed-work"/>
     </task>
+    <task id="107" name="Comunicaciones" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="108" name="SENSORES" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
   </tasks>
   <resource-groups>
     <group id="1" name="Desarrollo" admin-name="" admin-phone="" admin-email=""/>
@@ -184,6 +187,7 @@
     <resource group="2" id="4" name="Rodriguez, Cristian" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
   </resources>
   <allocations>
+    <allocation task-id="106" resource-id="1" units="100"/>
     <allocation task-id="105" resource-id="1" units="25"/>
     <allocation task-id="33" resource-id="1" units="100"/>
     <allocation task-id="32" resource-id="1" units="100"/>

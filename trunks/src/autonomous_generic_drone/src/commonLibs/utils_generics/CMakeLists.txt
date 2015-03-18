@@ -9,3 +9,4 @@ set (HDR generis_strutures.h
 set (SRC main.cpp)
 
 add_executable(${PROJECT_NAME} ${SRC} ${HDR})
+#add_executable(test_error test_tm.cpp ${HDR})
