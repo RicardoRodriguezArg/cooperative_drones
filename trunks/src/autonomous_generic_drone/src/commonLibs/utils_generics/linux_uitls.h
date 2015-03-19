@@ -67,16 +67,15 @@ namespace NSUtils
     template<typename Vector>
     static void getAllFilesFromDirectory( const char * const aDirectoryName, Vector & aVectorFileName)
     {
-      DIR *dpdf;
-      struct dirent *epdf;
-      dpdf = opendir(aDirectoryName);
-      if (dpdf != nullptr)
-        {
-         while (epdf = readdir(dpdf)){
+	typedef struct dirent * DirectoryEntryPtr;
+	DIR * const dpdf = opendir(aDirectoryName);
+      	if (dpdf != nullptr){
+         while ( DirectoryEntryPtr epdf = readdir(dpdf)){
              const auto file=std::move(std::string(epdf->d_name));
              if ((file.compare(".")!=0) && ((file.compare("..")!=0))) aVectorFileName.emplace_back(std::string(epdf->d_name));
           }
         }
+      free(dpdf);
     }
 
 

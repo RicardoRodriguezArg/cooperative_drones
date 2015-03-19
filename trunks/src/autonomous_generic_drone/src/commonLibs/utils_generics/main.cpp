@@ -23,7 +23,9 @@ int main()
 
   std::string  DirectoryName("~/Desktop/CODIGO/uc/FLIR_MINSEG_Software/trunk/src/mainControlUnit_UC_SBC340/build/unidadcontrol");
   int aErrorCode=0;
+  constexpr unsigned MAX_FILES_TO_ROTATE=20;
   NSUtils::getPathFromString(DirectoryName,aErrorCode);
+  NSUtils::rotateFiles(DirectoryName.c_str(),MAX_FILES_TO_ROTATE);
   std::cout<<"DirectoryName: "<<DirectoryName<<std::endl;
   std::cout<<"aErrorCode: "<<aErrorCode<<std::endl;
   /*
