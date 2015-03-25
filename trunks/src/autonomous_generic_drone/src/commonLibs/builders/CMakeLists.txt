@@ -8,8 +8,11 @@ file (GLOB  CONFIG_XML_FILES
                                             ${CMAKE_CURRENT_SOURCE_DIR}../../ref/config/*.xml
 
         )
-set ( XML_FILES /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/kernel_configuration_option.xml
-                            /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/generaloptionconfig.xml
+set ( XML_FILES
+			../../../config/config/kernel_configuration_option.xml
+			#../../../config/config/generaloptionconfig.xml
+
+
 
       )
 file (MAKE_DIRECTORY  ${CMAKE_BINARY_DIR}/ref/config  )
