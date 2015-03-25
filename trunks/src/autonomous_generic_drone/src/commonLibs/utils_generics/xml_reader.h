@@ -1,3 +1,11 @@
+/**
+*@author : Ricardo Rodriguez
+*@email: aricardorodriguez@hotmail.com
+*@date: 24-03-2015
+*@brief: Archivo de clases utiles para la administracion de archivos en linux
+*
+*
+*/
 #ifndef XML_READER_H
 #define XML_READER_H
 #include "tinyxml2.h"
