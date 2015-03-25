@@ -23,23 +23,16 @@ namespace std {
     };
 
 }
-
-namespace NSUitlsGenerics
+namespace NSUtils
 {
-/*
-  //base type definition
-  template<typename IndexType,typename NodeAtribute, typename ... Args>
-  struct GenericMapNode
-  {
-    constexpr GenericMapNode(const IndexType & aIndex,
-                             const NodeAtribute & aNodeAttribute):Index(aIndex)
-                                                                ,NodeTuple(std::make_tuple(aIndex,aNodeAttribute)
-    {}
-
-   constexpr IndexType Index;
-   constexpr std::tuple<IndexType,NodeAtribute> NodeTuple;
-   typedef std::hash<IndexType> Hashfunction;
-  };
-*/
+    struct MsgData
+    {
+        void setContenidoMensaje(std::string & )
+        {}
+        size_t getContenidoMensaje() const
+        {}
+    };
 }
+
+
 #endif // GENERIS_STRUTURES_H
