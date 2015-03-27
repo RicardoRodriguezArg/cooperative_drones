@@ -166,28 +166,44 @@
       <task id="102" name="definicion protoco de mensajes de eventos" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
       <task id="103" name="definicion de protocolo de telemetria" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="104" name="CommonsLibs" note="" work="57600" start="20150205T000000Z" end="20150317T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="105" name="Implementacion Acceptor-Connector Pattern(Comunicacion)" note="" work="28800" duration="115200" start="20150312T000000Z" end="20150317T170000Z" work-start="20150312T080000Z" percent-complete="10" priority="1" type="normal" scheduling="fixed-duration">
+    <task id="104" name="CommonsLibs (Implementacion)" note="" work="144000" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="105" name="Implementacion Acceptor-Connector Pattern(Comunicacion)" note="" work="28800" duration="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="10" priority="1" type="normal" scheduling="fixed-duration">
         <constraint type="must-start-on" time="20150312T000000Z"/>
+        <task id="106" name="Implementacion Reactor Pattern" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
       </task>
-      <task id="106" name="Implementacion utiles_genericas" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="30" priority="1" type="normal" scheduling="fixed-work"/>
+      <task id="107" name="Implementacion utiles_genericas" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="30" priority="1" type="normal" scheduling="fixed-work"/>
+      <task id="108" name="StreamBuilders" note="" work="86400" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="109" name="xml_parser" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="110" name="builder option structure" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="111" name="StreamBuilder" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="80" priority="1" type="normal" scheduling="fixed-work"/>
+      </task>
     </task>
-    <task id="107" name="Comunicaciones" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-    <task id="108" name="SENSORES" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="112" name="Comunicaciones" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="113" name="Definicion estructura de comunicaciones (Memo)" note="" work="28800" start="20150205T000000Z" end="20150205T170000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="114" name="SENSORES" note="" work="57600" start="20150205T000000Z" end="20150205T120000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="115" name="Definicion Microcontrolador a usar" note="" work="28800" start="20150205T000000Z" end="20150205T120000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="116" name="definicion protocolo comunicacion sbc &lt;-&gt; microcontrolador" note="" work="28800" start="20150205T000000Z" end="20150205T120000Z" work-start="20150205T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
   </tasks>
   <resource-groups>
-    <group id="1" name="Desarrollo" admin-name="" admin-phone="" admin-email=""/>
+    <group id="1" name="I+D" admin-name="" admin-phone="" admin-email=""/>
     <group id="2" name="Marketing" admin-name="" admin-phone="" admin-email=""/>
-    <group id="3" name="I+D" admin-name="" admin-phone="" admin-email=""/>
+    <group id="3" name="Desarrollo" admin-name="" admin-phone="" admin-email=""/>
   </resource-groups>
   <resources>
-    <resource group="3" id="1" name="Ricardo Rodriguez" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
-    <resource group="3" id="2" name="Manani Jose" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
-    <resource group="3" id="3" name="Mosconi, Eduardo" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="1" id="1" name="Ricardo Rodriguez" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="1" id="2" name="Manani Jose" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="1" id="3" name="Mosconi, Eduardo" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
     <resource group="2" id="4" name="Rodriguez, Cristian" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
   </resources>
   <allocations>
-    <allocation task-id="106" resource-id="1" units="100"/>
+    <allocation task-id="116" resource-id="1" units="100"/>
+    <allocation task-id="115" resource-id="1" units="100"/>
+    <allocation task-id="111" resource-id="1" units="100"/>
+    <allocation task-id="110" resource-id="1" units="100"/>
+    <allocation task-id="109" resource-id="1" units="100"/>
+    <allocation task-id="107" resource-id="1" units="100"/>
     <allocation task-id="105" resource-id="1" units="25"/>
     <allocation task-id="33" resource-id="1" units="100"/>
     <allocation task-id="32" resource-id="1" units="100"/>
@@ -212,6 +228,8 @@
     <allocation task-id="1" resource-id="1" units="100"/>
     <allocation task-id="3" resource-id="1" units="100"/>
     <allocation task-id="9" resource-id="1" units="100"/>
+    <allocation task-id="116" resource-id="2" units="100"/>
+    <allocation task-id="115" resource-id="2" units="100"/>
     <allocation task-id="32" resource-id="2" units="100"/>
     <allocation task-id="31" resource-id="2" units="100"/>
     <allocation task-id="47" resource-id="2" units="100"/>
