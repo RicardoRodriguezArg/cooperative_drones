@@ -1,9 +1,11 @@
 #ifndef UDPCOMM_H
 #define UDPCOMM_H
+#include <cstdlib>
 #include "icomm.h"
 #include "framercomunicacion.h"
 #include "../netlink/socket.h"
-#include <cstdlib>
+#include "../utils_generics/utils_transform_data.h"
+
 
 
 
@@ -155,21 +157,17 @@ public:
        mBuffer[mBufferSize-1]='\0';
        try
         {
-         std::string aIp=mDestino;
-         unsigned aRemotePort=remotePort;
-         aErrorCode=mServer->readFrom(mBuffer,mBufferSize,&aIp,&aRemotePort);
-
-
-            if(aErrorCode!=-1)
+         aErrorCode=mServer->readFrom(mBuffer,mBufferSize,&mDestino,&remotePort);
+         if(aErrorCode!=-1)
+         {
+            mErrorFrameOperation=mFramerGenerico.unFrame(mBuffer);
+            if(mErrorFrameOperation==0)
             {
-                mErrorFrameOperation=mFramerGenerico.unFrame(mBuffer);
-                if(mErrorFrameOperation==0)
-                {
-                    mBufferString.assign(mFramerGenerico.getFrameBuffer(),mFramerGenerico.getSize());
-                    aMsg.setContenidoMensaje(mBufferString);
-                    aErrorCode=0;
-                }
+              mBufferString.assign(mFramerGenerico.getFrameBuffer(),mFramerGenerico.getSize());
+              aMsg=mBufferString;
+              aErrorCode=0;
             }
+         }
        }
        catch(...)
        {
@@ -191,8 +189,8 @@ public:
        }
        try
        {
-           mErrorFrameOperation=mFramerGenerico.frame(const_cast<char *>( aMsg->getContenidoMensaje().c_str()),
-                                               aMsg->getContenidoMensaje().size());
+           mErrorFrameOperation=mFramerGenerico.frame(const_cast<char *>( aMsg->c_str()),
+                                               aMsg->size());
             if(mErrorFrameOperation!=0)
            {
                aErrorCode=mErrorFrameOperation;
@@ -211,6 +209,11 @@ public:
    void setLocalPort(const unsigned & aLocalPort)
    {
         localPort=aLocalPort;
+   }
+   void setLocalPort(const std::string & aLocalPort)
+   {
+     NSUtils::getValueFromString<unsigned>(localPort,aLocalPort);
+
    }
    void setFramerPaquetes( COMUNICACION::IFramer * const aFramerPtr = nullptr) noexcept(true)
    {

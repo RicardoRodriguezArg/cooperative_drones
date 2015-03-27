@@ -50,6 +50,10 @@ public:
     {
     return 0;
     }
+    void setLocalPort(const std::string &)
+    {
+
+    }
     void leer(MsgType & aMsgData , int & aError)
     {
         if (!mCliente) {
@@ -58,19 +62,16 @@ public:
         }
         try
         {
-            aMsgData.limpiarContenidoMensaje();
+            aMsgData.clear();
             char buffer[BUFFERSIZE];
             mComunicationError=static_cast<volatile int>(mCliente->read(buffer,BUFFERSIZE));
             if(mComunicationError>0)
             {
               aError=mFramerGenerico.unFrame(buffer);
-
               if (aError!=0) return;//error en la recepcion del byte de comunicacion
-
               std::string aBuffer(mFramerGenerico.getFrameBuffer(),mFramerGenerico.getSize());
-              aMsgData.setContenidoMensaje(aBuffer);
+              aMsgData=aBuffer;
               aError=0;//ERROR_SERVER_LECTURA_OK;
-
 
             }
              else
@@ -85,7 +86,7 @@ public:
              return;
         }
     }
-    void escribir(MsgType * const aPtrDataMsg=0, int & aError=gDefaultIntValue) noexcept(true)
+    void escribir(MsgType * const aPtrDataMsg, int & aError)
     {
         if (!aPtrDataMsg)
         {
@@ -97,8 +98,8 @@ public:
             return;
         }
         try{
-            mErrorFrameOperation=mFramerGenerico.frame(const_cast<char *>( aPtrDataMsg->getContenidoMensaje().c_str()),
-                                               aPtrDataMsg->getContenidoMensaje().size());
+            mErrorFrameOperation=mFramerGenerico.frame(const_cast<char *>( aPtrDataMsg->c_str()),
+                                               aPtrDataMsg->size());
             if(mErrorFrameOperation!=0)
             {
                 aError=mErrorFrameOperation;
@@ -106,7 +107,6 @@ public:
             }
             this->mCliente->send(mFramerGenerico.getFrameBuffer(),mFramerGenerico.getSize());
             aError= 0;
-           // std::cout<<"Escritura exitosa en el socket  TCP"<<std::endl;
         }
         catch(...)
         {

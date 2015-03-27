@@ -64,7 +64,7 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
                          std::cout<<"|_ "<<std::get<1>(inner_node_vector.at(i))<<" --> "<<std::get<2>(inner_node_vector.at(i))<<"\n " ;
                      }
                  }
-                 std::string getStremType() const
+                 std::string getStreamType() const
                  {
                     return std::get<2>(inner_node_vector.at(0));
                  }
@@ -76,6 +76,24 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
                  {
                      return std::get<2>(inner_node_vector.at(2));
                  }
+                 std::string getPort() const
+                 {
+
+                 }
+                 std::string getLocalhost() const
+                 {
+
+                 }
+
+                 std::string getTargetIp() const
+                 {
+
+                 }
+                 std::string getLocalPort() const
+                 {
+
+                 }
+
                 std::tuple<const std::string,const std::string> SUB_NODE_OPTIONS;
                 std::vector<INNER_NODE_OPTIONS> inner_node_vector;
             };//Fin Options

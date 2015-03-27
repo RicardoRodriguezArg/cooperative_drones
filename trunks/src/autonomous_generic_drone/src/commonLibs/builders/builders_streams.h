@@ -80,26 +80,46 @@ namespace NSBuilders
          }
          void buildAll(int & aErrorCode)
          {
+
              for(auto i=0;i<BuilderOptions.SubNodeVector.size();i++)
              {
+                 aErrorCode=-1;
                       for(auto j=0;j<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.size();j++)
                       {
                           key aKeyValue;
                           aKeyValue.ProxyID=BuilderOptions.SubNodeVector.at(i).getRowTitles();
                           std::cout<<"ProxyId: "<<BuilderOptions.SubNodeVector.at(i).getRowTitles()<<std::endl;
-                          std::cout<<"StreamType: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStremType()<<std::endl;
+                          std::cout<<"StreamType: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType()<<std::endl;
                           std::cout<<"Data Type: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType()<<std::endl;
                           aKeyValue.data_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType();
-                          aKeyValue.stream_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStremType();
+                          aKeyValue.stream_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType();
+
                           if(aKeyValue.isValidKey())
                           {
-                              comm_map.insert(std::make_pair(aKeyValue,getComm(BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getCommType())));
+                              const auto aPtr=getComm(BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getCommType());
+                              configurateComm(aPtr,BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j));
+                              comm_map.insert(std::make_pair(aKeyValue,aPtr));
+                              aErrorCode=0;
                           }
                       }
              }
-
-
          }
+         COMUNICACION::IComm * getComInterface(const std::string & ProxyName, const std::string & StreamType, const std::string & DataType)
+         {
+           COMUNICACION::IComm * aComPtr=nullptr;
+            key aKeyValue;
+            aKeyValue.ProxyID=ProxyName;
+            aKeyValue.data_type=StreamType;
+            aKeyValue.stream_type=DataType;
+            const auto iterator=comm_map.find(aKeyValue);
+            if(iterator!=comm_map.end())
+            {
+                aComPtr=iterator->second;
+            }
+            return aComPtr;
+         }
+
+    private:
          COMUNICACION::IComm * getComm(const std::string & aCommType) const
          {
              COMUNICACION::IComm * aPtr=nullptr;
@@ -109,8 +129,20 @@ namespace NSBuilders
              if (aCommType.compare("TCP")==0) aPtr=new COMUNICACION::TCPCOMM<NSUtils::MsgData>;
              return aPtr;
          }
-
-    private:
+         template<typename options>
+         void configurateComm(COMUNICACION::IComm * const aCommInterface, const options & aOptions)
+         {
+          //si es server
+           if(aOptions.getCommType()=="UDP")
+             {
+               aCommInterface->setLocalPort(aOptions.getLocalPort());
+             }
+           aCommInterface->setPort(aOptions.getPort());
+           if(aOptions.getStreamType()=="out")//client
+           {
+             aCommInterface->setDestino(aOptions.getTargetIp());
+           }
+         }
 
         NSBuilders::BuildersOptions<NSCommonsLibs::BuilderType::StreamType>  BuilderOptions;
          NSUtils::BuilderInterfaceBase<NSCommonsLibs::BuilderType::StreamType ,BuilderOption > xmlReader;
