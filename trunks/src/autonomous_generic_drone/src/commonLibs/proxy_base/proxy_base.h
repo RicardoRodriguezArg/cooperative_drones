@@ -1,3 +1,10 @@
+/**
+  *@author : Ricardo Rodriguez
+  *@email: aricardorodriguez@hotmail.com
+  *@date: 12-03-2015
+  *@brief:
+  *
+  */
 #ifndef PROXY_BASE_H
 #define PROXY_BASE_H
 #include <string>
@@ -48,7 +55,7 @@ class ProxyBase : public IServiceInterface
     {
 
     }
-    virtual const MetaCmd getMetaCmd(const std::string &) const
+    virtual  MetaCmd  * getMetaCmd(const std::string &) const
     {}
 
     Serializer * const MsgSerializer;

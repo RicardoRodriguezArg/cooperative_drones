@@ -1,3 +1,10 @@
+/**
+  *@author : Ricardo Rodriguez
+  *@email: aricardorodriguez@hotmail.com
+  *@date: 12-03-2015
+  *@brief:
+  *
+  */
 #ifndef TCPCOMMUNICATION_H
 #define TCPCOMMUNICATION_H
 #include "icomm.h"

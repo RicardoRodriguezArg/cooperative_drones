@@ -2,7 +2,7 @@
   *@author : Ricardo Rodriguez
   *@email: aricardorodriguez@hotmail.com
   *@date: 12-03-2015
-  *@brief: Clase que representa la capa reactiva del patron acceptor - connector. Implementada con variadic templates .
+  *@brief:
   *
   */
 #ifndef REACTOR_H
