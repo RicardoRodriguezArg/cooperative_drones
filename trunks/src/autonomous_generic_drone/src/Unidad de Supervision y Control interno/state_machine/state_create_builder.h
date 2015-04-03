@@ -52,10 +52,10 @@ public:
 
     void createBuilders( Kernel * const aKernelPtr ,int & aErrorCode )
     {
-
+            LOG(INFO)<<"Buildenado las opciones de comunicacion"<<std::endl;
             StreamBuilder.buildAll(aErrorCode);
             LOG(INFO)<<"ErrorCode al crear StreamBuilder:  "<<aErrorCode<<std::endl;
-            if(aErrorCode==ControlDef::ERROR_CODE::OK_ERROR_CODE)
+           if(aErrorCode==ControlDef::ERROR_CODE::OK_ERROR_CODE)
             aKernelPtr->setBuilderInterface(ControlDef::BuilderName::StreamBuilder,&StreamBuilder);
 
 
@@ -69,7 +69,7 @@ public:
 
     private:
     CreateBuilderState():_ErrorCode(0)
-      ,StreamBuilder(ControlDef::BuilderName::StreamBuilder.c_str())
+      ,StreamBuilder(ControlDef::ConfigFile::CommunicationXmlFile)
     {}
     ~CreateBuilderState()
     {

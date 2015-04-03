@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<CONFIGMODULES >
+         <Modules name="Proxy" id="USyCI" id_value="1000" type= "CommunicationType" >
+            <Option stream_type="in" data_type="event" connection_type="UDP" ip="localhost" port="5004" localport="18100"/>
+            <Option stream_type="in" data_type="command"  connection_type="UDP" ip="localhost" port="5003" localport="18101"/>
+            <Option stream_type="out" data_type="command"  connection_type="UDP" ip="localhost" port="5000" localport="18002" />
+            <Option stream_type="out" data_type="telemetry" connection_type="UDP" ip="localhost" port="5002" localport="18003" />
+            <Option stream_type="out" data_type="event" connection_type="UDP" ip="localhost" port="5001" localport="18004" />
+         </Modules>
+		
+       <Modules name="Proxy" id="UPI" id_value="1200" type= "CommunicationType" >
+            <Option name="CmdConnector"  connectionType="UDP" ip="localhost" port="8000" localport="18002" />
+       </Modules>
+
+       <Modules name="Proxy" id="UISG" id_value="4000" type= "CommunicationType" >
+            <Option name="CmdConnector"  connectionType="UDP" ip="192.169.0.50" port="12000" localport="18004" />
+            <Option name="EventAcceptor"  connectionType="UDP" ip="localhost" port="12002" localport="18008" />
+       </Modules>
+
+       <Modules name="Proxy" id="Tracker" id_value="1220" type= "CommunicationType" >
+            <Option name="CmdConnector"  connectionType="UDP" ip="localhost" port="13000" localport="14004" />
+            <Option name="EventAcceptor"  connectionType="UDP" ip="192.169.0.50" port="13002" localport="14006" />
+	    	<Option name="CmdConnector"  connectionType="UDP" ip="192.169.0.50" port="13002" localport="14006" />
+       </Modules>
+
+       <Modules name="UC_TelemetryService" id="TelemetryService" id_value="1" type= "CommunicationType" >
+            <Option name="TelemetryAcceptor"  connectionType="UDP" ip="localhost" port="12010" localport="18010" />
+            <Option name="ProtoTelemetryAcceptor"  connectionType="TCP" ip="localhost" port="12012" localport="" />
+       </Modules>
+		
+</CONFIGMODULES>

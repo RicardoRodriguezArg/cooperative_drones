@@ -10,8 +10,11 @@ namespace ControlDef
     namespace BuilderName
     {
             static const std::string StreamBuilder("StreamBuilder");
-    }
 
+    }
+    namespace ConfigFile {
+    static const std::string CommunicationXmlFile("/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/generaloptionconfig.xml");
+    }
     namespace ClassID
     {
     constexpr int SERVER_MANAGER_ID=1;

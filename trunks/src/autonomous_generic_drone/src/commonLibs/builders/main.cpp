@@ -19,7 +19,8 @@ int main()
 
      aBuilderOptions.SubNodeVector.at(0).print();//Row name options
      aBuilderOptions.getSubnode("USyCI")->print();
-     //NSBuilders::Builders<NSCommonsLibs::BuilderType::StreamType> aStreamBuilder("/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/generaloptionconfig.xml");
-     //aStreamBuilder.buildAll(aErrorCode);
+     //usando el builder
+     NSBuilders::Builders<NSCommonsLibs::BuilderType::StreamType> aStreamBuilder("/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/generaloptionconfig.xml");
+     aStreamBuilder.buildAll(aErrorCode);
 	return 0;
 }

@@ -97,9 +97,12 @@ namespace NSBuilders
                           if(aKeyValue.isValidKey())
                           {
                               const auto aPtr=getComm(BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getCommType());
-                              configurateComm(aPtr,BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j));
-                              comm_map.insert(std::make_pair(aKeyValue,aPtr));
-                              aErrorCode=0;
+                              if(aPtr!=nullptr)
+                              {
+                                  configurateComm(aPtr,BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j));
+                                  comm_map.insert(std::make_pair(aKeyValue,aPtr));
+                                  aErrorCode=0;
+                              }
                           }
                       }
              }
