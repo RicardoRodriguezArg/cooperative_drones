@@ -63,7 +63,7 @@ namespace NSBuilders
 
 
     template<>
-    class Builders<NSCommonsLibs::BuilderType::StreamType>
+    class Builders<NSCommonsLibs::BuilderType::StreamType> : public IBuilderInterface
     {
         typedef NSBuilders::BuildersOptions<NSCommonsLibs::BuilderType::StreamType> BuilderOption;
     public:

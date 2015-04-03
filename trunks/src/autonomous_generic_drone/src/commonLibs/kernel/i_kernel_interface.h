@@ -8,7 +8,7 @@
 #ifndef I_KERNEL_INTERFACE_H
 #define I_KERNEL_INTERFACE_H
 #include <string>
-namespace Kernel
+namespace NSKernel
 {
     class IServiceTarget
     {

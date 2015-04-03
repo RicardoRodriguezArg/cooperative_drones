@@ -8,7 +8,13 @@
 #ifndef STATE_CREATE_BUILDER_H
 #define STATE_CREATE_BUILDER_H
 #include <iostream>
-#include "generic_state_machine.h"
+#include <mutex>
+#include <glog/logging.h>
+#include "../commonLibs/state_machine/generic_state_machine.h"
+
+#include "../commonLibs/builders/builders_streams.h"
+
+#include "uc_definiciones.h"
 //#include "state_shutdown_uc.h"
 //#include "configurateKernelComponents.h"
 //#include "state_create_kernel_component.h"
@@ -44,12 +50,14 @@ public:
        ~CreateBuilderState();
     }
 
-    void createBuilders( Kernel * const aKernelPtr
-            ,int & aErrorCode )
+    void createBuilders( Kernel * const aKernelPtr ,int & aErrorCode )
     {
 
-		//        aKernelPtr->setBuilderInterface(EKERNEL_BUILDERS::EKERNEL_BUILDERS_MODEL_PROPERTIES_MAP, 		//static_cast<IBuilderInterface *>(&aModelPropertiesBuilder));
-        //falta agregarlo en el mapa
+            StreamBuilder.buildAll(aErrorCode);
+            LOG(INFO)<<"ErrorCode al crear StreamBuilder:  "<<aErrorCode<<std::endl;
+            if(aErrorCode==ControlDef::ERROR_CODE::OK_ERROR_CODE)
+            aKernelPtr->setBuilderInterface(ControlDef::BuilderName::StreamBuilder,&StreamBuilder);
+
 
 
         //creacion de builder finalizada
@@ -61,6 +69,7 @@ public:
 
     private:
     CreateBuilderState():_ErrorCode(0)
+      ,StreamBuilder(ControlDef::BuilderName::StreamBuilder.c_str())
     {}
     ~CreateBuilderState()
     {
@@ -84,6 +93,8 @@ public:
     static CreateBuilderState<Kernel> * BuilderStatePtr;
     static bool isNullPtr;
     int _ErrorCode;
+    NSBuilders::Builders<NSCommonsLibs::BuilderType::StreamType> StreamBuilder;
+
 };
 
 template<class Kernel>

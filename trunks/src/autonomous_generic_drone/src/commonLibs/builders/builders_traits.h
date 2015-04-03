@@ -14,5 +14,12 @@ namespace NSBuilders
     class Builders{};
     template<NSCommonsLibs::BuilderType>
     struct BuildersOptions{};
+    //declaracion de interface de construccion
+    class IBuilderInterface
+    {
+    public:
+        ~IBuilderInterface(){}
+        virtual void buildAll(int &) =0;
+    };
 }
 #endif // BUILDERS_TRAITS_H
