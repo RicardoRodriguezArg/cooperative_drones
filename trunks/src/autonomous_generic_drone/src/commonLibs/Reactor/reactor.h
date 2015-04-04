@@ -52,7 +52,7 @@ namespace NSReactorLayer
     private:
     enum serivice
     {
-      comm_type,
+      comm_type = 0,
       service
     };
     void run()
@@ -62,12 +62,12 @@ namespace NSReactorLayer
           for(auto iterator = vector_reactor.begin();iterator!=vector_reactor.end();iterator++)
             {
               Buffer.clear();
-              std::get<comm_type>(iterator)->leer(Buffer,ErrorCode);
+              std::get<static_cast<int>(comm_type)>(*iterator)->leer(Buffer,ErrorCode);
               if(ErrorCode==0)
                 {
                   mutex.lock();
                   //Recorda mandar una copia
-                  std::get<service>(iterator)->setRawMsg(Buffer);
+                  std::get<service>(*iterator)->setRawMsg(Buffer);
                   mutex.unlock();
                 }
             }
@@ -78,7 +78,7 @@ namespace NSReactorLayer
     volatile bool isActive;
     std::mutex mutex;
     std::string Buffer;
-    volatile int ErrorCode;
+     int ErrorCode;
     bool isServicesActive;
   };
 }

@@ -11,9 +11,7 @@
 #include <mutex>
 #include <glog/logging.h>
 #include "../commonLibs/state_machine/generic_state_machine.h"
-
 #include "../commonLibs/builders/builders_streams.h"
-
 #include "uc_definiciones.h"
 //#include "state_shutdown_uc.h"
 //#include "configurateKernelComponents.h"

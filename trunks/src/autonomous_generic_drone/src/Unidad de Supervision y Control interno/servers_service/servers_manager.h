@@ -5,6 +5,7 @@
 #include "../../commonLibs/factory/base_class.h"
 #include "../../commonLibs/factory/factory_register.h"
 #include "../../commonLibs/Reactor/reactor.h"
+#include "../../commonLibs/comunicacion/icomm.h"
 namespace NSServerManager
 {
 class ServerManager : public KERNEL::FactoryBase, public NSKernel::IKernelInterface
@@ -17,12 +18,22 @@ public:
             return ControlDef::ClassID::SERVER_MANAGER_ID;
     }
      void init(int &)
-     {}
+     {
+         reactor_layer.initCommServices();
+         reactor_layer.init();
+     }
      void configurate(int &)
      {}
      void stop(int &)
-     {}
+     {
+         reactor_layer.stop();
+     }
+     NSReactorLayer::Reactor<COMUNICACION::IComm,NSKernel::IServiceTarget> * getReactor()
+     {
+         return &reactor_layer;
+     }
     private:
+     NSReactorLayer::Reactor<COMUNICACION::IComm,NSKernel::IServiceTarget> reactor_layer;
      int ErrorCode;
      static KERNEL::FactoryRegister< ServerManager> factory_register;
      static bool isRegisterDone;

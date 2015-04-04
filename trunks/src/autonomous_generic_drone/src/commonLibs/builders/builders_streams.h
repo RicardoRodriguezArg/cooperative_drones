@@ -88,12 +88,11 @@ namespace NSBuilders
                       {
                           key aKeyValue;
                           aKeyValue.ProxyID=BuilderOptions.SubNodeVector.at(i).getRowTitles();
-                          std::cout<<"ProxyId: "<<BuilderOptions.SubNodeVector.at(i).getRowTitles()<<std::endl;
-                          std::cout<<"StreamType: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType()<<std::endl;
-                          std::cout<<"Data Type: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType()<<std::endl;
+                          //std::cout<<"ProxyId: "<<BuilderOptions.SubNodeVector.at(i).getRowTitles()<<std::endl;
+                          //std::cout<<"StreamType: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType()<<std::endl;
+                          //std::cout<<"Data Type: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType()<<std::endl;
                           aKeyValue.data_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType();
                           aKeyValue.stream_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType();
-
                           if(aKeyValue.isValidKey())
                           {
                               const auto aPtr=getComm(BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getCommType());
@@ -101,7 +100,7 @@ namespace NSBuilders
                               {
                                   configurateComm(aPtr,BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j));
                                   comm_map.insert(std::make_pair(aKeyValue,aPtr));
-                                  aErrorCode=0;
+                                   aErrorCode=0;
                               }
                           }
                       }
@@ -127,15 +126,17 @@ namespace NSBuilders
          {
              COMUNICACION::IComm * aPtr=nullptr;
 
-             if (aCommType.compare("UDP")==0) aPtr=new COMUNICACION::UDPComm<NSUtils::MsgData>;
+             if (aCommType.compare("UDP")==0) aPtr=new COMUNICACION::UDPComm<std::string>;
 
-             if (aCommType.compare("TCP")==0) aPtr=new COMUNICACION::TCPCOMM<NSUtils::MsgData>;
+             if (aCommType.compare("TCP")==0) aPtr=new COMUNICACION::TCPCOMM<std::string>;
+             std::cout<<"Ptr: "<<aPtr<<std::endl;
              return aPtr;
          }
          template<typename options>
          void configurateComm(COMUNICACION::IComm * const aCommInterface, const options & aOptions)
          {
           //si es server
+
            if(aOptions.getCommType()=="UDP")
              {
                aCommInterface->setLocalPort(aOptions.getLocalPort());

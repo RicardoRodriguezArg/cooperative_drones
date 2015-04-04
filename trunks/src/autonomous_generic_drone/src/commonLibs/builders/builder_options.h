@@ -8,7 +8,10 @@
 #include <algorithm>
 namespace  NSBuilders
 {
-
+namespace
+{
+    static const std::string LOCAL_HOST("localhost");
+}
 template<>
 struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
 {
@@ -44,17 +47,7 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
                              std::get<Row_value>(field)="";
                      }
                  }
-                 /*
-                 friend std::ostream& operator<<(std::ostream& os, Options const&  sub_node) {
-                        os << "sub_node NAME:"<<std::get<1>(sub_node.SUB_NODE_OPTIONS) <<"cantidad de subnodos: "<<sub_node.inner_node_vector.size()
-                                  << "\n " ;
-                        for(auto i=0;i<sub_node.inner_node_vector.size();i++)
-                        {
-                            os<<"|_ "<<std::get<2>(sub_node.inner_node_vector)<<"\n " ;
-                        }
-                        return os;
-                    }
-                    */
+
                  void print()
                  {
                      std::cout << "sub_node NAME:"<<std::get<0>(SUB_NODE_OPTIONS) <<" "<<std::get<1>(SUB_NODE_OPTIONS) <<"  cantidad de subnodos: "<<inner_node_vector.size()
@@ -78,20 +71,20 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
                  }
                  std::string getPort() const
                  {
-
+                       return std::get<2>(inner_node_vector.at(4));
                  }
                  std::string getLocalhost() const
                  {
-
+                    return LOCAL_HOST;
                  }
 
                  std::string getTargetIp() const
                  {
-
+                      return std::get<2>(inner_node_vector.at(3));
                  }
                  std::string getLocalPort() const
                  {
-
+                        return std::get<2>(inner_node_vector.at(5));
                  }
 
                 std::tuple<const std::string,const std::string> SUB_NODE_OPTIONS;

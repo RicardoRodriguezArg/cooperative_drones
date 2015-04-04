@@ -7,6 +7,8 @@
 #include "../../commonLibs/kernel/i_kernel_interface.h"
 #include "../../commonLibs/factory/generic_factory.h"
 #include "../state_machine/state_create_builder.h"
+#include "../state_machine/state_configurate_component.h"
+#include "../cmd_processor/cmd_processor.h"
 namespace NSUC_Kernel
 {
 
@@ -21,17 +23,22 @@ class Kernel
         LOG(INFO)<<"iniciando la creacion de los builders del sistema";
         CurrentState->createBuilders(this,ErrorCode);
         LOG(INFO)<<"ErrorCode al crear los builders: "<<ErrorCode;
-
+    }
+    void configurateKernelComponents()
+    {
+        LOG(INFO)<<"Configurando los componentes del sistema";
     }
 
     void setBuilderInterface(const std::string & aBuilderName, NSBuilders::IBuilderInterface * const  aBuilderPtr)
     {
             builders_map.insert(std::make_pair(aBuilderName,aBuilderPtr));
     }
+
     static void initSystemSingletons()
     {
-        KERNEL::KernelFactory::getInstance();
         initLogging();
+        KERNEL::KernelFactory::getInstance();
+        NSCmdProcessor::CmdProcessor::getInstance();
 
     }
     static void initLogging()

@@ -1,5 +1,6 @@
 project( kernel )
 cmake_minimum_required(VERSION 2.8)
+set(CMAKE_BUILD_TYPE Debug)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ")
 include_directories (
                                      ../
@@ -9,6 +10,7 @@ include_directories (
                                     ../../commonLibs/tinyxml2
                                     ../../commonLibs/netlink
                                    ../../commonsLibs/utils_generics
+                                    ../cmd_processor
 
                                   )
 include( ../../commonLibs/cmake/findGlog.cmake)

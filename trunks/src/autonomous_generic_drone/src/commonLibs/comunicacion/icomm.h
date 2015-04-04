@@ -29,6 +29,7 @@ public:
         virtual int setDestino(const std::string &)=0;
         virtual std::string getDestino() const = 0;
         virtual void setLocalPort(const std::string &)=0;
+        virtual void leer(std::string &, int &) = 0;
 };
 }
 #endif // ICOMM_H
