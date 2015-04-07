@@ -5,7 +5,7 @@ include_directories (
                                      ../
                                     )
 set (HDR  
-                
+         state_transition_unit.h
     )
 set (SRC main.cpp)
 
