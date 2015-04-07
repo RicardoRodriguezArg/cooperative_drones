@@ -16,7 +16,7 @@ namespace Proxy {
 template< class Serializer
                     , class CommInterface
                     ,class ProxyProcessInterface
-                    ,class MetaCmd
+                    ,class SubCmd
                     , class IServiceInterface
                 >
 class ProxyBase : public IServiceInterface
@@ -31,7 +31,7 @@ class ProxyBase : public IServiceInterface
     {
         ConnectorMaps.insert(std::make_pair(SenderIDChannel,aMsgSender));
     }
-    void setProcessProccess(const std::string & aProxyProcessID, ProxyProcessInterface * const aProxyProcess)
+    void setProxyProccess(const std::string & aProxyProcessID, ProxyProcessInterface * const aProxyProcess)
     {
         ProxyProxyMap.insert(std::make_pair(aProxyProcessID,aProxyProcess));
     }
@@ -40,7 +40,7 @@ class ProxyBase : public IServiceInterface
         const auto iterator=ConnectorMaps.find(aConnectorTypeId);
         if(iterator!=ConnectorMaps.end())
         {
-                (iterator->second)->init();
+                (iterator->second)->inicializarCliente(ErrorCode);
         }
     }
     void setCmdVectorID(const unsigned & aCmdId )
@@ -51,11 +51,11 @@ class ProxyBase : public IServiceInterface
     {
 
     }
-    virtual void execute( MetaCmd aCmd, int &)
+    virtual void execute( SubCmd aCmd, int &)
     {
 
     }
-    virtual  MetaCmd  * getMetaCmd(const std::string &) const
+    virtual  SubCmd  * geSubCmd(const std::string &) const
     {}
 
     Serializer * const MsgSerializer;
@@ -66,6 +66,7 @@ class ProxyBase : public IServiceInterface
     std::unordered_map<std::string, ProxyProcessInterface * const> ProxyProxyMap;
     std::vector<unsigned> CmdIdVector;
     const unsigned PROXYID;
+    int ErrorCode;
 
 };
 }
