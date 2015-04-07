@@ -1,0 +1,81 @@
+//import "nanopb.proto";
+package Mensajes;
+
+//option optimize_for = SPEED;
+message MessageHeader{
+	enum MessageType{
+    	Command=1;
+    	Event=2;
+    	Data=3;
+	}
+	//
+	
+	required uint32 IDCompSource=1;	//Id del componente que origina el 						
+					//mensaje
+	required uint32 IDMessage=2; 	//Identificacion unica del 							
+					//mensaje ()seqNum 							
+					//sequence number)
+	required bool ReturnAck=3; 	//identificacion de solicitud de 							
+					//retorno de ACK de un mensaje
+		
+	
+	required  MessageType MsgType=4;//Tipo de mensaje
+	required uint32 IDCompDestiny=5;
+	required double timestamp=6;
+}
+
+message TypeValue{
+enum Type{	
+	stringType =1;
+	int32Type  =2;
+	uint32Type =3;
+	floatType  =4;
+	doubleType =5;
+	boolType   =6;
+			}
+	required Type 		typArg=1;
+	optional string 	strArg=2 [(nanopb).max_size = 40];
+	optional int32 		int32Arg=3;
+	optional uint32 	uint32Arg=4;
+	optional float 		floatArg=5;
+	optional double 	doubleArg=6;
+	optional bool 		boolArg=7;
+}
+
+message InfoDupla{
+	required uint32 IDArg=2;
+	required TypeValue ArgValue=1;
+}
+
+message MessageCommand{
+enum ECmdState{	
+	SEND =1;
+	CMD_ACK  =2;
+	CMD_NOT_ACK =3;
+	CMD_EXECUTED  =4;
+	CMD_EXECUTING =5;
+
+			}
+	required MessageHeader header=4;
+	required uint32 IDCommand=1;
+	required ECmdState CmdState=2;
+	repeated InfoDupla argument=3 [(nanopb).max_count = 20]; //aca se define el vector de argumentos (definir el valor maximo del array)
+}
+
+message EventInfoDupla{
+	required uint32 idComponente=1;
+	required uint32 idEvento=2;
+}
+
+message MessageEvent{
+	required MessageHeader header=2;
+	repeated EventInfoDupla events=1 [(nanopb).max_count = 20];
+	required uint32 eventType=3;
+}
+
+message MessageData
+{
+	required MessageHeader header=2;
+	required uint32 IDData=3;
+	repeated InfoDupla metadatos=1 [(nanopb).max_count = 100];//definicion del vector de metadatos
+}
