@@ -15,12 +15,12 @@
 
 
 
-
+namespace{
 static const int gDefaultBufferSize=512;
 static const unsigned gDefaultRemotePort=5001;
 static const std::string gDefaultRemoteIp= std::string("localhost");
 static int gDefaultIntErrorValue=-1;
-
+}
 namespace COMUNICACION {
 template<typename MsgType>
 class UDPComm: public IComm {
@@ -34,7 +34,6 @@ public:
       ,mPuerto(std::move("5001"))
       ,mDestino(aRemoteIp)
       ,mBloqueante(false)
-
       ,mComunicationError(-1)
       ,localPort(5000)
       ,remotePort(aRemotePort)
@@ -50,10 +49,11 @@ public:
     {
         cerrarComunicacion();
 
-       if(mBuffer) {
+       if(mBuffer!=nullptr)
+         {
            delete [] mBuffer;
            mBuffer=nullptr;
-       }
+        }
     }
     void setRemoteIp(const std::string & aRemoteIp)
     {

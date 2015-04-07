@@ -30,7 +30,7 @@ namespace NSReactorLayer
       typedef std::tuple<CommType * const,ServiceTargetInterface * const> service_com_tuple;
       for(service_com_tuple aTuple : vector_reactor)
         {
-          std::get<comm_type>(aTuple)->inicializarcomunicacion();
+          std::get<comm_type>(aTuple)->inicializarServer(ErrorCode);
           isServicesActive=true;
         }
 
