@@ -34,7 +34,7 @@ enum Type{
 	boolType   =6;
 			}
 	required Type 		typArg=1;
-	optional string 	strArg=2 [(nanopb).max_size = 40];
+	optional string 	strArg=2;// [(nanopb).max_size = 40];
 	optional int32 		int32Arg=3;
 	optional uint32 	uint32Arg=4;
 	optional float 		floatArg=5;
@@ -59,7 +59,7 @@ enum ECmdState{
 	required MessageHeader header=4;
 	required uint32 IDCommand=1;
 	required ECmdState CmdState=2;
-	repeated InfoDupla argument=3 [(nanopb).max_count = 20]; //aca se define el vector de argumentos (definir el valor maximo del array)
+	repeated InfoDupla argument=3;// [(nanopb).max_count = 20]; //aca se define el vector de argumentos (definir el valor maximo del array)
 }
 
 message EventInfoDupla{
@@ -69,7 +69,7 @@ message EventInfoDupla{
 
 message MessageEvent{
 	required MessageHeader header=2;
-	repeated EventInfoDupla events=1 [(nanopb).max_count = 20];
+	repeated EventInfoDupla events=1;// [(nanopb).max_count = 20];
 	required uint32 eventType=3;
 }
 
@@ -77,5 +77,5 @@ message MessageData
 {
 	required MessageHeader header=2;
 	required uint32 IDData=3;
-	repeated InfoDupla metadatos=1 [(nanopb).max_count = 100];//definicion del vector de metadatos
+	repeated InfoDupla metadatos=1;// [(nanopb).max_count = 100];//definicion del vector de metadatos
 }
