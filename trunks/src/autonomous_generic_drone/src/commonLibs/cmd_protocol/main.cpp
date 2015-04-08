@@ -6,6 +6,13 @@ namespace NSTest
   struct CurrentState{
     CurrentState(const Options * const)
     {}
+    struct ActionInterface{
+      ActionInterface(const Options * const)
+      {
+
+      }
+    };
+
   };
   struct Event{
     Event(const Options * const)
@@ -18,13 +25,16 @@ namespace NSTest
   struct ActionInterface{
     ActionInterface(const Options * const)
     {}
+    struct CurrentStateAction{
+      CurrentStateAction(const Options * const){}
+    };
   };
 }
 int main()
 {
  const NSTest::Options aOptions;
  //NSTest::CurrentState * const aPtr = new NSTest::CurrentState(&aOptions);
-  NSProtocol::StateTransitionUnit<NSTest::CurrentState,NSTest::Event,NSTest::NextState,NSTest::ActionInterface> aStateTransitionTable(&aOptions);
+  NSProtocol::StateTransitionUnit<NSTest::CurrentState,NSTest::Event> aStateTransitionTable(&aOptions);
 
  return 0;
 }

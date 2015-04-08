@@ -23,6 +23,7 @@ namespace std {
     };
 
 }
+
 namespace NSUtils
 {
     struct MsgData
@@ -31,6 +32,25 @@ namespace NSUtils
         {}
         size_t getContenidoMensaje() const
         {}
+    };
+    template<typename tuple_t>
+    struct tuple_key_hash : public std::unary_function<tuple_t, std::size_t>
+    {
+      std::size_t operator()(const tuple_t & aTupleKey) const
+      {
+          return (std::get<0>( aTupleKey) ^ std::get<1>( aTupleKey));
+      }
+    };
+    template<typename tuple_t>
+    struct tuple_key_equal : public std::binary_function<tuple_t, tuple_t, bool>
+    {
+      bool operator()(const tuple_t& v0, const tuple_t& v1) const
+      {
+        return (
+                std::get<0>(v0) == std::get<0>(v1) &&
+                std::get<1>(v0) == std::get<1>(v1)
+                );
+      }
     };
 }
 
