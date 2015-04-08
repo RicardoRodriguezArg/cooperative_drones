@@ -27,6 +27,7 @@ class ProxyBase : public IServiceInterface
       ,PROXYID(aProxyID)
 
     {}
+    ~ProxyBase(){}
     void setConnector(const std::string & SenderIDChannel ,CommInterface * const aMsgSender)
     {
         ConnectorMaps.insert(std::make_pair(SenderIDChannel,aMsgSender));

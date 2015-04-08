@@ -1,5 +1,5 @@
 #include "state_transition_unit.h"
-
+#include "cmd_state_traits.h"
 namespace NSTest
 {
   struct Options{};
@@ -15,6 +15,8 @@ namespace NSTest
 
   };
   struct Event{
+    Event()
+    {}
     Event(const Options * const)
     {}
   };
@@ -34,7 +36,8 @@ int main()
 {
  const NSTest::Options aOptions;
  //NSTest::CurrentState * const aPtr = new NSTest::CurrentState(&aOptions);
-  NSProtocol::StateTransitionUnit<NSTest::CurrentState,NSTest::Event> aStateTransitionTable(&aOptions);
+  NSProtocol::StateRow<NSTest::CurrentState,NSTest::Event> aStateTransitionTable(&aOptions);
+
 
  return 0;
 }

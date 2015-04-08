@@ -8,16 +8,17 @@ namespace NSProtocol
   //base Case
   template< class ... Others
            >
-  class StateTransitionUnit{}; //definicion de clase vacia
-
+  class StateRow{}; //definicion de clase vacia
+  //class Forwarding
+  class Event;
 
   template<class State,
-           class Event,
+           class StateEvents,
            class ... Others
            >
-  class StateTransitionUnit<State,Event,Others...>
+  class StateRow<State,StateEvents,Others...>
   {
-  public:
+    public:
     enum class EStateID
     {
       currentState,
@@ -26,17 +27,25 @@ namespace NSProtocol
     enum class EStateAction
     {
       start,
+      transition_action,
       stop
     };
     typedef std::tuple<EStateID, EStateAction> tuple_key_type;
     typedef typename State::ActionInterface ActionInterface;
     typedef  std::unordered_map< const tuple_key_type, ActionInterface * const ,NSUtils::tuple_key_hash<tuple_key_type>,NSUtils::tuple_key_equal<tuple_key_type>>  ActionMapType;
+
+    //protected:
+    public:
     template<typename Options >
-    StateTransitionUnit(const Options * const aOptionsPtr):currentState(aOptionsPtr)
-    ,eventState(aOptionsPtr)
+    StateRow(const Options * const aOptionsPtr =nullptr,State * const aNextState =nullptr):currentState(aOptionsPtr)
+    ,NextState(aNextState)
     {
     }
-
+    StateRow():
+    NextState(nullptr)
+    {
+    }
+    virtual ~StateRow(){}
     virtual void checkEvent(Event * const eventRecieved)
     {
     }
@@ -44,10 +53,20 @@ namespace NSProtocol
     {
       stateActionMap=aStateMapPtr;
     }
+    void setNextState(State * const aNextState)
+    {
+        NextState=aNextState;
+    }
+    State * const getNextState() const
+    {
+      return NextState;
+    }
+
     void setStateActions(const EStateID & aStateID,const EStateAction & ActionState, ActionInterface * const aActionInterface )
     {
       stateActionMap.insert(std::make_tuple(std::make_tuple(aStateID,ActionState),aActionInterface));
     }
+
     void executeActions(const EStateID & aStateID,const EStateAction & ActionState, int & aErrorCode)
     {
       const auto aTuple=std::make_tuple(aStateID,ActionState);
@@ -58,9 +77,10 @@ namespace NSProtocol
         }
     }
 
-    private:
+
     State currentState;
-    Event eventState;
+    State *  NextState;
+    StateEvents StateEventsManager;
     ActionMapType stateActionMap;
 
   };

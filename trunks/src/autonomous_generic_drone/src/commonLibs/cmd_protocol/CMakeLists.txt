@@ -6,6 +6,8 @@ include_directories (
                                     )
 set (HDR  
          state_transition_unit.h
+         cmd_state_traits.h
+         events_state_traits.h
     )
 set (SRC main.cpp)
 
