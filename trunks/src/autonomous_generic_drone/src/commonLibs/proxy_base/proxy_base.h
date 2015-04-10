@@ -12,18 +12,17 @@
 #include <unordered_map>
 #include <vector>
 #include "definitions.h"
-namespace Proxy {
-template< class Serializer
-                    , class CommInterface
-                    ,class ProxyProcessInterface
-                    ,class SubCmd
-                    , class IServiceInterface
-                >
+namespace NSProxy {
+template< class Serializer,
+          , class CommInterface
+          , class ProxyProcessInterface
+          , class SubCmd
+          , class IServiceInterface
+        >
 class ProxyBase : public IServiceInterface
 {
     protected:
-    ProxyBase(Serializer * const aSerializer,const unsigned & aProxyID):MsgSerializer(aSerializer)
-      ,MsgSenderPtr(nullptr)
+    ProxyBase(const unsigned & aProxyID):MsgSenderPtr(nullptr)
       ,PROXYID(aProxyID)
 
     {}
@@ -36,6 +35,12 @@ class ProxyBase : public IServiceInterface
     {
         ProxyProxyMap.insert(std::make_pair(aProxyProcessID,aProxyProcess));
     }
+
+    void setDataTypeSerializer(const std::string & aSerializerID, Serializer * const aSerializer )
+    {
+      MsgSerializerMap.insert(std::make_pair( aSerializerID,aSerializer));
+    }
+
     void initConnector(const std::string & aConnectorTypeId)
     {
         const auto iterator=ConnectorMaps.find(aConnectorTypeId);
@@ -46,7 +51,7 @@ class ProxyBase : public IServiceInterface
     }
     void setCmdVectorID(const unsigned & aCmdId )
     {
-            CmdIdVector.emplace_back(aCmdId );
+       CmdIdVector.emplace_back(aCmdId );
     }
     bool isCmdExecutable(const unsigned & aCmdId)
     {
@@ -59,7 +64,7 @@ class ProxyBase : public IServiceInterface
     virtual  SubCmd  * geSubCmd(const std::string &) const
     {}
 
-    Serializer * const MsgSerializer;
+    std::unordered_map<std::string,Serializer * const> MsgSerializerMap;
     std::string Buffer;
     CommInterface * const MsgSenderPtr;
     std::mutex mutex;

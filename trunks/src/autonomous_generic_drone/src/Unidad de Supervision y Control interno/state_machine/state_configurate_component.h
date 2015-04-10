@@ -35,7 +35,7 @@ private:
     void configurateServerManager(Kernel * const aKernelPtr)
     {
         const auto Ptr=(KERNEL::KernelFactory::getInstance().createInstance("ServerManager").get());
-
+        //TODO: Falta integrar el componente de comunicacion
         reinterpret_cast<NSServerManager::ServerManager * >(Ptr)->getReactor()->make_service_tuple(nullptr,&NSCmdProcessor::CmdProcessor::getInstance());
     }
     static void createInstance()

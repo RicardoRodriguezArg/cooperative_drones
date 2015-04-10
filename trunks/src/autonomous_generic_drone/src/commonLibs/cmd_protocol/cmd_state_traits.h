@@ -10,22 +10,32 @@ namespace NSProtocol
   namespace
   {
    constexpr int OK_ERROR_CODE=0;
-   constexpr unsigned sleep_time=100;
-   constexpr std::chrono::milliseconds millisecond_sleep(sleep_time);
+   constexpr unsigned sleep_time=100U;
+
   }
-  template<class EventState,class CmdStateModel,class ActionInterface,class Event>
-  class CmdState : public NSUtils::Sujeto<Event>
+  template<class CmdStateModel,class ActionInterface,class StateInfo>
+  class CmdState : public NSUtils::Sujeto<StateInfo>
   {
 
   public:
+    enum class ECmdState
+    {
+      No_Init,
+      Init,
+      Running,
+      Stopped
+    };
     CmdState(CmdStateModel * const aCmdStateModelPtr,
-             ActionInterface * const aActionInterfacePtr):CmdStateModelPtr(aCmdStateModelPtr)
+             ActionInterface * const aActionInterfacePtr,
+             const unsigned aMiliSleepTime):CmdStateModelManagerPtr(aCmdStateModelPtr)
                                                           ,CmdActionInterfacePtr(aActionInterfacePtr)
                                                           ,isRunning(false)
                                                           ,ErrorCode(OK_ERROR_CODE)
+                                                          ,millisecond_sleep(aMiliSleepTime)
     {
-        CmdActionInterfacePtr->setModelPtr(CmdStateModelPtr);
+      //CmdActionInterfacePtr->setModelPtr(CmdStateModelPtr);
     }
+
     void init()
     {
       CmdActionInterfacePtr->setInitcondition();
@@ -33,26 +43,30 @@ namespace NSProtocol
         {
           CmdActionInterfacePtr->execute(isRunning);
           std::this_thread::sleep_for(millisecond_sleep);
-          CmdActionInterfacePtr->verifyCmdContext(isRunning);
+          CmdStateModelManagerPtr->verifyCmdContext(CmdActionInterfacePtr->getCmdActionInfo,isRunning);
         }
-      NSUtils::Sujeto<Event>::notificarObservador(CmdActionInterfacePtr->getEventInfo(),ErrorCode);
+      NSUtils::Sujeto<StateInfo>::notificarObservador(CmdActionInterfacePtr->getStateInfo(),ErrorCode);
     }
+
     void stopState()
     {
       isRunning=false;
     }
 
-    template<typename ModelUnitType>
-    void setCmdStateModel(const ModelUnitType & aUnitModelType)
+    void setCmdStateInfoUnit(const StateInfo & aCmdStateInfoModelUnit)
     {
       //eventManager
-      CmdStateModelPtr->setUnit(aUnitModelType);
+      CmdStateModelManagerPtr->UpdateRowStateInfo(aCmdStateInfoModelUnit);
     }
-    EventState eventManager;
-    CmdStateModel * const CmdStateModelPtr;
+    bool isStateRunning()
+    {
+      return isRunning;
+    }
+    CmdStateModel * const CmdStateModelManagerPtr;
     ActionInterface * const CmdActionInterfacePtr;
-    volatile bool isRunning;
+    bool isRunning;
     int ErrorCode;
+    const std::chrono::milliseconds millisecond_sleep;
   };
 
 
