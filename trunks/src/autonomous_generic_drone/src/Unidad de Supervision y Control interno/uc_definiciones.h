@@ -19,6 +19,12 @@ namespace ControlDef
     {
     constexpr int SERVER_MANAGER_ID=1;
     }
+    namespace NSProxy
+    {
+      static const std::string CMD_TYPE_ID("CMD_ID");
+      static const std::string TELEMETRY_TYPE_ID("TELEMETRY_TYPE_ID");
+      static const std::string EVENT_TYPE_ID("EVENT_TYPE_ID");
+    }
 }
 
 #endif // DEFINICIONES_H
