@@ -13,7 +13,7 @@ class Sujeto
 	    void notificarObservador(T aCmd, int & aErrorCode)
 	    {
 		aErrorCode=-1;
-		if(mObservador){
+		if(mObservador!=nullptr){
 			aErrorCode=0;
 			mObservador->update(aCmd,aErrorCode);
 		}

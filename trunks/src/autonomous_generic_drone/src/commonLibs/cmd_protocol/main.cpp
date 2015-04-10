@@ -1,5 +1,5 @@
 #include "state_transition_unit.h"
-#include "cmd_state_traits.h"
+
 namespace NSTest
 {
   struct Options{};

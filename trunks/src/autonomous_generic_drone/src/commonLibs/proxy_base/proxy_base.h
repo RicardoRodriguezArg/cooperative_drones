@@ -13,7 +13,7 @@
 #include <vector>
 #include "definitions.h"
 namespace NSProxy {
-template< class Serializer,
+template< class Serializer
           , class CommInterface
           , class ProxyProcessInterface
           , class SubCmd

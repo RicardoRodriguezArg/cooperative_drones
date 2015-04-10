@@ -1,6 +1,7 @@
 #ifndef STATE_TRANSITION_TRAITS_H
 #define STATE_TRANSITION_TRAITS_H
 #include <thread>
+#include <mutex>
 #include <chrono>
 #include <mutex>
 #include "state_transition_unit.h"
@@ -11,8 +12,8 @@ namespace NSProtocol
   {
    constexpr int OK_ERROR_CODE=0;
    constexpr unsigned sleep_time=100U;
-
   }
+
   template<class CmdStateModel,class ActionInterface,class StateInfo>
   class CmdState : public NSUtils::Sujeto<StateInfo>
   {
@@ -38,35 +39,52 @@ namespace NSProtocol
 
     void init()
     {
-      CmdActionInterfacePtr->setInitcondition();
-      while(isRunning)
-        {
-          CmdActionInterfacePtr->execute(isRunning);
-          std::this_thread::sleep_for(millisecond_sleep);
-          CmdStateModelManagerPtr->verifyCmdContext(CmdActionInterfacePtr->getCmdActionInfo,isRunning);
-        }
-      NSUtils::Sujeto<StateInfo>::notificarObservador(CmdActionInterfacePtr->getStateInfo(),ErrorCode);
+      if(shouldProced()) process();
     }
 
     void stopState()
     {
+      std::lock_guard<std::mutex> lock(mutex);
       isRunning=false;
     }
 
     void setCmdStateInfoUnit(const StateInfo & aCmdStateInfoModelUnit)
     {
+      std::lock_guard<std::mutex> lock(mutex);
       //eventManager
       CmdStateModelManagerPtr->UpdateRowStateInfo(aCmdStateInfoModelUnit);
     }
     bool isStateRunning()
     {
+      std::lock_guard<std::mutex> lock(mutex);
       return isRunning;
+    }
+  private:
+
+    bool shouldProced()
+    {
+      return (CmdStateModelManagerPtr!=nullptr &&
+          CmdActionInterfacePtr!= nullptr
+          );
+    }
+
+    void process()
+    {
+      CmdActionInterfacePtr->setInitcondition(isRunning);
+      while(isRunning)
+        {
+          CmdActionInterfacePtr->execute(isRunning);
+          std::this_thread::sleep_for(millisecond_sleep);
+          CmdStateModelManagerPtr->verifyCmdContext(CmdActionInterfacePtr->getStateInfo(),isRunning);
+        }
+      NSUtils::Sujeto<StateInfo>::notificarObservador(*CmdActionInterfacePtr->getStateInfo(),ErrorCode);
     }
     CmdStateModel * const CmdStateModelManagerPtr;
     ActionInterface * const CmdActionInterfacePtr;
     bool isRunning;
     int ErrorCode;
     const std::chrono::milliseconds millisecond_sleep;
+    std::mutex mutex;
   };
 
 
