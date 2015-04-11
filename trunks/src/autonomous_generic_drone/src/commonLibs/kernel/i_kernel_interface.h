@@ -26,5 +26,11 @@ namespace NSKernel
         virtual void stop(int &) = 0;
 
     };
+    class ISerializer
+    {
+    public:
+      virtual ~ISerializer(){}
+      virtual std::string serializeData() = 0;
+    };
 }
 #endif // I_KERNEL_INTERFACE_H

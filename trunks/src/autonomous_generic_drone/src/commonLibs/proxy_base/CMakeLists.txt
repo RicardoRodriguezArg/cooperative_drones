@@ -6,6 +6,7 @@ include_directories (
                                     )
 set (HDR 
                 proxy_base.h
+                i_proxy_proccess.h
     )
 set (SRC main.cpp)
 
