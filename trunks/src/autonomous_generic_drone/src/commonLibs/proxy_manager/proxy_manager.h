@@ -1,13 +1,20 @@
+/**
+  *@author : Ricardo Rodriguez
+  *@email: aricardorodriguez@hotmail.com
+  *@date: 12-04-2015
+  *@brief:
+  *
+  */
 #ifndef PROXY_MANAGER_H
 #define PROXY_MANAGER_H
 #include <unordered_map>
 
-namespace NSProxyManager
+namespace NSCommonLibs
 {
   template<class Proxy>
   class ProxyManager
   {
-  public:
+  protected:
     ProxyManager()
     {}
     void addProxy(const std::string & aProxyID,Proxy * const aProxyPtr)

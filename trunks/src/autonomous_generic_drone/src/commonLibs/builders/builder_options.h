@@ -57,6 +57,7 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
                          std::cout<<"|_ "<<std::get<1>(inner_node_vector.at(i))<<" --> "<<std::get<2>(inner_node_vector.at(i))<<"\n " ;
                      }
                  }
+                 //TODO: agregar enumerado para identificar los campos
                  std::string getStreamType() const
                  {
                     return std::get<2>(inner_node_vector.at(0));
@@ -119,7 +120,15 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
             };
             std::string getRowTitles() const
             {
-                return std::get<2>(optionsVector.at(1));
+                return std::get<2>(optionsVector.at(1));//nombre literal del proxy
+            }
+            /**
+             * @brief getProxyId funcion que devuelve el ID del proxy que se quiere modelar
+             * @return id en string del proxy que se quiere modelar
+             */
+            std::string getProxyId() const
+            {
+              return std::get<2>(optionsVector.at(2));
             }
             void print()
             {
@@ -138,13 +147,7 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
              std::vector<ROW_OPTIONS> optionsVector;
         };//termina SubNode
 
-/*
-        friend std::ostream& operator<<(std::ostream& os,  const  BuildersOptions &node)
-         {
-            os<<std::get<0>(node.NODE_NAME)<<" "<<std::get<1>(node.NODE_NAME)<<" "<<std::get<0>(SUB_NODE_NAME)<<" "<<std::get<1>(SUB_NODE_NAME)<<"\n";
-            for(auto i=0;i<node.SubNodeVector.size();i++) os <<node.SubNodeVector.at(i);
-            return os;
-         }*/
+
         void print()
         {
 

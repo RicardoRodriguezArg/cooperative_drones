@@ -25,6 +25,7 @@ set ( HDRS
                    #     ../../commonsLibs/netlink/socket.cc
                         state_create_builder.h
                         state_configurate_component.h
+                        create_kernel_components.h
 		
 )
 add_executable(${PROJECT_NAME} main.cpp

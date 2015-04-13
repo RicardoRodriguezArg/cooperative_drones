@@ -1,3 +1,10 @@
+/**
+  *@author : Ricardo Rodriguez
+  *@email: aricardorodriguez@hotmail.com
+  *@date: 12-04-2015
+  *@brief:
+  *
+  */
 #ifndef CMD_STATE_TEST_H
 #define CMD_STATE_TEST_H
 #include "gtest/gtest.h"

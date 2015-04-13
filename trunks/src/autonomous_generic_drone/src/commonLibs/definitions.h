@@ -8,6 +8,7 @@
 */
 #ifndef DEFINITIONS_H
 #define DEFINITIONS_H
+#include <tuple>
 namespace NSCommonsLibs
 {
     enum class BuilderType
@@ -15,6 +16,11 @@ namespace NSCommonsLibs
        StreamType,
         ProxyType
     };
+namespace ERROR_CODES
+{
+  static const std::tuple<std::string,int> OK_ERROR_TUPLE("OK_ERROR_CODE",0);
+  static const std::tuple<std::string,int> BUILDER_PROXY_ERROR("Options Ptr not Set",-1);
+}
 
 }
 #endif // DEFINITIONS_H

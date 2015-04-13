@@ -62,8 +62,8 @@ namespace NSBuilders
 {
 
 
-    template<>
-    class Builders<NSCommonsLibs::BuilderType::StreamType> : public IBuilderInterface
+    template<class ...Args>
+    class Builders<NSCommonsLibs::BuilderType::StreamType,Args...> : public IBuilderInterface
     {
         typedef NSBuilders::BuildersOptions<NSCommonsLibs::BuilderType::StreamType> BuilderOption;
     public:
@@ -87,7 +87,8 @@ namespace NSBuilders
                       for(auto j=0;j<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.size();j++)
                       {
                           key aKeyValue;
-                          aKeyValue.ProxyID=BuilderOptions.SubNodeVector.at(i).getRowTitles();
+                          aKeyValue.ProxyID=BuilderOptions.SubNodeVector.at(i).getProxyId();
+                          std::cout<<"ID PROXY: "<<BuilderOptions.SubNodeVector.at(i).getProxyId()<<std::endl;
                           //std::cout<<"ProxyId: "<<BuilderOptions.SubNodeVector.at(i).getRowTitles()<<std::endl;
                           //std::cout<<"StreamType: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType()<<std::endl;
                           //std::cout<<"Data Type: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType()<<std::endl;
@@ -106,6 +107,7 @@ namespace NSBuilders
                       }
              }
          }
+
          COMUNICACION::IComm * getComInterface(const std::string & ProxyName, const std::string & StreamType, const std::string & DataType)
          {
            COMUNICACION::IComm * aComPtr=nullptr;
@@ -120,7 +122,14 @@ namespace NSBuilders
             }
             return aComPtr;
          }
-
+         /**
+          * @brief getComMapOption
+          * @return mapa completo de las opciones de interfaces
+          */
+         std::unordered_map<key,COMUNICACION::IComm * const,std::hash<key>> getComMapOption()
+         {
+            return &comm_map;
+         }
     private:
          COMUNICACION::IComm * getComm(const std::string & aCommType) const
          {
@@ -129,7 +138,7 @@ namespace NSBuilders
              if (aCommType.compare("UDP")==0) aPtr=new COMUNICACION::UDPComm<std::string>;
 
              if (aCommType.compare("TCP")==0) aPtr=new COMUNICACION::TCPCOMM<std::string>;
-             std::cout<<"Ptr: "<<aPtr<<std::endl;
+
              return aPtr;
          }
          template<typename options>

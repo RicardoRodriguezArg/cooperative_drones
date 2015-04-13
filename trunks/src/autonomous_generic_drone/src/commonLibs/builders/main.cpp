@@ -6,7 +6,7 @@ int main()
     std::string aName;
       int aErrorCode=0;
 
-    NSBuilders::BuildersOptions<NSCommonsLibs::BuilderType::StreamType>  aBuilderOptions("/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/generaloptionconfig.xml");
+    NSBuilders::BuildersOptions<NSCommonsLibs::BuilderType::StreamType>  aBuilderOptions("/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/generaloptionconfig.xml");
     typedef NSBuilders::BuildersOptions<NSCommonsLibs::BuilderType::StreamType> BuilderOption;
     NSUtils::BuilderInterfaceBase<NSCommonsLibs::BuilderType::StreamType
             ,BuilderOption
@@ -20,7 +20,7 @@ int main()
      aBuilderOptions.SubNodeVector.at(0).print();//Row name options
      aBuilderOptions.getSubnode("USyCI")->print();
      //usando el builder
-     NSBuilders::Builders<NSCommonsLibs::BuilderType::StreamType> aStreamBuilder("/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/generaloptionconfig.xml");
+     NSBuilders::Builders<NSCommonsLibs::BuilderType::StreamType> aStreamBuilder("/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/generaloptionconfig.xml");
      aStreamBuilder.buildAll(aErrorCode);
 	return 0;
 }

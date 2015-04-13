@@ -8,3 +8,5 @@ add_subdirectory( servers_service )
 add_subdirectory(  unidad_supervision )
 add_subdirectory(  cmd_processor )
 add_subdirectory( proxy )
+add_subdirectory( proxy_manager )
+

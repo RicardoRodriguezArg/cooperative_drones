@@ -1,4 +1,10 @@
-
+/**
+  *@author : Ricardo Rodriguez
+  *@email: aricardorodriguez@hotmail.com
+  *@date: 12-04-2015
+  *@brief:
+  *
+  */
 #include "gtest/gtest.h"
 #include "cmd_state_aux.h"
 #include "../../../../src/autonomous_generic_drone/src/commonLibs/cmd_protocol/cmd_state_unit.h"

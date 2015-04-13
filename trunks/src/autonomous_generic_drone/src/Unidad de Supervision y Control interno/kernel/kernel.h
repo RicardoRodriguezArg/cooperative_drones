@@ -33,7 +33,16 @@ class Kernel
     {
             builders_map.insert(std::make_pair(aBuilderName,aBuilderPtr));
     }
-
+    NSBuilders::IBuilderInterface * getBuilderInterface(const std::string & aBuilderName)
+    {
+      NSBuilders::IBuilderInterface * aBuilderPtr=nullptr;
+      const auto iterator=builders_map.find(aBuilderName);
+      if(iterator!=builders_map.end())
+        {
+          aBuilderPtr=iterator->second;
+        }
+      return aBuilderPtr;
+    }
     static void initSystemSingletons()
     {
         initLogging();

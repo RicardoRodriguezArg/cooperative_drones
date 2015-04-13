@@ -29,6 +29,8 @@ include_directories (
 set (HDR builders_traits.h
                 builders_streams.h
                 builder_options.h
+                builders_proxy.h
+                utils_builder.h
          
     )
 set (SRC

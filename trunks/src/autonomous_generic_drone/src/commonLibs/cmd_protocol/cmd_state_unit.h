@@ -1,4 +1,11 @@
 #ifndef STATE_TRANSITION_TRAITS_H
+/**
+  *@author : Ricardo Rodriguez
+  *@email: aricardorodriguez@hotmail.com
+  *@date: 12-04-2015
+  *@brief:
+  *
+  */
 #define STATE_TRANSITION_TRAITS_H
 #include <thread>
 #include <mutex>

@@ -5,6 +5,7 @@
 #include "uc_definiciones.h"
 #include "../servers_service/servers_manager.h"
 #include "../commonLibs/state_machine/generic_state_machine.h"
+#include "../../commonLibs/builders/builders_streams.h"
 #include "../../commonLibs/factory/generic_factory.h"
 #include "../cmd_processor/cmd_processor.h"
 namespace KERNEL
@@ -35,8 +36,11 @@ private:
     void configurateServerManager(Kernel * const aKernelPtr)
     {
         const auto Ptr=(KERNEL::KernelFactory::getInstance().createInstance("ServerManager").get());
+        const auto aBuilderPtr=aKernelPtr->getBuilderInterface(ControlDef::BuilderName::StreamBuilder);
+        const auto aStreammerBuilder=reinterpret_cast<NSBuilders::Builders<NSCommonsLibs::BuilderType::StreamType> *>(aBuilderPtr);
+        const auto aCommandServerPtr=aStreammerBuilder->getComInterface("USyCI","in","command");//servidor de comandos
         //TODO: Falta integrar el componente de comunicacion
-        reinterpret_cast<NSServerManager::ServerManager * >(Ptr)->getReactor()->make_service_tuple(nullptr,&NSCmdProcessor::CmdProcessor::getInstance());
+        reinterpret_cast<NSServerManager::ServerManager * >(Ptr)->getReactor()->make_service_tuple(aCommandServerPtr,&NSCmdProcessor::CmdProcessor::getInstance());
     }
     static void createInstance()
     {

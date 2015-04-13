@@ -1,3 +1,10 @@
+/**
+  *@author : Ricardo Rodriguez
+  *@email: aricardorodriguez@hotmail.com
+  *@date: 12-04-2015
+  *@brief:
+  *
+  */
 #ifndef CMD_PROTOCOL_H
 #define CMD_PROTOCOL_H
 #include <tuple>

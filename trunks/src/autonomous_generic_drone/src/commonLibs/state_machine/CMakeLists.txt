@@ -11,7 +11,7 @@ include_directories(
                                 )
 set ( HDRS generic_state_machine.h
 
-                    #    state_create_builder.h
+                        #state_create_builder.h
 		
 )
 add_executable(${PROJECT_NAME} main.cpp

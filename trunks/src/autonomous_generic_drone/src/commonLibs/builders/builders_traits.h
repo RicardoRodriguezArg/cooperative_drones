@@ -10,8 +10,9 @@
 #include "definitions.h"
 namespace NSBuilders
 {
-    template<NSCommonsLibs::BuilderType>
+    template<NSCommonsLibs::BuilderType, class ...Args>
     class Builders{};
+
     template<NSCommonsLibs::BuilderType>
     struct BuildersOptions{};
     //declaracion de interface de construccion

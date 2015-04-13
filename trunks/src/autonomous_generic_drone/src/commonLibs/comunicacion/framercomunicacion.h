@@ -1,3 +1,10 @@
+/**
+  *@author : Ricardo Rodriguez
+  *@email: aricardorodriguez@hotmail.com
+  *@date: 12-04-2015
+  *@brief:
+  *
+  */
 #ifndef FRAMERCOMUNICACION_H
 #define FRAMERCOMUNICACION_H
 #include <string.h>
