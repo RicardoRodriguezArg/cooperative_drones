@@ -20,7 +20,7 @@ message MessageHeader{
 		
 	
 	required  MessageType MsgType=4;//Tipo de mensaje
-	required uint32 IDCompDestiny=5;
+	required uint32 IDCompTarget=5; // componente destino
 	required double timestamp=6;
 }
 
