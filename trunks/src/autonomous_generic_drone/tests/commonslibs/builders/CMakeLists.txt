@@ -43,3 +43,13 @@ target_link_libraries(${PROJECT_NAME}
                                     ${GMOCK_BOTH_LIBRARIES}
                                     ${CMAKE_THREAD_LIBS_INIT}
 )
+
+add_executable(test_transform_structure test_transform_structure.cpp ${HDR})
+
+target_link_libraries(test_transform_structure
+                                    -lpthread
+
+                                    ${GTEST_LIBRARIES}
+                                    ${GMOCK_BOTH_LIBRARIES}
+                                    ${CMAKE_THREAD_LIBS_INIT}
+)

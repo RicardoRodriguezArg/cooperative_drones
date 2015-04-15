@@ -12,6 +12,7 @@
 #include <unordered_map>
 #include <vector>
 #include "definitions.h"
+#include "../factory/base_class.h"
 namespace NSProxy {
 template< class Serializer
           , class CommInterface
@@ -19,9 +20,10 @@ template< class Serializer
           , class SubCmd
           , class IServiceInterface
         >
-class ProxyBase : public IServiceInterface
+class ProxyBase : public IServiceInterface , public KERNEL::FactoryBase
 {
     protected:
+    const static  int PROXY_DEFAULT_FACTORY_ID=4;
     ProxyBase(const unsigned & aProxyID):MsgSenderPtr(nullptr)
       ,PROXYID(aProxyID)
 
@@ -30,6 +32,18 @@ class ProxyBase : public IServiceInterface
     void setConnector(const std::string & SenderIDChannel ,CommInterface * const aMsgSender)
     {
         ConnectorMaps.insert(std::make_pair(SenderIDChannel,aMsgSender));
+    }
+    /**
+     * @brief getID metodo usado por el factory
+     * @return
+     */
+    int getID()
+    {
+      return PROXY_DEFAULT_FACTORY_ID;
+    }
+    void setProxyId(const unsigned & aProxyId)
+    {
+      PROXYID=aProxyId;
     }
     void setProxyProccess(const std::string & aProxyProcessID, ProxyProcessInterface * const aProxyProcess)
     {

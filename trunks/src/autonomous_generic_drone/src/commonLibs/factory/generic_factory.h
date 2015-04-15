@@ -5,6 +5,7 @@
 #include <functional>
 #include <mutex>
 #include "base_class.h"
+#include "../factory/generic_factory.h"
 namespace KERNEL
 {
     /**
@@ -42,6 +43,7 @@ namespace KERNEL
                    return std::shared_ptr<FactoryBase > (instance_ptr);
                else return nullptr;
             }
+
         private:
             KernelFactory()
             {}
@@ -59,5 +61,6 @@ namespace KERNEL
     };
     KernelFactory *  KernelFactory::KenelPtr=nullptr;
     bool KernelFactory::IsNullPtr=true;
+
 }
 #endif // GENERIC_FACTORY_H

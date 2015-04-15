@@ -10,6 +10,7 @@
 #define BUILDERS_STREAMS_H
 #include <unordered_map>
 #include <iostream>
+
 #include "../utils_generics/xml_reader.h"
 #include "../utils_generics/generis_strutures.h"
 #include "builders_traits.h"
@@ -21,20 +22,36 @@
 struct key
 {
    std::string ProxyID;
+   std::string ProxyDescription;
    std::string stream_type;
    std::string data_type;
+   std::string MsgType;
    bool isValidKey() const
    {
        return (!(ProxyID.empty() &&
                stream_type.empty() &&
-               data_type.empty()
+               data_type.empty()   &&
+               ProxyDescription.empty() &&
+               MsgType.empty()
                ));
+   }
+   void clear()
+   {
+     ProxyID.clear();
+     ProxyDescription.clear();
+     stream_type.clear();
+     data_type.clear();
+     MsgType.clear();
+
    }
    bool operator==(const key &other) const
     {
        return (ProxyID == other.ProxyID
               && stream_type == other.stream_type
-              && data_type == other.data_type);
+              && data_type == other.data_type
+              && ProxyDescription == other.ProxyDescription
+              && MsgType == other.MsgType
+               );
     }
 };
 
@@ -53,15 +70,17 @@ namespace std {
       // and bit shifting:
       return ((hash<string>()(k.ProxyID)
                ^ (hash<string>()(k.stream_type) << 1)) >> 1)
-               ^ (hash<string>()(k.data_type) << 1);
+               ^ (hash<string>()(k.data_type) << 1)
+               ^ (hash<string>()(k.ProxyDescription) << 1)
+               ^ (hash<string>()(k.MsgType) << 1)
+
+              ;
     }
   };
 }
 
 namespace NSBuilders
 {
-
-
     template<class ...Args>
     class Builders<NSCommonsLibs::BuilderType::StreamType,Args...> : public IBuilderInterface
     {
@@ -72,7 +91,7 @@ namespace NSBuilders
                                                  ,ErrorCode(0)
          {
              xmlReader.buildAll(ErrorCode);
-             std::cout<<"ErrorCode: "<<ErrorCode<<std::endl;
+            // LOG(INFO)<<"ErrorCode: "<<ErrorCode<<std::endl;
          }
          int getErrorCode() const
          {
@@ -88,12 +107,14 @@ namespace NSBuilders
                       {
                           key aKeyValue;
                           aKeyValue.ProxyID=BuilderOptions.SubNodeVector.at(i).getProxyId();
-                          std::cout<<"ID PROXY: "<<BuilderOptions.SubNodeVector.at(i).getProxyId()<<std::endl;
+                          aKeyValue.ProxyDescription=BuilderOptions.SubNodeVector.at(i).getProxyDescription();
+                          //std::cout<<"ID PROXY: "<<BuilderOptions.SubNodeVector.at(i).getProxyId()<<std::endl;
                           //std::cout<<"ProxyId: "<<BuilderOptions.SubNodeVector.at(i).getRowTitles()<<std::endl;
                           //std::cout<<"StreamType: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType()<<std::endl;
                           //std::cout<<"Data Type: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType()<<std::endl;
                           aKeyValue.data_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType();
                           aKeyValue.stream_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType();
+                          aKeyValue.MsgType=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getMsgType();
                           if(aKeyValue.isValidKey())
                           {
                               const auto aPtr=getComm(BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getCommType());
@@ -128,7 +149,7 @@ namespace NSBuilders
           */
          std::unordered_map<key,COMUNICACION::IComm * const,std::hash<key>> getComMapOption()
          {
-            return &comm_map;
+            return comm_map;
          }
     private:
          COMUNICACION::IComm * getComm(const std::string & aCommType) const
@@ -163,5 +184,6 @@ namespace NSBuilders
          std::unordered_map<key,COMUNICACION::IComm * const,std::hash<key>> comm_map;
          //std::unorderer_map<key,COMUNICACION::IComm *> comm_map;
     };
+    typedef Builders<NSCommonsLibs::BuilderType::StreamType> StreamBuilderType;
 }
 #endif // BUILDERS_STREAMS_H

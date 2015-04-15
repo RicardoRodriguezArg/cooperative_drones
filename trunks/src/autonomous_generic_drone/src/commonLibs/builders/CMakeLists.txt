@@ -31,6 +31,7 @@ set (HDR builders_traits.h
                 builder_options.h
                 builders_proxy.h
                 utils_builder.h
+                builder_proxy_info.h
          
     )
 set (SRC
@@ -40,3 +41,8 @@ set (SRC
         )
 
 add_executable(${PROJECT_NAME} ${SRC} ${HDR})
+
+add_executable(test_builders_proxy test_builders_proxy.cpp ../tinyxml2/tinyxml2.cpp
+                                                            ../netlink/socket.cc
+                                                            ${HDR}
+                )

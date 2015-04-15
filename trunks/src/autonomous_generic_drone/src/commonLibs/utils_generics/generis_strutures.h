@@ -10,6 +10,7 @@
 #define GENERIS_STRUTURES_H
 #include <tuple>
 #include <type_traits>
+#include <string>
 namespace std {
     struct enum_hash
     {
@@ -52,6 +53,53 @@ namespace NSUtils
                 );
       }
     };
+
+    /**
+      *@brief clase utiliria para ejecutar una funcion en una tupla
+      */
+    //caso generico
+    namespace{
+      static const unsigned ZERO_INDEX=0U;
+    }
+    template<unsigned INDEX, typename CallBack,typename ...Tuple>
+    struct tuple_custom_iterator
+    {
+      void operator()(std::tuple<Tuple...>& tuple, CallBack aCallBackFunction)
+      {
+        aCallBackFunction(std::get<INDEX>(tuple));
+        //lamada recursiva
+        tuple_custom_iterator<INDEX-1,CallBack,Tuple...>{}(tuple,aCallBackFunction);
+      }
+    };
+    //caso de salida
+    /**
+     *@brief caso de salida de la recursion, en este caso llego a cero el indice
+     */
+    template<typename CallBack,typename ...Tuple>
+    struct tuple_custom_iterator<ZERO_INDEX,CallBack,Tuple...>
+    {
+      void operator()(std::tuple<Tuple...>& tuple, CallBack aCallBackFunction)
+      {
+        aCallBackFunction(std::get<ZERO_INDEX>(tuple));
+
+      }
+    };
+
+    template<typename CallBack, typename ...TupleParams>
+     void tuple_iterator(CallBack callback, std::tuple<TupleParams...> tuple)
+    {
+      tuple_custom_iterator<std::tuple_size<std::tuple<TupleParams...>>::value,CallBack,TupleParams ...> iterator;
+      iterator(tuple,callback);
+    }
+
+    template<typename tuple_type>
+    void clean_tuple(tuple_type & aTupleType)
+    {
+      aTupleType.clear();
+    }
+
+
+
 }
 
 

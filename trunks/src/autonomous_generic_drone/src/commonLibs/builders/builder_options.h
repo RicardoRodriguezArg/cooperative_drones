@@ -26,12 +26,13 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
             {
                 typedef std::tuple<std::string,std::string,std::string> INNER_NODE_OPTIONS;
                  Options():SUB_NODE_OPTIONS(std::make_tuple("SUB_NODE_OPTIONS","Option"))
-                   ,inner_node_vector{std::make_tuple("OPTION_TAG_STREAM_TYPE","stream_type","")
-                                                     ,std::make_tuple("OPTION_TAG_DATA_TYPE","data_type","")
+                   ,inner_node_vector{              std::make_tuple("OPTION_TAG_STREAM_TYPE","stream_type","")
+                                                    ,std::make_tuple("OPTION_TAG_DATA_TYPE","data_type","")
                                                     ,std::make_tuple("OPTION_TAG_CONNECTION_TYPE","connection_type","")
                                                     ,std::make_tuple("OPTION_TAG_IP","ip","")
                                                     ,std::make_tuple("OPTION_TAG_PORT","port","")
                                                     ,std::make_tuple("OPTION_TAG_LOCALPORT","localport","")
+                                                    ,std::make_tuple("OPTION_TAG_MSG_TYPE","msg_type","")
                                                      }
                  {}
                  enum SubNodeIndex
@@ -39,6 +40,11 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
                      Row_Tag,
                      Row_name,
                      Row_value
+                 };
+                 enum OPTION_TAG_INDEX
+                 {
+                   OPTION_TAG_STREAM_TYPE_INDEX=0,
+                   OPTION_TAG_MSG_TYPE_INDEX=6
                  };
                  void cleanInnerOptions()
                  {
@@ -87,7 +93,11 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
                  {
                         return std::get<2>(inner_node_vector.at(5));
                  }
+                 std::string getMsgType() const
+                 {
+                   return std::get<Row_value>(inner_node_vector.at(OPTION_TAG_MSG_TYPE_INDEX));
 
+                 }
                 std::tuple<const std::string,const std::string> SUB_NODE_OPTIONS;
                 std::vector<INNER_NODE_OPTIONS> inner_node_vector;
             };//Fin Options
@@ -119,6 +129,14 @@ struct BuildersOptions<NSCommonsLibs::BuilderType::StreamType>
                 Row_value
             };
             std::string getRowTitles() const
+            {
+                return std::get<2>(optionsVector.at(1));//nombre literal del proxy
+            }
+            /**
+             * @brief getProxyDescription Obtiene el nombre del proxy
+             * @return
+             */
+            std::string getProxyDescription() const
             {
                 return std::get<2>(optionsVector.at(1));//nombre literal del proxy
             }
