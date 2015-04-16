@@ -69,6 +69,7 @@ namespace NSBuilders
             KERNEL::KernelFactory::getInstance().registerFactoryFunction((iterator->first),[](void)->KERNEL::FactoryBase *{return new Proxy();});
             //actaulizo el puntero del mapa
             (iterator->second).ProxyPtr=reinterpret_cast<Proxy *>(KERNEL::KernelFactory::getInstance().createInstance((iterator->first)).get());
+            //aca configuramos al proxy
         }
     }
     void configProxys()
