@@ -216,12 +216,12 @@ class MessageHeader : public ::google::protobuf::Message {
   inline ::Mensajes::MessageHeader_MessageType msgtype() const;
   inline void set_msgtype(::Mensajes::MessageHeader_MessageType value);
 
-  // required uint32 IDCompDestiny = 5;
-  inline bool has_idcompdestiny() const;
-  inline void clear_idcompdestiny();
-  static const int kIDCompDestinyFieldNumber = 5;
-  inline ::google::protobuf::uint32 idcompdestiny() const;
-  inline void set_idcompdestiny(::google::protobuf::uint32 value);
+  // required uint32 IDCompTarget = 5;
+  inline bool has_idcomptarget() const;
+  inline void clear_idcomptarget();
+  static const int kIDCompTargetFieldNumber = 5;
+  inline ::google::protobuf::uint32 idcomptarget() const;
+  inline void set_idcomptarget(::google::protobuf::uint32 value);
 
   // required double timestamp = 6;
   inline bool has_timestamp() const;
@@ -240,8 +240,8 @@ class MessageHeader : public ::google::protobuf::Message {
   inline void clear_has_returnack();
   inline void set_has_msgtype();
   inline void clear_has_msgtype();
-  inline void set_has_idcompdestiny();
-  inline void clear_has_idcompdestiny();
+  inline void set_has_idcomptarget();
+  inline void clear_has_idcomptarget();
   inline void set_has_timestamp();
   inline void clear_has_timestamp();
 
@@ -252,7 +252,7 @@ class MessageHeader : public ::google::protobuf::Message {
   bool returnack_;
   int msgtype_;
   double timestamp_;
-  ::google::protobuf::uint32 idcompdestiny_;
+  ::google::protobuf::uint32 idcomptarget_;
 
   mutable int _cached_size_;
   ::google::protobuf::uint32 _has_bits_[(6 + 31) / 32];
@@ -1079,26 +1079,26 @@ inline void MessageHeader::set_msgtype(::Mensajes::MessageHeader_MessageType val
   msgtype_ = value;
 }
 
-// required uint32 IDCompDestiny = 5;
-inline bool MessageHeader::has_idcompdestiny() const {
+// required uint32 IDCompTarget = 5;
+inline bool MessageHeader::has_idcomptarget() const {
   return (_has_bits_[0] & 0x00000010u) != 0;
 }
-inline void MessageHeader::set_has_idcompdestiny() {
+inline void MessageHeader::set_has_idcomptarget() {
   _has_bits_[0] |= 0x00000010u;
 }
-inline void MessageHeader::clear_has_idcompdestiny() {
+inline void MessageHeader::clear_has_idcomptarget() {
   _has_bits_[0] &= ~0x00000010u;
 }
-inline void MessageHeader::clear_idcompdestiny() {
-  idcompdestiny_ = 0u;
-  clear_has_idcompdestiny();
+inline void MessageHeader::clear_idcomptarget() {
+  idcomptarget_ = 0u;
+  clear_has_idcomptarget();
 }
-inline ::google::protobuf::uint32 MessageHeader::idcompdestiny() const {
-  return idcompdestiny_;
+inline ::google::protobuf::uint32 MessageHeader::idcomptarget() const {
+  return idcomptarget_;
 }
-inline void MessageHeader::set_idcompdestiny(::google::protobuf::uint32 value) {
-  set_has_idcompdestiny();
-  idcompdestiny_ = value;
+inline void MessageHeader::set_idcomptarget(::google::protobuf::uint32 value) {
+  set_has_idcomptarget();
+  idcomptarget_ = value;
 }
 
 // required double timestamp = 6;

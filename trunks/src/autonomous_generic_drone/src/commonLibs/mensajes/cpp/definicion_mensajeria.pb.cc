@@ -60,7 +60,7 @@ void protobuf_AssignDesc_definicion_5fmensajeria_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageHeader, idmessage_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageHeader, returnack_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageHeader, msgtype_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageHeader, idcompdestiny_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageHeader, idcomptarget_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MessageHeader, timestamp_),
   };
   MessageHeader_reflection_ =
@@ -237,34 +237,34 @@ void protobuf_AddDesc_definicion_5fmensajeria_2eproto() {
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\033definicion_mensajeria.proto\022\010Mensajes\""
-    "\334\001\n\rMessageHeader\022\024\n\014IDCompSource\030\001 \002(\r\022"
+    "\333\001\n\rMessageHeader\022\024\n\014IDCompSource\030\001 \002(\r\022"
     "\021\n\tIDMessage\030\002 \002(\r\022\021\n\tReturnAck\030\003 \002(\010\0224\n"
     "\007MsgType\030\004 \002(\0162#.Mensajes.MessageHeader."
-    "MessageType\022\025\n\rIDCompDestiny\030\005 \002(\r\022\021\n\tti"
-    "mestamp\030\006 \002(\001\"/\n\013MessageType\022\013\n\007Command\020"
-    "\001\022\t\n\005Event\020\002\022\010\n\004Data\020\003\"\204\002\n\tTypeValue\022(\n\006"
-    "typArg\030\001 \002(\0162\030.Mensajes.TypeValue.Type\022\016"
-    "\n\006strArg\030\002 \001(\t\022\020\n\010int32Arg\030\003 \001(\005\022\021\n\tuint"
-    "32Arg\030\004 \001(\r\022\020\n\010floatArg\030\005 \001(\002\022\021\n\tdoubleA"
-    "rg\030\006 \001(\001\022\017\n\007boolArg\030\007 \001(\010\"b\n\004Type\022\016\n\nstr"
-    "ingType\020\001\022\r\n\tint32Type\020\002\022\016\n\nuint32Type\020\003"
-    "\022\r\n\tfloatType\020\004\022\016\n\ndoubleType\020\005\022\014\n\010boolT"
-    "ype\020\006\"A\n\tInfoDupla\022\r\n\005IDArg\030\002 \002(\r\022%\n\010Arg"
-    "Value\030\001 \002(\0132\023.Mensajes.TypeValue\"\203\002\n\016Mes"
-    "sageCommand\022\'\n\006header\030\004 \002(\0132\027.Mensajes.M"
-    "essageHeader\022\021\n\tIDCommand\030\001 \002(\r\0224\n\010CmdSt"
-    "ate\030\002 \002(\0162\".Mensajes.MessageCommand.ECmd"
-    "State\022%\n\010argument\030\003 \003(\0132\023.Mensajes.InfoD"
-    "upla\"X\n\tECmdState\022\010\n\004SEND\020\001\022\013\n\007CMD_ACK\020\002"
-    "\022\017\n\013CMD_NOT_ACK\020\003\022\020\n\014CMD_EXECUTED\020\004\022\021\n\rC"
-    "MD_EXECUTING\020\005\"8\n\016EventInfoDupla\022\024\n\014idCo"
-    "mponente\030\001 \002(\r\022\020\n\010idEvento\030\002 \002(\r\"t\n\014Mess"
-    "ageEvent\022\'\n\006header\030\002 \002(\0132\027.Mensajes.Mess"
-    "ageHeader\022(\n\006events\030\001 \003(\0132\030.Mensajes.Eve"
-    "ntInfoDupla\022\021\n\teventType\030\003 \002(\r\"n\n\013Messag"
-    "eData\022\'\n\006header\030\002 \002(\0132\027.Mensajes.Message"
-    "Header\022\016\n\006IDData\030\003 \002(\r\022&\n\tmetadatos\030\001 \003("
-    "\0132\023.Mensajes.InfoDupla", 1142);
+    "MessageType\022\024\n\014IDCompTarget\030\005 \002(\r\022\021\n\ttim"
+    "estamp\030\006 \002(\001\"/\n\013MessageType\022\013\n\007Command\020\001"
+    "\022\t\n\005Event\020\002\022\010\n\004Data\020\003\"\204\002\n\tTypeValue\022(\n\006t"
+    "ypArg\030\001 \002(\0162\030.Mensajes.TypeValue.Type\022\016\n"
+    "\006strArg\030\002 \001(\t\022\020\n\010int32Arg\030\003 \001(\005\022\021\n\tuint3"
+    "2Arg\030\004 \001(\r\022\020\n\010floatArg\030\005 \001(\002\022\021\n\tdoubleAr"
+    "g\030\006 \001(\001\022\017\n\007boolArg\030\007 \001(\010\"b\n\004Type\022\016\n\nstri"
+    "ngType\020\001\022\r\n\tint32Type\020\002\022\016\n\nuint32Type\020\003\022"
+    "\r\n\tfloatType\020\004\022\016\n\ndoubleType\020\005\022\014\n\010boolTy"
+    "pe\020\006\"A\n\tInfoDupla\022\r\n\005IDArg\030\002 \002(\r\022%\n\010ArgV"
+    "alue\030\001 \002(\0132\023.Mensajes.TypeValue\"\203\002\n\016Mess"
+    "ageCommand\022\'\n\006header\030\004 \002(\0132\027.Mensajes.Me"
+    "ssageHeader\022\021\n\tIDCommand\030\001 \002(\r\0224\n\010CmdSta"
+    "te\030\002 \002(\0162\".Mensajes.MessageCommand.ECmdS"
+    "tate\022%\n\010argument\030\003 \003(\0132\023.Mensajes.InfoDu"
+    "pla\"X\n\tECmdState\022\010\n\004SEND\020\001\022\013\n\007CMD_ACK\020\002\022"
+    "\017\n\013CMD_NOT_ACK\020\003\022\020\n\014CMD_EXECUTED\020\004\022\021\n\rCM"
+    "D_EXECUTING\020\005\"8\n\016EventInfoDupla\022\024\n\014idCom"
+    "ponente\030\001 \002(\r\022\020\n\010idEvento\030\002 \002(\r\"t\n\014Messa"
+    "geEvent\022\'\n\006header\030\002 \002(\0132\027.Mensajes.Messa"
+    "geHeader\022(\n\006events\030\001 \003(\0132\030.Mensajes.Even"
+    "tInfoDupla\022\021\n\teventType\030\003 \002(\r\"n\n\013Message"
+    "Data\022\'\n\006header\030\002 \002(\0132\027.Mensajes.MessageH"
+    "eader\022\016\n\006IDData\030\003 \002(\r\022&\n\tmetadatos\030\001 \003(\013"
+    "2\023.Mensajes.InfoDupla", 1141);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "definicion_mensajeria.proto", &protobuf_RegisterTypes);
   MessageHeader::default_instance_ = new MessageHeader();
@@ -321,7 +321,7 @@ const int MessageHeader::kIDCompSourceFieldNumber;
 const int MessageHeader::kIDMessageFieldNumber;
 const int MessageHeader::kReturnAckFieldNumber;
 const int MessageHeader::kMsgTypeFieldNumber;
-const int MessageHeader::kIDCompDestinyFieldNumber;
+const int MessageHeader::kIDCompTargetFieldNumber;
 const int MessageHeader::kTimestampFieldNumber;
 #endif  // !_MSC_VER
 
@@ -345,7 +345,7 @@ void MessageHeader::SharedCtor() {
   idmessage_ = 0u;
   returnack_ = false;
   msgtype_ = 1;
-  idcompdestiny_ = 0u;
+  idcomptarget_ = 0u;
   timestamp_ = 0;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
@@ -386,7 +386,7 @@ void MessageHeader::Clear() {
     idmessage_ = 0u;
     returnack_ = false;
     msgtype_ = 1;
-    idcompdestiny_ = 0u;
+    idcomptarget_ = 0u;
     timestamp_ = 0;
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -463,19 +463,19 @@ bool MessageHeader::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(40)) goto parse_IDCompDestiny;
+        if (input->ExpectTag(40)) goto parse_IDCompTarget;
         break;
       }
 
-      // required uint32 IDCompDestiny = 5;
+      // required uint32 IDCompTarget = 5;
       case 5: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_IDCompDestiny:
+         parse_IDCompTarget:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &idcompdestiny_)));
-          set_has_idcompdestiny();
+                 input, &idcomptarget_)));
+          set_has_idcomptarget();
         } else {
           goto handle_uninterpreted;
         }
@@ -538,9 +538,9 @@ void MessageHeader::SerializeWithCachedSizes(
       4, this->msgtype(), output);
   }
 
-  // required uint32 IDCompDestiny = 5;
-  if (has_idcompdestiny()) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->idcompdestiny(), output);
+  // required uint32 IDCompTarget = 5;
+  if (has_idcomptarget()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->idcomptarget(), output);
   }
 
   // required double timestamp = 6;
@@ -577,9 +577,9 @@ void MessageHeader::SerializeWithCachedSizes(
       4, this->msgtype(), target);
   }
 
-  // required uint32 IDCompDestiny = 5;
-  if (has_idcompdestiny()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->idcompdestiny(), target);
+  // required uint32 IDCompTarget = 5;
+  if (has_idcomptarget()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->idcomptarget(), target);
   }
 
   // required double timestamp = 6;
@@ -623,11 +623,11 @@ int MessageHeader::ByteSize() const {
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->msgtype());
     }
 
-    // required uint32 IDCompDestiny = 5;
-    if (has_idcompdestiny()) {
+    // required uint32 IDCompTarget = 5;
+    if (has_idcomptarget()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->idcompdestiny());
+          this->idcomptarget());
     }
 
     // required double timestamp = 6;
@@ -674,8 +674,8 @@ void MessageHeader::MergeFrom(const MessageHeader& from) {
     if (from.has_msgtype()) {
       set_msgtype(from.msgtype());
     }
-    if (from.has_idcompdestiny()) {
-      set_idcompdestiny(from.idcompdestiny());
+    if (from.has_idcomptarget()) {
+      set_idcomptarget(from.idcomptarget());
     }
     if (from.has_timestamp()) {
       set_timestamp(from.timestamp());
@@ -708,7 +708,7 @@ void MessageHeader::Swap(MessageHeader* other) {
     std::swap(idmessage_, other->idmessage_);
     std::swap(returnack_, other->returnack_);
     std::swap(msgtype_, other->msgtype_);
-    std::swap(idcompdestiny_, other->idcompdestiny_);
+    std::swap(idcomptarget_, other->idcomptarget_);
     std::swap(timestamp_, other->timestamp_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
