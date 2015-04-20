@@ -28,7 +28,10 @@ class ProxyBase : public IServiceInterface , public KERNEL::FactoryBase
       ,PROXYID(aProxyID)
 
     {}
-    ~ProxyBase(){}
+    virtual ~ProxyBase()
+    {
+      //TODO: Liberar los mapas de la interface de serializacion
+    }
     void setConnector(const std::string & SenderIDChannel ,CommInterface * const aMsgSender)
     {
         ConnectorMaps.insert(std::make_pair(SenderIDChannel,aMsgSender));

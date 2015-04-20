@@ -7,6 +7,12 @@
 namespace {
   namespace Test
   {
+    struct SerializerInterface
+    {};
+    struct NanoSerializer : public SerializerInterface
+    {};
+    struct ProtoSerializer : public SerializerInterface
+    {};
     struct ComInterface
     {
 
@@ -20,6 +26,10 @@ namespace {
 
       {}
       void setConnector(const std::string & SenderIDChannel ,COMUNICACION::IComm * const aMsgSender)
+      {
+
+      }
+      void setDataTypeSerializer(const std::string & aMsgChannel, SerializerInterface * const aSerializer )
       {
 
       }
@@ -51,7 +61,9 @@ int main()
   ::Test::Proxy * aPtr=nullptr;
   ProxyPtrContainner.insert(std::make_pair("puntero_nulo",aPtr));
   */
-  NSBuilders::Builders<NSCommonsLibs::BuilderType::ProxyType,NSBuilders::StreamBuilderType,::Test::Proxy> aProxyBuilder(&aStreamBuilder);
+
+  NSBuilders::Builders<NSCommonsLibs::BuilderType::ProxyType,NSBuilders::StreamBuilderType,::Test::Proxy
+      ,::Test::SerializerInterface,::Test::ProtoSerializer,::Test::NanoSerializer> aProxyBuilder(&aStreamBuilder);
 
   aErrorCode=-1;
   aProxyBuilder.buildAll(aErrorCode);

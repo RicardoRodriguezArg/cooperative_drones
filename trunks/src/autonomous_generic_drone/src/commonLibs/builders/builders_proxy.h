@@ -6,6 +6,7 @@
 #include "../factory/factory_register.h"
 #include "../utils_generics/utils_transform_data.h"
 #include "definitions.h"
+
 namespace NSBuilders
 {
   namespace{
@@ -15,8 +16,8 @@ namespace NSBuilders
    *@brief: Esta clase no realiza el parsing del archivo XML sino que toma la clase que encapsula las opciones de
    *otro builder (En este caso de comunicaciones)
    */
-  template<class StreamBuilder,class Proxy,class ...Args>
-  class Builders<NSCommonsLibs::BuilderType::ProxyType,StreamBuilder,Proxy,Args...> : public IBuilderInterface
+  template<class StreamBuilder,class Proxy,class SerializadorInterface,class ProtoSerializer,class NanoSerializer, class ...Args>
+  class Builders<NSCommonsLibs::BuilderType::ProxyType,StreamBuilder,Proxy,SerializadorInterface,ProtoSerializer,NanoSerializer,Args...> : public IBuilderInterface
   {
     typedef NSBuilders::Utils::ProxyData<Proxy> ProxyDataConfig;
     const std::string PROXY_OUT_STREAM=std::move(std::string("out"));
@@ -35,7 +36,6 @@ namespace NSBuilders
         {
            createProxyMap();//extraigo los nombre sin repeticiones
            registerProxyInFactory();
-           printProxysNames();
         }
 
     }
@@ -52,7 +52,6 @@ namespace NSBuilders
              if(result.second)
              {
              ProxyPtrContainner[(iterator->first).ProxyDescription].ProxyID=(iterator->first).ProxyID;
-             std::cout<<"ProxyId(ProxyPtr): "<<ProxyPtrContainner[(iterator->first).ProxyDescription].ProxyID<<std::endl;
              ProxyPtrContainner[(iterator->first).ProxyDescription].DataType=(iterator->first).data_type;/*Command Data Event*/
              ProxyPtrContainner[(iterator->first).ProxyDescription].MsgDataType=(iterator->first).MsgType;
             }
@@ -70,7 +69,6 @@ namespace NSBuilders
     {
       for(auto iterator= ProxyPtrContainner.begin();iterator!=ProxyPtrContainner.end();iterator++)
         {
-
             KERNEL::KernelFactory::getInstance().registerFactoryFunction((iterator->first),[](void)->KERNEL::FactoryBase *{return new Proxy();});
             //actaulizo el puntero del mapa
             (iterator->second).ProxyPtr=reinterpret_cast<Proxy *>(KERNEL::KernelFactory::getInstance().createInstance((iterator->first)).get());
@@ -87,17 +85,19 @@ namespace NSBuilders
       if( aComPtr!=nullptr)
         {
           (aProxyDataConfigPtr->ProxyPtr)->setConnector(aProxyDataConfigPtr->DataType,aComPtr);
-          //(aProxyDataConfigPtr->ProxyPtr)->setDataTypeSerializer(aProxyDataConfigPtr->data_type,getSerializer(aProxyDataConfigPtr->MsgType));
+          (aProxyDataConfigPtr->ProxyPtr)->setDataTypeSerializer(aProxyDataConfigPtr->DataType,getSerializer(aProxyDataConfigPtr->MsgDataType));
         }
 
     }
-    /*
-    SerializerInterface * getSerializer(const std::string & aSerializerType)
+
+    SerializadorInterface * getSerializer(const std::string & aSerializerType)
     {
-      if(aSerializerType.compare("proto")==0) return (new ProtoSerializer);
-      if(aSerializerType.compare("nano")==0) return (new NanoSerializer);
+    SerializadorInterface * aPtr=nullptr;
+      if(aSerializerType.compare("proto")==0) aPtr=(new ProtoSerializer);
+      if(aSerializerType.compare("nano")==0) aPtr=(new NanoSerializer);
+      return aPtr;
     }
-*/
+
     ProxyDataConfig ProxyDataConfig_;
     std::unordered_map<std::string,ProxyDataConfig ,std::hash<std::string>> ProxyPtrContainner;
     StreamBuilder * const StreamBuilderPtr;
