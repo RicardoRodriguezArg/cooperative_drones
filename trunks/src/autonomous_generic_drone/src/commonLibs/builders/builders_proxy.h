@@ -4,6 +4,8 @@
 #include "utils_builder.h"
 #include "builder_proxy_info.h"
 #include "../factory/factory_register.h"
+#include "../utils_generics/utils_transform_data.h"
+#include "definitions.h"
 namespace NSBuilders
 {
   namespace{
@@ -17,8 +19,10 @@ namespace NSBuilders
   class Builders<NSCommonsLibs::BuilderType::ProxyType,StreamBuilder,Proxy,Args...> : public IBuilderInterface
   {
     typedef NSBuilders::Utils::ProxyData<Proxy> ProxyDataConfig;
+    const std::string PROXY_OUT_STREAM=std::move(std::string("out"));
   public:
     Builders(StreamBuilder * const aStreamBuilder=nullptr):StreamBuilderPtr(aStreamBuilder)
+    ,ProxyId(std::get<NSCommonsLibs::ERROR_CODES::ERROR_CODE_INDEX>(NSCommonsLibs::ERROR_CODES::OK_ERROR_TUPLE))
     {}
     /**
      * @brief buildAll toma el puntero a la estructura que contienen las opciones del builder que realizo el parsing de las opciones de comunicacion
@@ -66,19 +70,38 @@ namespace NSBuilders
     {
       for(auto iterator= ProxyPtrContainner.begin();iterator!=ProxyPtrContainner.end();iterator++)
         {
+
             KERNEL::KernelFactory::getInstance().registerFactoryFunction((iterator->first),[](void)->KERNEL::FactoryBase *{return new Proxy();});
             //actaulizo el puntero del mapa
             (iterator->second).ProxyPtr=reinterpret_cast<Proxy *>(KERNEL::KernelFactory::getInstance().createInstance((iterator->first)).get());
             //aca configuramos al proxy
+            configProxys((iterator->first),&(iterator->second));
         }
     }
-    void configProxys()
+    void configProxys(const std::string & aProxyDescription,ProxyDataConfig * const aProxyDataConfigPtr )
     {
+      //seteo del id del proxy
+      NSUtils::getValueFromString<int>(ProxyId,aProxyDataConfigPtr->ProxyID);
+      (aProxyDataConfigPtr->ProxyPtr)->setProxyId(static_cast<unsigned>(ProxyId));
+      const auto aComPtr=StreamBuilderPtr->getComInterface(aProxyDescription,PROXY_OUT_STREAM,aProxyDataConfigPtr->DataType);
+      if( aComPtr!=nullptr)
+        {
+          (aProxyDataConfigPtr->ProxyPtr)->setConnector(aProxyDataConfigPtr->DataType,aComPtr);
+          //(aProxyDataConfigPtr->ProxyPtr)->setDataTypeSerializer(aProxyDataConfigPtr->data_type,getSerializer(aProxyDataConfigPtr->MsgType));
+        }
 
     }
+    /*
+    SerializerInterface * getSerializer(const std::string & aSerializerType)
+    {
+      if(aSerializerType.compare("proto")==0) return (new ProtoSerializer);
+      if(aSerializerType.compare("nano")==0) return (new NanoSerializer);
+    }
+*/
     ProxyDataConfig ProxyDataConfig_;
     std::unordered_map<std::string,ProxyDataConfig ,std::hash<std::string>> ProxyPtrContainner;
     StreamBuilder * const StreamBuilderPtr;
+    int ProxyId;
 
   };
 }

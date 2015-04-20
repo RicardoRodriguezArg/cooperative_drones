@@ -41,6 +41,7 @@ class ProxyBase : public IServiceInterface , public KERNEL::FactoryBase
     {
       return PROXY_DEFAULT_FACTORY_ID;
     }
+
     void setProxyId(const unsigned & aProxyId)
     {
       PROXYID=aProxyId;
@@ -50,9 +51,14 @@ class ProxyBase : public IServiceInterface , public KERNEL::FactoryBase
         ProxyProxyMap.insert(std::make_pair(aProxyProcessID,aProxyProcess));
     }
 
-    void setDataTypeSerializer(const std::string & aSerializerID, Serializer * const aSerializer )
+    /**
+     * @brief setDataTypeSerializer setea el serializador segun el canal que se este usando
+     * @param aMsgChannel
+     * @param aSerializer
+     */
+    void setDataTypeSerializer(const std::string & aMsgChannel, Serializer * const aSerializer )
     {
-      MsgSerializerMap.insert(std::make_pair( aSerializerID,aSerializer));
+      MsgSerializerMap.insert(std::make_pair( aMsgChannel,aSerializer));
     }
 
     void initConnector(const std::string & aConnectorTypeId)

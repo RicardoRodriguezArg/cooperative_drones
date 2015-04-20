@@ -7,13 +7,23 @@
 namespace {
   namespace Test
   {
+    struct ComInterface
+    {
+
+    };
     struct Proxy:public KERNEL::FactoryBase
     {
       Proxy()
       {
        }
-      void setProxyId(const unsigned & aProxyID)
+      void setProxyId(const unsigned & aProxyId)
+
       {}
+      void setConnector(const std::string & SenderIDChannel ,COMUNICACION::IComm * const aMsgSender)
+      {
+
+      }
+
       static const int TEST_PROXY_ID_DEFAULT=100;
       virtual int getID()
       {
@@ -42,8 +52,10 @@ int main()
   ProxyPtrContainner.insert(std::make_pair("puntero_nulo",aPtr));
   */
   NSBuilders::Builders<NSCommonsLibs::BuilderType::ProxyType,NSBuilders::StreamBuilderType,::Test::Proxy> aProxyBuilder(&aStreamBuilder);
-  aProxyBuilder.buildAll(aErrorCode);
 
+  aErrorCode=-1;
+  aProxyBuilder.buildAll(aErrorCode);
+  std::cout<<"ErrorCode; "<<aErrorCode<<std::endl;
 
 
   return 0;
