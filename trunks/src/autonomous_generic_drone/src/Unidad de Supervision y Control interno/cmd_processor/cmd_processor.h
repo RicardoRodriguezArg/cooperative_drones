@@ -5,7 +5,7 @@
 #include <mutex>
 namespace NSCmdProcessor
 {
-
+template<class MsgType>
 class CmdProcessor : public NSKernel::IServiceTarget
 {
  public:
@@ -33,6 +33,7 @@ private:
     }
     static CmdProcessor  * CmdProcessorPtr;
 };
-CmdProcessor * CmdProcessor::CmdProcessorPtr=nullptr;
+template<class Msg>
+CmdProcessor<Msg> * CmdProcessor<Msg>::CmdProcessorPtr=nullptr;
 }
 #endif // CMD_PROCESSOR_H

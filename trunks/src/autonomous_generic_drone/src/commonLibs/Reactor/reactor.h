@@ -8,8 +8,11 @@
 #ifndef REACTOR_H
 #define REACTOR_H
 #include <vector>
+#include <tuple>
 #include <thread>
 #include <mutex>
+#include <glog/logging.h>
+#include <iostream>
 namespace NSReactorLayer
 {
   template<typename CommType, typename ServiceTargetInterface>
@@ -20,10 +23,24 @@ namespace NSReactorLayer
     ,isActive(false)
     ,ErrorCode(0)
     ,isServicesActive(false)
-    {}
+    {
+      LOG(INFO)<<"Constructor Reactor";
+      std::cout<<"!!!!!Constructor Reactor!!!!"<<std::endl;
+    }
     void make_service_tuple(CommType * const aCommType, ServiceTargetInterface * const aServiceTargetInterface)
     {
-      vector_reactor.emplace_back(std::make_tuple(aCommType,aServiceTargetInterface));
+      LOG(INFO)<<"vector_reactor.size(): "<<vector_reactor.size();
+      LOG(INFO)<<"otro.size(): "<<otro_vector.size();
+      otro_vector.emplace_back(12);
+      if(aCommType!=nullptr && aServiceTargetInterface!=nullptr)
+        {
+          LOG(INFO)<<"Creando Tuple";
+        const auto aTuple=std::make_tuple(nullptr,nullptr);//std::make_tuple(aCommType,aServiceTargetInterface);
+        LOG(INFO)<<"Insertando en el vector";
+        vector_reactor.emplace_back(aTuple);
+        LOG(INFO)<<"Vector Size: "<<vector_reactor.size();
+
+        }
     }
     void initCommServices()
     {
@@ -73,7 +90,8 @@ namespace NSReactorLayer
             }
         }
     }
-    std::vector<std::tuple<CommType * const,ServiceTargetInterface * const>> vector_reactor;
+    std::vector<std::tuple<CommType * const,ServiceTargetInterface * const> > vector_reactor;
+    std::vector<int> otro_vector;
     std::thread * ThreadPtr;
     volatile bool isActive;
     std::mutex mutex;

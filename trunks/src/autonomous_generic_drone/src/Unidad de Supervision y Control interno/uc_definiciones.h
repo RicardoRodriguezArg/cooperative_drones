@@ -1,11 +1,13 @@
 #ifndef UC_DEFINICIONES_H
 #define UC_DEFINICIONES_H
 #include <string>
+
 namespace ControlDef
 {
     namespace ERROR_CODE
     {
         constexpr int OK_ERROR_CODE=0;
+        //const std::tuple<int,std::string> ERROR_STATE_NOT_CONFIGURATED(-1,"ERROR_STATE_NOT_CONFIGURATED");
     }
     namespace BuilderName
     {
@@ -13,7 +15,8 @@ namespace ControlDef
 
     }
     namespace ConfigFile {
-    static const std::string CommunicationXmlFile("/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/generaloptionconfig.xml");
+    static const std::string CommunicationXmlFile("/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/config/config/generaloptionconfig.xml");
+
     }
     namespace ClassID
     {

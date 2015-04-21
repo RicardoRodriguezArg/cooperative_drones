@@ -10,9 +10,11 @@
 #include <iostream>
 #include <mutex>
 #include <glog/logging.h>
+#include "uc_definiciones.h"
 #include "../commonLibs/state_machine/generic_state_machine.h"
 #include "../commonLibs/builders/builders_streams.h"
-#include "uc_definiciones.h"
+#include "../state_machine/create_kernel_components.h"
+
 //#include "state_shutdown_uc.h"
 //#include "configurateKernelComponents.h"
 //#include "state_create_kernel_component.h"
@@ -50,19 +52,16 @@ public:
 
     void createBuilders( Kernel * const aKernelPtr ,int & aErrorCode )
     {
-            LOG(INFO)<<"Buildenado las opciones de comunicacion"<<std::endl;
-            StreamBuilder.buildAll(aErrorCode);
-            LOG(INFO)<<"ErrorCode al crear StreamBuilder:  "<<aErrorCode<<std::endl;
-           if(aErrorCode==ControlDef::ERROR_CODE::OK_ERROR_CODE)
-            aKernelPtr->setBuilderInterface(ControlDef::BuilderName::StreamBuilder,&StreamBuilder);
+      LOG(INFO)<<"Buildenado las opciones de comunicacion"<<std::endl;
+      StreamBuilder.buildAll(aErrorCode);
+      LOG(INFO)<<"ErrorCode al crear StreamBuilder:  "<<aErrorCode<<std::endl;
+      if(aErrorCode==ControlDef::ERROR_CODE::OK_ERROR_CODE)
+      aKernelPtr->setBuilderInterface(ControlDef::BuilderName::StreamBuilder,&StreamBuilder);
+      LOG(INFO)<<"cambio a estado de configuracion de compoenntes";
+      //TODO: agregar salto condicional al estado de shutdown
+      StateMachine<Kernel>::changeState(aKernelPtr,&NSKernel::CreateKernelComponents<Kernel>::getInstance(),_ErrorCode);
 
 
-
-        //creacion de builder finalizada
-        //cambio a estado de configuracion de compoenntes
-        //StateMachine<Kernel>::changeState(aKernelPtr,SADI_KERNEL::ConfigureKernelComponentState<Kernel>::getStatePtr(),_ErrorCode);
-       // StateMachine<Kernel>::changeState(aKernelPtr,SADI_KERNEL::CreateKernelComponents<Kernel>::getStatePtr(),_ErrorCode);
-        //
     }
 
     private:

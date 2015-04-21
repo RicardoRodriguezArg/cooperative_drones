@@ -1,14 +1,20 @@
 #ifndef KERNEL_H
 #define KERNEL_H
 #include <unordered_map>
+#include <stdexcept>
 #include <glog/logging.h>
 #include "uc_definiciones.h"
+
+#include "../../commonLibs/factory/generic_factory.h"
 #include "../../commonLibs/builders/builders_streams.h"
 #include "../../commonLibs/kernel/i_kernel_interface.h"
-#include "../../commonLibs/factory/generic_factory.h"
+
 #include "../state_machine/state_create_builder.h"
+#include "../state_machine/create_kernel_components.h"
 #include "../state_machine/state_configurate_component.h"
 #include "../cmd_processor/cmd_processor.h"
+
+
 namespace NSUC_Kernel
 {
 
@@ -17,16 +23,28 @@ class Kernel
     public:
     Kernel():CurrentState(&KERNEL::CreateBuilderState<Kernel>::getState())
       ,ErrorCode(ControlDef::ERROR_CODE::OK_ERROR_CODE)
-    {}
+    {
+      //creacion de las instancias de los estados
+      KERNEL::ConfigurateComponentState<Kernel>::getStateInstance();
+    }
     void init()
     {
         LOG(INFO)<<"iniciando la creacion de los builders del sistema";
+        //TODO: emitir EXCEPTION
         CurrentState->createBuilders(this,ErrorCode);
         LOG(INFO)<<"ErrorCode al crear los builders: "<<ErrorCode;
+    }
+    void createKernelDevices()
+    {
+      CurrentState->createKernelComponents(this,ErrorCode);
     }
     void configurateKernelComponents()
     {
         LOG(INFO)<<"Configurando los componentes del sistema";
+        //TODO: emitir EXCEPTION
+        CurrentState->configurateKernelComponents(this,ErrorCode);
+        if(ErrorCode!=0) throw std::logic_error("Error al configurar el estado configurateKernelComponents");
+        LOG(INFO)<<"CODIGO DE ERROR AL REALIZAR LA OPERACION: "<<ErrorCode;
     }
 
     void setBuilderInterface(const std::string & aBuilderName, NSBuilders::IBuilderInterface * const  aBuilderPtr)
@@ -47,13 +65,17 @@ class Kernel
     {
         initLogging();
         KERNEL::KernelFactory::getInstance();
-        NSCmdProcessor::CmdProcessor::getInstance();
+        NSCmdProcessor::CmdProcessor<void>::getInstance();
 
     }
     static void initLogging()
     {
        //GOOGLE_PROTOBUF_VERIFY_VERSION;
          google::InitGoogleLogging("unidad_control");
+    }
+    void setState(KERNEL::StateMachine<Kernel> * const aCurrentState)
+    {
+        CurrentState=aCurrentState;
     }
     private:
     KERNEL::StateMachine<Kernel> * CurrentState;

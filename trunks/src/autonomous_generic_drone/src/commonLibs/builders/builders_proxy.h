@@ -94,6 +94,7 @@ namespace NSBuilders
     {
     SerializadorInterface * aPtr=nullptr;
       if(aSerializerType.compare("proto")==0) aPtr=(new ProtoSerializer);
+      //TODO: Falta crear el serializador de comandos Nano
       if(aSerializerType.compare("nano")==0) aPtr=(new NanoSerializer);
       return aPtr;
     }

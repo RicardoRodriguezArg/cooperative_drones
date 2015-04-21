@@ -10,7 +10,7 @@
 #define BUILDERS_STREAMS_H
 #include <unordered_map>
 #include <iostream>
-
+#include <glog/logging.h>
 #include "../utils_generics/xml_reader.h"
 #include "../utils_generics/generis_strutures.h"
 #include "builders_traits.h"
@@ -43,6 +43,17 @@ struct key
      data_type.clear();
      MsgType.clear();
 
+   }
+
+   bool findByName(const std::string & aProxyDescription,
+                   const std::string & aStreamType,
+                   const std::string & aDataType/*command event telemetry*/
+                   ) const
+   {
+      return (ProxyDescription==aProxyDescription &&
+              stream_type==aStreamType &&
+              aDataType==data_type
+              );
    }
    bool operator==(const key &other) const
     {
@@ -90,57 +101,61 @@ namespace NSBuilders
                                                  ,xmlReader(&BuilderOptions)
                                                  ,ErrorCode(0)
          {
+           LOG(INFO)<<"Builder Stream: "<<aFileName<<std::endl;
              xmlReader.buildAll(ErrorCode);
-            // LOG(INFO)<<"ErrorCode: "<<ErrorCode<<std::endl;
+             LOG(INFO)<<"XML READER ErrorCode: "<<ErrorCode<<std::endl;
          }
          int getErrorCode() const
          {
                 return ErrorCode;
          }
+
          void buildAll(int & aErrorCode)
          {
-
-             for(auto i=0;i<BuilderOptions.SubNodeVector.size();i++)
+           aErrorCode=ErrorCode;
+           if(ErrorCode==0)
              {
-                 aErrorCode=-1;
-                      for(auto j=0;j<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.size();j++)
-                      {
-                          key aKeyValue;
-                          aKeyValue.ProxyID=BuilderOptions.SubNodeVector.at(i).getProxyId();
-                          aKeyValue.ProxyDescription=BuilderOptions.SubNodeVector.at(i).getProxyDescription();
-                          //std::cout<<"ID PROXY: "<<BuilderOptions.SubNodeVector.at(i).getProxyId()<<std::endl;
-                          //std::cout<<"ProxyId: "<<BuilderOptions.SubNodeVector.at(i).getRowTitles()<<std::endl;
-                          //std::cout<<"StreamType: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType()<<std::endl;
-                          //std::cout<<"Data Type: "<<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType()<<std::endl;
-                          aKeyValue.data_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType();
-                          aKeyValue.stream_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType();
-                          aKeyValue.MsgType=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getMsgType();
-                          if(aKeyValue.isValidKey())
-                          {
-                              const auto aPtr=getComm(BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getCommType());
-                              if(aPtr!=nullptr)
-                              {
-                                  configurateComm(aPtr,BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j));
-                                  comm_map.insert(std::make_pair(aKeyValue,aPtr));
-                                   aErrorCode=0;
-                              }
-                          }
-                      }
+               for(auto i=0;i<BuilderOptions.SubNodeVector.size();i++)
+                 {
+                   aErrorCode=-1;
+                   for(auto j=0;j<BuilderOptions.SubNodeVector.at(i).InnerNodeVector.size();j++)
+                     {
+                       key aKeyValue;
+                       aKeyValue.ProxyID=BuilderOptions.SubNodeVector.at(i).getProxyId();
+                       aKeyValue.ProxyDescription=BuilderOptions.SubNodeVector.at(i).getProxyDescription();
+                       aKeyValue.data_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getDataType();
+                       aKeyValue.stream_type=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getStreamType();
+                       aKeyValue.MsgType=BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getMsgType();
+
+                       if(aKeyValue.isValidKey())
+                         {
+                           const auto aPtr=getComm(BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j).getCommType());
+                           if(aPtr!=nullptr)
+                             {
+                               configurateComm(aPtr,BuilderOptions.SubNodeVector.at(i).InnerNodeVector.at(j));
+                               comm_map.insert(std::make_pair(aKeyValue,aPtr));
+                               aErrorCode=0;
+                             }
+                         }
+                     }
+                 }
              }
          }
 
          COMUNICACION::IComm * getComInterface(const std::string & ProxyName, const std::string & StreamType, const std::string & DataType)
          {
+           LOG(INFO)<<"STREAM BUILDERS getComInterface (Tamaño del mapa: )"<<comm_map.size();
+
            COMUNICACION::IComm * aComPtr=nullptr;
-            key aKeyValue;
-            aKeyValue.ProxyID=ProxyName;
-            aKeyValue.data_type=StreamType;
-            aKeyValue.stream_type=DataType;
-            const auto iterator=comm_map.find(aKeyValue);
-            if(iterator!=comm_map.end())
-            {
-                aComPtr=iterator->second;
-            }
+           for(auto iterator=comm_map.begin();iterator!=comm_map.end();iterator++)
+             {
+               if((iterator->first).findByName(ProxyName,StreamType,DataType))
+                 {
+
+                   aComPtr=iterator->second;
+                   break;
+                 }
+             }
             return aComPtr;
          }
          /**

@@ -10,6 +10,8 @@ include_directories (
                                     ../../commonLibs/tinyxml2
                                     ../../commonLibs/netlink
                                    ../../commonsLibs/utils_generics
+                                    ../../commonLibs/factory
+                                    ../../commonsLibs/Reactor
                                     ../cmd_processor
 
                                   )
@@ -20,6 +22,7 @@ include_directories(${GLOG_INCLUDE_DIR}
 set (HDR
                 ../../commonLibs/tinyxml2/tinyxml2.cpp
                 ../../commonLibs/netlink/socket.cc
+                ../../commonLibs/factory/generic_factory.cpp
                  kernel.h
                
     )

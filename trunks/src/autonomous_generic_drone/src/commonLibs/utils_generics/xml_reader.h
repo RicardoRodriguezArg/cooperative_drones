@@ -33,7 +33,7 @@ public:
         {
 
             mXmlError=mXmlDoc.LoadFile(OptionStructurePtr->FILE_NAME.c_str());
-            std::cout<<"ERROR XML: "<<mXmlError<<std::endl;
+            //std::cout<<"ERROR XML: "<<mXmlError<<std::endl;
         }
     }
 
@@ -44,7 +44,7 @@ public:
 
         if(isPossibleToProcess())
         {
-           std::cout<<"Leyendo primer opcion archivo: "<<std::get<Value>(OptionStructurePtr->NODE_NAME)<<std::endl;
+           //std::cout<<"Leyendo primer opcion archivo: "<<std::get<Value>(OptionStructurePtr->NODE_NAME)<<std::endl;
             BaseNodePtr=mXmlDoc.FirstChildElement(std::get<Value>(OptionStructurePtr->NODE_NAME).c_str());
             //nodo raiz
             processNodeInfo(aErrorCode);
@@ -67,7 +67,7 @@ protected:
 
         //Options
           auto RowPtr=BaseNodePtr->FirstChildElement(std::get<Value>(OptionStructurePtr->SUB_NODE_NAME).c_str());
-          std::cout<<"leyendo las SUB NODE: "<<std::get<Value>(OptionStructurePtr->SUB_NODE_NAME)<<std::endl;
+          //std::cout<<"leyendo las SUB NODE: "<<std::get<Value>(OptionStructurePtr->SUB_NODE_NAME)<<std::endl;
           aErrorCode=(RowPtr==nullptr)?-2:0;
 
           if(aErrorCode==0)
@@ -81,22 +81,22 @@ protected:
        auto Ptr=aRowOptionPtr;
             do{
                 OptionStructurePtr->Sub_Node_Row.cleanValuesFields();
-                std::cout<<"cantidad de opciones: "<<(OptionStructurePtr->SubNodeVector).size()<<std::endl;
+                //std::cout<<"cantidad de opciones: "<<(OptionStructurePtr->SubNodeVector).size()<<std::endl;
                 for(auto i=0;i<OptionStructurePtr->Sub_Node_Row.optionsVector.size();i++)
                 {
-                    std::cout<<"valor de fabrica:(row tag) "<<std::get<0>(OptionStructurePtr->Sub_Node_Row.optionsVector.at(i))<<std::endl;
-                    std::cout<<"valor de fabrica (row name): "<<std::get<1>(OptionStructurePtr->Sub_Node_Row.optionsVector.at(i))<<std::endl;
+                   // std::cout<<"valor de fabrica:(row tag) "<<std::get<0>(OptionStructurePtr->Sub_Node_Row.optionsVector.at(i))<<std::endl;
+                   // std::cout<<"valor de fabrica (row name): "<<std::get<1>(OptionStructurePtr->Sub_Node_Row.optionsVector.at(i))<<std::endl;
                     const auto attributeName=std::get<1>(OptionStructurePtr->Sub_Node_Row.optionsVector.at(i));
                     if(Ptr->Attribute(attributeName.c_str())!=nullptr)
                     {
                         std::get<2>(OptionStructurePtr->Sub_Node_Row.optionsVector.at(i))=Ptr->Attribute(attributeName.c_str());
-                        std::cout<<"valor obtenido (row value): "<<std::get<2>(OptionStructurePtr->Sub_Node_Row.optionsVector.at(i))<<std::endl;
+                        //std::cout<<"valor obtenido (row value): "<<std::get<2>(OptionStructurePtr->Sub_Node_Row.optionsVector.at(i))<<std::endl;
                     }
                 }
 
              extractSubNodeOptions(Ptr);
              (OptionStructurePtr->SubNodeVector).emplace_back(OptionStructurePtr->Sub_Node_Row);
-              std::cout<<"==========================="<<std::endl<<std::endl;
+              //std::cout<<"==========================="<<std::endl<<std::endl;
         }
        while((Ptr=Ptr->NextSiblingElement())!=nullptr);
 
@@ -110,13 +110,13 @@ protected:
             for(auto i=0; i<OptionStructurePtr->Sub_Node_Row.InnerNodeOption .inner_node_vector.size();i++)
             {
 
-            std::cout<<"Factory Sub Node Tag Name: "<<std::get<1>(OptionStructurePtr->Sub_Node_Row.InnerNodeOption.inner_node_vector.at(i))<<std::endl;
+            //std::cout<<"Factory Sub Node Tag Name: "<<std::get<1>(OptionStructurePtr->Sub_Node_Row.InnerNodeOption.inner_node_vector.at(i))<<std::endl;
             const auto attribute_from_factory=std::get<1>(OptionStructurePtr->Sub_Node_Row.InnerNodeOption.inner_node_vector.at(i));
             aSubNodePtr->Attribute(attribute_from_factory.c_str());
             if(aSubNodePtr->Attribute(attribute_from_factory.c_str())!=nullptr)
             {
                 std::get<2>(OptionStructurePtr->Sub_Node_Row.InnerNodeOption.inner_node_vector.at(i))=aSubNodePtr->Attribute(attribute_from_factory.c_str());
-                 std::cout<<"SubNode Value From XMl: "<<std::get<2>(OptionStructurePtr->Sub_Node_Row.InnerNodeOption.inner_node_vector.at(i))<<std::endl;
+                //std::cout<<"SubNode Value From XMl: "<<std::get<2>(OptionStructurePtr->Sub_Node_Row.InnerNodeOption.inner_node_vector.at(i))<<std::endl;
             }
 
             }

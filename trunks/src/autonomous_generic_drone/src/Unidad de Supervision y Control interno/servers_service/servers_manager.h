@@ -3,14 +3,17 @@
 #include "uc_definiciones.h"
 #include "../../commonLibs/kernel/i_kernel_interface.h"
 #include "../../commonLibs/factory/base_class.h"
-#include "../../commonLibs/factory/factory_register.h"
+
 #include "../../commonLibs/Reactor/reactor.h"
 #include "../../commonLibs/comunicacion/icomm.h"
+#include "../../commonLibs/factory/factory_register.h"
 namespace NSServerManager
 {
+template<class Aux = void>
 class ServerManager : public KERNEL::FactoryBase, public NSKernel::IKernelInterface
 {
 public:
+  static KERNEL::FactoryRegister< ServerManager> factory_register;
     ServerManager():ErrorCode(ControlDef::ERROR_CODE::OK_ERROR_CODE)
     {}
     virtual int getID()
@@ -35,10 +38,12 @@ public:
     private:
      NSReactorLayer::Reactor<COMUNICACION::IComm,NSKernel::IServiceTarget> reactor_layer;
      int ErrorCode;
-     static KERNEL::FactoryRegister< ServerManager> factory_register;
-     static bool isRegisterDone;
+
+
 };
- KERNEL::FactoryRegister< ServerManager> ServerManager::factory_register("ServerManager");
- bool ServerManager::isRegisterDone=true;
+template<class Aux>
+KERNEL::FactoryRegister<ServerManager<Aux>> ServerManager<Aux>::factory_register=KERNEL::FactoryRegister<ServerManager<Aux>>("ServerManager");
+
+
 }
 #endif // SERVERS_MANAGER_H

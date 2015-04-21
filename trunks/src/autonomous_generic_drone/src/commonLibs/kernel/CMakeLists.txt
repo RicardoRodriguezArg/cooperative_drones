@@ -6,6 +6,7 @@ include_directories (
                                     ../state_machine
                                   )
 set (HDR 
+
                 kernel.h
                 i_kernel_interface.h
     )
