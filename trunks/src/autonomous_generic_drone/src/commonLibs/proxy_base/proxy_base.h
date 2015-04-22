@@ -17,7 +17,6 @@ namespace NSProxy {
 template< class Serializer
           , class CommInterface
           , class ProxyProcessInterface
-          , class SubCmd
           , class IServiceInterface
         >
 class ProxyBase : public IServiceInterface , public KERNEL::FactoryBase
@@ -80,12 +79,6 @@ class ProxyBase : public IServiceInterface , public KERNEL::FactoryBase
     {
 
     }
-    virtual void execute( SubCmd aCmd, int &)
-    {
-
-    }
-    virtual  SubCmd  * geSubCmd(const std::string &) const
-    {}
 
     std::unordered_map<std::string,Serializer * const> MsgSerializerMap;
     std::string Buffer;

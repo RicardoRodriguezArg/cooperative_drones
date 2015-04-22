@@ -14,25 +14,25 @@ namespace NSProxy
 {
   //TODO: Falta completar esta clase
   //Falta los mensajes creados con Protocol Buffer
-
-class Proxy : public ProxyBase< NSKernel::ISerializer
+template<class SubCmdType, class SubCmdInterface>
+class Proxy :  ProxyBase< NSKernel::ISerializer
                               ,  COMUNICACION::IComm
-                              ,  IProxyProcess<Proxy>
-                              ,  NSSubCmds::SubCmds<Mensajes::MessageCommand>
+                              ,  IProxyProcess<Proxy<SubCmdType,SubCmdInterface>>
                               ,  NSKernel::IServiceTarget
                               >
 {
-  typedef NSSubCmds::SubCmds<Mensajes::MessageCommand> SubCmd;
+
 public:
   Proxy(const unsigned & aProxyId):ProxyBase(aProxyId)
   {}
-  virtual void execute( SubCmd aCmd, int &)
+  void execute( SubCmdType aCmd, int &)
   {
     //NSProxy::ProxyBase::Buffer.clear();
     //aca un reinterpreter cast para ese dato en particular
     //Buffer=ProxyBase::MsgSerializerMap[ControlDef::NSProxy::CMD_TYPE_ID]->serializeData();
   }
-  virtual  SubCmd  * geSubCmd(const std::string &) const
+
+  SubCmdInterface  * geSubCmd(const std::string &) const
   {
 
   }

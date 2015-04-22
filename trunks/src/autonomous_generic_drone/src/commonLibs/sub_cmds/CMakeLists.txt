@@ -5,6 +5,7 @@ set(CMAKE_BUILD_TYPE Debug)
 
 set ( SRCHDR
                 sub_cmds.h
+                sub_command_interface.h
    )
 set ( SRCIMP
           main.cpp

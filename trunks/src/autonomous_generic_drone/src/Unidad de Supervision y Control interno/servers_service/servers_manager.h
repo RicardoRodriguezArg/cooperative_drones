@@ -41,6 +41,7 @@ public:
 
 
 };
+
 template<class Aux>
 KERNEL::FactoryRegister<ServerManager<Aux>> ServerManager<Aux>::factory_register=KERNEL::FactoryRegister<ServerManager<Aux>>("ServerManager");
 

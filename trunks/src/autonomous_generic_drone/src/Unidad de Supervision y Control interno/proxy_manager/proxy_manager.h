@@ -9,8 +9,11 @@ namespace NSKernel
   class ProxyManager : public NSCommonLibs::ProxyManagerBase<ProxyType> ,public KERNEL::FactoryBase
   {
   public:
+    static KERNEL::FactoryRegister< ProxyManager> factory_register;
   private:
 
   };
+  template<class ProxyType>
+  KERNEL::FactoryRegister<ProxyManager<ProxyType>> ProxyManager<ProxyType>::factory_register=KERNEL::FactoryRegister<ProxyManager<ProxyType>>("ProxyManager");
 }
 #endif // PROXY_MANAGER_H

@@ -8,6 +8,7 @@
 #include "../../commonLibs/state_machine/generic_state_machine.h"
 #include "../servers_service/servers_manager.h"
 #include "../state_machine/state_configurate_component.h"
+#include "../proxy_manager/proxy_manager.h"
 namespace NSKernel
 {
   namespace
@@ -30,7 +31,12 @@ namespace NSKernel
   {
     LOG(INFO)<<"Creando los componenetes del nucleo";
     aErrorCode=STATE_OK_ERROR;
+    LOG(INFO)<<"Creacion de Manager de Server del sistema";
     NSServerManager::ServerManager<void>::factory_register=KERNEL::FactoryRegister<NSServerManager::ServerManager<void>>("ServerManager");
+    LOG(INFO)<<"Creacion de los proxys del componente";
+
+    LOG(INFO)<<"Creacion ProxyManager";
+
     LOG(INFO)<<"Fin de creacion de los componentes del nucleo, pasando al estado de Configuracion";
     KERNEL::StateMachine<kernel>::changeState(aKernelPtr,&KERNEL::ConfigurateComponentState<kernel>::getStateInstance(),ErrorCode);
   }
