@@ -52,7 +52,7 @@ public:
 
     void createBuilders( Kernel * const aKernelPtr ,int & aErrorCode )
     {
-      LOG(INFO)<<"Buildenado las opciones de comunicacion"<<std::endl;
+      LOG(INFO)<<"Creando las opciones de comunicacion desde archivo XML las opciones de comunicacion"<<std::endl;
       StreamBuilder.buildAll(aErrorCode);
       LOG(INFO)<<"ErrorCode al crear StreamBuilder:  "<<aErrorCode<<std::endl;
       if(aErrorCode==ControlDef::ERROR_CODE::OK_ERROR_CODE)

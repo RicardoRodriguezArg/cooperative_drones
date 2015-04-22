@@ -9,9 +9,9 @@ include_directories (
                                    ../../commonLibs/cmake
                                    ../../commonLibs/tinyxml2
                                    ../../commonLibs/netlink
-                                   ../../commonsLibs/utils_generics
+                                   ../../commonLibs/utils_generics
                                     ../../commonLibs/factory
-                                    ../../commonsLibs/Reactor
+                                    ../../commonLibs/Reactor
                                     ../kernel
                                     ../state_machine
                                     ../servers_service
@@ -25,12 +25,14 @@ set (HDR
                     ../../commonLibs/tinyxml2/tinyxml2.cpp
                     ../../commonLibs/netlink/socket.cc
                     ../../commonLibs/factory/generic_factory.cpp
+                    ../../commonLibs/factory/factory_register.h
+                    ../servers_service/servers_manager.h
 	             
    )
 set (SRC main.cpp)
 
 add_executable(${PROJECT_NAME} ${SRC} ${HDR})
 target_link_libraries( ${PROJECT_NAME}
-                         ${GLOG_LIBRARY}
                         ${CMAKE_THREAD_LIBS_INIT}
+                         ${GLOG_LIBRARY}
                        )

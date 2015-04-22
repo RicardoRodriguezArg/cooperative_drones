@@ -2,22 +2,23 @@ project( kernel )
 cmake_minimum_required(VERSION 2.8)
 set(CMAKE_BUILD_TYPE Debug)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ")
+find_package( Threads )
+include( ../../commonLibs/cmake/findGlog.cmake)
 include_directories (
+                                    ${GLOG_INCLUDE_DIR}
                                      ../
-                                   # /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/
                                     ../../commonLibs
                                     ../../commonLibs/cmake
                                     ../../commonLibs/tinyxml2
                                     ../../commonLibs/netlink
-                                   ../../commonsLibs/utils_generics
+                                   ../../commonLibs/utils_generics
                                     ../../commonLibs/factory
                                     ../../commonsLibs/Reactor
                                     ../cmd_processor
 
                                   )
-include( ../../commonLibs/cmake/findGlog.cmake)
-include_directories(${GLOG_INCLUDE_DIR}
-                                )
+
+
 
 set (HDR
                 ../../commonLibs/tinyxml2/tinyxml2.cpp

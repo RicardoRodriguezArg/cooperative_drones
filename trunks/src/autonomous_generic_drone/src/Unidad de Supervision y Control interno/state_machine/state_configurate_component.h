@@ -52,23 +52,18 @@ private:
     }
     void configurateServerManager(Kernel * const aKernelPtr,int & aErrorCode)
     {
-      aErrorCode=STATE_ERROR;
-        //KERNEL::KernelFactory::getInstance().registerFactoryFunction("ServerManager",[](void)->FactoryBase *{return new NSServerManager::ServerManager<void>();});
-
-        //const auto Ptr=(KERNEL::KernelFactory::getInstance().createInstance("ServerManager").get());
-        const auto ptr=new NSServerManager::ServerManager<void>;
+      LOG(INFO)<<"Inicio de creacion de servidores del sistema";
+        aErrorCode=STATE_ERROR;
+        const auto ptr=KERNEL::KernelFactory::getInstance().getInstancePtr("ServerManager");
         const auto aBuilderPtr=aKernelPtr->getBuilderInterface(ControlDef::BuilderName::StreamBuilder);
         const auto aStreammerBuilder=reinterpret_cast<NSBuilders::Builders<NSCommonsLibs::BuilderType::StreamType> *>(aBuilderPtr);
-
         const auto aCommandServerPtr=aStreammerBuilder->getComInterface("USyCI","in","command");//servidor de comandos
         if(aCommandServerPtr!=nullptr)
           {
             aErrorCode=STATE_OK;
             const auto aCmdProceesorPtr=&NSCmdProcessor::CmdProcessor<void>::getInstance();
-            LOG(INFO)<<"Tratando de insertar en el server manager";
-            LOG(INFO)<<"Direccion Puntero: "<<ptr;
-            //(reinterpret_cast<NSServerManager::ServerManager<void> * >(Ptr))->getReactor()->make_service_tuple(aCommandServerPtr,aCmdProceesorPtr);
-            ptr->getReactor()->make_service_tuple(aCommandServerPtr,aCmdProceesorPtr);
+           (reinterpret_cast<NSServerManager::ServerManager<void> * >(ptr))->getReactor()->make_service_tuple(aCommandServerPtr,aCmdProceesorPtr);
+
           }
         LOG(INFO)<<"Fin de creacion de servidores del sistema";
 

@@ -12,10 +12,12 @@
 namespace NSCommonLibs
 {
   template<class Proxy>
-  class ProxyManager
+  class ProxyManagerBase
   {
   protected:
-    ProxyManager()
+    ProxyManagerBase()
+    {}
+    ~ProxyManagerBase()
     {}
     void addProxy(const std::string & aProxyID,Proxy * const aProxyPtr)
     {

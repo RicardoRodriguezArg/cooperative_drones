@@ -9,10 +9,10 @@ include_directories(
                                 ../../commonLibs
                                 ../../commonLibs/tinyxml2
                                 ../../commonLibs/netlink
-                                ../../commonsLibs/utils_generics
-                                ../../commonsLibs/state_machine
-                                ../../commonsLibs/factory
-                                ../../commonsLibs/Reactor
+                                ../../commonLibs/utils_generics
+                                ../../commonLibs/state_machine
+                                ../../commonLibs/factory
+                                ../../commonLibs/Reactor
                                 ../servers_service
                                 ../cmd_processor
 
@@ -25,11 +25,12 @@ set ( HDRS
                     ../../commonLibs/tinyxml2/tinyxml2.cpp
                     ../../commonLibs/netlink/socket.cc
                    #     ../../commonsLibs/netlink/socket.cc
-
+                        ../../commonLibs/factory/generic_factory.cpp
+                        ../../commonLibs/factory/factory_register.h
+                        ../servers_service/servers_manager.h
                         state_create_builder.h
                         state_configurate_component.h
                         create_kernel_components.h
-                        ../../commonLibs/factory/generic_factory.cpp
 		
 )
 add_executable(${PROJECT_NAME} main.cpp

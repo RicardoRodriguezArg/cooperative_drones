@@ -29,22 +29,20 @@ class Kernel
     }
     void init()
     {
-        LOG(INFO)<<"iniciando la creacion de los builders del sistema";
-        //TODO: emitir EXCEPTION
-        CurrentState->createBuilders(this,ErrorCode);
-        LOG(INFO)<<"ErrorCode al crear los builders: "<<ErrorCode;
+         CurrentState->createBuilders(this,ErrorCode);
+         if(ErrorCode!=0) throw std::logic_error("Error al inicializar el sistema, verifique path archivo de configuracion");
+
     }
     void createKernelDevices()
     {
       CurrentState->createKernelComponents(this,ErrorCode);
+      if(ErrorCode!=0) throw std::logic_error("Error al crear las instancias de los componentes del kernel");
     }
     void configurateKernelComponents()
     {
-        LOG(INFO)<<"Configurando los componentes del sistema";
-        //TODO: emitir EXCEPTION
         CurrentState->configurateKernelComponents(this,ErrorCode);
         if(ErrorCode!=0) throw std::logic_error("Error al configurar el estado configurateKernelComponents");
-        LOG(INFO)<<"CODIGO DE ERROR AL REALIZAR LA OPERACION: "<<ErrorCode;
+
     }
 
     void setBuilderInterface(const std::string & aBuilderName, NSBuilders::IBuilderInterface * const  aBuilderPtr)

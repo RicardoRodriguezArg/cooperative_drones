@@ -20,7 +20,7 @@ namespace ControlDef
     }
     namespace ClassID
     {
-    constexpr int SERVER_MANAGER_ID=1;
+    constexpr int SERVER_MANAGER_ID=1000;
     }
     namespace NSProxy
     {

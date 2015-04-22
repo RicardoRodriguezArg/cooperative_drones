@@ -38,7 +38,8 @@ namespace KERNEL
                LOG(INFO)<<"Cantidad de instancias en el mapa: "<<FactoryRegistryMap.size();
                if(iter!=FactoryRegistryMap.end())
                {
-                   instance_ptr=iter->second();
+                   instance_ptr=(iter->second)();
+                   LOG(INFO)<<"Creando la instancia!!!!";
                  }
 
                //TODO: multiples retornos
@@ -53,7 +54,19 @@ namespace KERNEL
                  return nullptr;
                  }
             }
+            FactoryBase *   getInstancePtr(const std::string & aClassName)
+            {
+               FactoryBase *  instance_ptr=nullptr;
+               const auto iter= FactoryRegistryMap.find(aClassName );
+               LOG(INFO)<<"Cantidad de instancias en el mapa: "<<FactoryRegistryMap.size();
+               if(iter!=FactoryRegistryMap.end())
+               {
+                   instance_ptr=(iter->second)();
+                   LOG(INFO)<<"Creando la instancia!!!!";
+                 }
+                return instance_ptr;
 
+            }
         private:
             KernelFactory()
             {
@@ -68,6 +81,7 @@ namespace KERNEL
                 IsNullPtr=true;
             }
             std::unordered_map<std::string,std::function<FactoryBase * ()>> FactoryRegistryMap;
+
             static KernelFactory * KenelPtr;
             static bool IsNullPtr;
     };
