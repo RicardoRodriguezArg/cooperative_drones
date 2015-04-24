@@ -9,6 +9,7 @@
 #include "../commonLibs/state_machine/generic_state_machine.h"
 #include "../cmd_processor/cmd_processor.h"
 #include "../servers_service/servers_manager.h"
+#include "../proxy/proxy.h"
 namespace KERNEL
 {
   namespace
@@ -52,7 +53,7 @@ private:
     }
     void configurateServerManager(Kernel * const aKernelPtr,int & aErrorCode)
     {
-      LOG(INFO)<<"Inicio de creacion de servidores del sistema";
+      LOG(INFO)<<"Creacion de servidores del sistema";
         aErrorCode=STATE_ERROR;
         const auto ptr=KERNEL::KernelFactory::getInstance().getInstancePtr("ServerManager");
         const auto aBuilderPtr=aKernelPtr->getBuilderInterface(ControlDef::BuilderName::StreamBuilder);

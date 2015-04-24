@@ -9,6 +9,10 @@
 #include "../servers_service/servers_manager.h"
 #include "../state_machine/state_configurate_component.h"
 #include "../proxy_manager/proxy_manager.h"
+#include "../../commonLibs/sub_cmds/sub_command_interface.h"
+#include "../../commonLibs/sub_cmds/sub_cmds.h"
+#include "../../commonLibs/mensajes/cpp/definicion_mensajeria.pb.h"
+#include "../proxy/proxy.h"
 namespace NSKernel
 {
   namespace
@@ -34,7 +38,9 @@ namespace NSKernel
     LOG(INFO)<<"Creacion de Manager de Server del sistema";
     NSServerManager::ServerManager<void>::factory_register=KERNEL::FactoryRegister<NSServerManager::ServerManager<void>>("ServerManager");
     LOG(INFO)<<"Creacion de los proxys del componente";
-
+    LOG(INFO)<<"Creacion de los proxy DDS Manager";
+    typedef NSSubCmds::SubCmds<Mensajes::MessageCommand> SubCmdType;
+    NSProxy::Proxy<SubCmdType,NSSubCmd::SubCmdInterface>::factory_register=KERNEL::FactoryRegister<NSProxy::Proxy<SubCmdType,NSSubCmd::SubCmdInterface>>("DDSManagerProxy");
     LOG(INFO)<<"Creacion ProxyManager";
 
     LOG(INFO)<<"Fin de creacion de los componentes del nucleo, pasando al estado de Configuracion";

@@ -79,6 +79,7 @@ class Kernel
     KERNEL::StateMachine<Kernel> * CurrentState;
     int ErrorCode;
     std::unordered_map<std::string, NSBuilders::IBuilderInterface * const> builders_map;
+    std::unordered_map<std::string,KERNEL::FactoryBase * const  > kernel_device_map;
 };
 }
 #endif // KERNEL_H

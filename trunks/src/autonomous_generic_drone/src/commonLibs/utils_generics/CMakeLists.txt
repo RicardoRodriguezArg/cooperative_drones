@@ -7,6 +7,7 @@ set (HDR generis_strutures.h
          linux_uitls.h
          xml_reader.h
          utils_transform_data.h
+        gpio_utils.h
          
     )
 set (SRC main.cpp)

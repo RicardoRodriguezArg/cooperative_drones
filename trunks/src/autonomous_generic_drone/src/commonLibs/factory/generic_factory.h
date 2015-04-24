@@ -54,6 +54,7 @@ namespace KERNEL
                  return nullptr;
                  }
             }
+
             FactoryBase *   getInstancePtr(const std::string & aClassName)
             {
                FactoryBase *  instance_ptr=nullptr;

@@ -6,6 +6,8 @@
 #include "../../commonLibs/proxy_base/i_proxy_proccess.h"
 #include "../../commonLibs/sub_cmds/sub_cmds.h"
 #include "../../commonLibs/mensajes/cpp/definicion_mensajeria.pb.h"
+#include "../../commonLibs/factory/base_class.h"
+#include "../../commonLibs/factory/factory_register.h"
 //registrar en la clase factory
 
 #include "uc_definiciones.h"
@@ -15,16 +17,28 @@ namespace NSProxy
   //TODO: Falta completar esta clase
   //Falta los mensajes creados con Protocol Buffer
 template<class SubCmdType, class SubCmdInterface>
-class Proxy :  ProxyBase< NSKernel::ISerializer
+class Proxy :
+              public ProxyBase< NSKernel::ISerializer
                               ,  COMUNICACION::IComm
                               ,  IProxyProcess<Proxy<SubCmdType,SubCmdInterface>>
                               ,  NSKernel::IServiceTarget
                               >
+
+
 {
 
 public:
-  Proxy(const unsigned & aProxyId):ProxyBase(aProxyId)
+  static KERNEL::FactoryRegister<Proxy> factory_register;
+  Proxy()
   {}
+  Proxy(const unsigned & aProxyId)//:ProxyBase(aProxyId)
+  {}
+
+  void setRawMsg(std::string )
+  {
+
+  }
+
   void execute( SubCmdType aCmd, int &)
   {
     //NSProxy::ProxyBase::Buffer.clear();
@@ -39,5 +53,7 @@ public:
 private:
 
 };
+template<class SubCmdType, class SubCmdInterface>
+KERNEL::FactoryRegister<Proxy<SubCmdType,SubCmdInterface>> Proxy<SubCmdType,SubCmdInterface>::factory_register=KERNEL::FactoryRegister<Proxy<SubCmdType,SubCmdInterface>>("Proxy");
 }
 #endif // PROXY_H

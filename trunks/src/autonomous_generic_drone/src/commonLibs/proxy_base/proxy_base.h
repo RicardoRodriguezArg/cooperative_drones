@@ -23,6 +23,10 @@ class ProxyBase : public IServiceInterface , public KERNEL::FactoryBase
 {
     protected:
     const static  int PROXY_DEFAULT_FACTORY_ID=4;
+
+    ProxyBase():MsgSenderPtr(nullptr)
+    ,PROXYID(PROXY_DEFAULT_FACTORY_ID)
+    {}
     ProxyBase(const unsigned & aProxyID):MsgSenderPtr(nullptr)
       ,PROXYID(aProxyID)
 
@@ -31,6 +35,11 @@ class ProxyBase : public IServiceInterface , public KERNEL::FactoryBase
     {
       //TODO: Liberar los mapas de la interface de serializacion
     }
+    void setProxyId(const unsigned & aProxyID)
+    {
+      PROXYID=aProxyID;
+    }
+
     void setConnector(const std::string & SenderIDChannel ,CommInterface * const aMsgSender)
     {
         ConnectorMaps.insert(std::make_pair(SenderIDChannel,aMsgSender));
@@ -44,10 +53,7 @@ class ProxyBase : public IServiceInterface , public KERNEL::FactoryBase
       return PROXY_DEFAULT_FACTORY_ID;
     }
 
-    void setProxyId(const unsigned & aProxyId)
-    {
-      PROXYID=aProxyId;
-    }
+
     void setProxyProccess(const std::string & aProxyProcessID, ProxyProcessInterface * const aProxyProcess)
     {
         ProxyProxyMap.insert(std::make_pair(aProxyProcessID,aProxyProcess));
@@ -87,7 +93,7 @@ class ProxyBase : public IServiceInterface , public KERNEL::FactoryBase
     std::unordered_map<std::string, CommInterface * const> ConnectorMaps;
     std::unordered_map<std::string, ProxyProcessInterface * const> ProxyProxyMap;
     std::vector<unsigned> CmdIdVector;
-    const unsigned PROXYID;
+     unsigned PROXYID;
     int ErrorCode;
 
 };
