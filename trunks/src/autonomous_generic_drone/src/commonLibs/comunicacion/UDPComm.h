@@ -196,8 +196,7 @@ public:
        }
        try
        {
-           mErrorFrameOperation=mFramerGenerico.frame(const_cast<char *>( aMsg->c_str()),
-                                               aMsg->size());
+           mErrorFrameOperation=mFramerGenerico.frame(const_cast<char *>( aMsg->c_str()), aMsg->size());
             if(mErrorFrameOperation!=0)
            {
                aErrorCode=mErrorFrameOperation;
@@ -224,13 +223,13 @@ public:
    }
    void setFramerPaquetes( COMUNICACION::IFramer * const aFramerPtr = nullptr) noexcept(true)
    {
-       if(mFramerGenerico)
+       if(mFramerGenerico!=nullptr)
        {
            delete mFramerGenerico;
            mFramerGenerico=nullptr;
        }
        mFramerGenerico=aFramerPtr;
-       mFramerGenerico.crearFrameBuffer();
+       mFramerGenerico->crearFrameBuffer();
    }
 private:
 

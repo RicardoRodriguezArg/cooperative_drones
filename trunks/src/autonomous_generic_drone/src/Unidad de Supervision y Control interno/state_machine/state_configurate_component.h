@@ -10,6 +10,7 @@
 #include "../cmd_processor/cmd_processor.h"
 #include "../servers_service/servers_manager.h"
 #include "../proxy/proxy.h"
+#include "state_shutdown.h"
 namespace KERNEL
 {
   namespace
@@ -37,6 +38,7 @@ class  ConfigurateComponentState: public StateMachine<Kernel >
     {
         //configurando el server manager
         configurateServerManager(aKernelPtr,aErrorCode);
+        KERNEL::StateMachine<Kernel>::changeState(aKernelPtr,&KERNEL::ShutdownState<Kernel>::getStateInstance(),ErrorCode);
 
     }
     void releaseState()
@@ -44,7 +46,7 @@ class  ConfigurateComponentState: public StateMachine<Kernel >
        ~ConfigurateComponentState();
     }
 private:
-    ConfigurateComponentState()
+    ConfigurateComponentState():ErrorCode(0)
     {}
 
     ~ConfigurateComponentState()
@@ -55,7 +57,7 @@ private:
     {
       LOG(INFO)<<"Creacion de servidores del sistema";
         aErrorCode=STATE_ERROR;
-        const auto ptr=KERNEL::KernelFactory::getInstance().getInstancePtr("ServerManager");
+        const auto ptr=aKernelPtr->getKernelDevice("ServerManager");
         const auto aBuilderPtr=aKernelPtr->getBuilderInterface(ControlDef::BuilderName::StreamBuilder);
         const auto aStreammerBuilder=reinterpret_cast<NSBuilders::Builders<NSCommonsLibs::BuilderType::StreamType> *>(aBuilderPtr);
         const auto aCommandServerPtr=aStreammerBuilder->getComInterface("USyCI","in","command");//servidor de comandos
@@ -80,6 +82,7 @@ private:
     ConfigurateComponentState & operator==(const ConfigurateComponentState &&) = delete;
 
     static ConfigurateComponentState<Kernel> *  statePtr;
+    int ErrorCode;
 };
 template<class Kernel>
 ConfigurateComponentState< Kernel > * ConfigurateComponentState<Kernel>::statePtr=nullptr;

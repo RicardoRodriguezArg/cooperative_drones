@@ -31,6 +31,7 @@ set ( HDRS
                         state_create_builder.h
                         state_configurate_component.h
                         create_kernel_components.h
+                        state_shutdown.h
 		
 )
 add_executable(${PROJECT_NAME} main.cpp

@@ -35,18 +35,29 @@ namespace NSKernel
   {
     LOG(INFO)<<"Creando los componenetes del nucleo";
     aErrorCode=STATE_OK_ERROR;
-    LOG(INFO)<<"Creacion de Manager de Server del sistema";
-    NSServerManager::ServerManager<void>::factory_register=KERNEL::FactoryRegister<NSServerManager::ServerManager<void>>("ServerManager");
-    LOG(INFO)<<"Creacion de los proxys del componente";
-    LOG(INFO)<<"Creacion de los proxy DDS Manager";
-    typedef NSSubCmds::SubCmds<Mensajes::MessageCommand> SubCmdType;
-    NSProxy::Proxy<SubCmdType,NSSubCmd::SubCmdInterface>::factory_register=KERNEL::FactoryRegister<NSProxy::Proxy<SubCmdType,NSSubCmd::SubCmdInterface>>("DDSManagerProxy");
+    createServerManagerComponent(aKernelPtr);
+    createDDSManagerProxy(aKernelPtr);
     LOG(INFO)<<"Creacion ProxyManager";
 
     LOG(INFO)<<"Fin de creacion de los componentes del nucleo, pasando al estado de Configuracion";
     KERNEL::StateMachine<kernel>::changeState(aKernelPtr,&KERNEL::ConfigurateComponentState<kernel>::getStateInstance(),ErrorCode);
   }
   private:
+  void createServerManagerComponent(kernel * const aKernelPtr)
+  {
+    LOG(INFO)<<"Creacion de Manager de Server del sistema";
+    NSServerManager::ServerManager<void>::factory_register=KERNEL::FactoryRegister<NSServerManager::ServerManager<void>>("ServerManager");
+    const auto ptr=KERNEL::KernelFactory::getInstance().getInstancePtr("ServerManager");
+    aKernelPtr->setKernelInterface("ServerManager",ptr);
+  }
+  void createDDSManagerProxy(kernel * const aKernelPtr)
+  {
+    LOG(INFO)<<"Creacion de los proxy DDS Manager";
+    typedef NSSubCmds::SubCmds<Mensajes::MessageCommand> SubCmdType;
+    NSProxy::Proxy<SubCmdType,NSSubCmd::SubCmdInterface>::factory_register=KERNEL::FactoryRegister<NSProxy::Proxy<SubCmdType,NSSubCmd::SubCmdInterface>>("DDSManagerProxy");
+    const auto aDDSManagerProxyptr=KERNEL::KernelFactory::getInstance().getInstancePtr("DDSManagerProxy");
+    aKernelPtr->setKernelInterface("DDSManagerProxy",aDDSManagerProxyptr);
+  }
   static void createInstance()
   {
       static CreateKernelComponents aInstance;
