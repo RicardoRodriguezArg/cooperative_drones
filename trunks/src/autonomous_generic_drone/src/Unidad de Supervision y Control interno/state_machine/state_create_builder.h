@@ -15,9 +15,7 @@
 #include "../commonLibs/builders/builders_streams.h"
 #include "../state_machine/create_kernel_components.h"
 
-//#include "state_shutdown_uc.h"
-//#include "configurateKernelComponents.h"
-//#include "state_create_kernel_component.h"
+
 
 namespace KERNEL
 {

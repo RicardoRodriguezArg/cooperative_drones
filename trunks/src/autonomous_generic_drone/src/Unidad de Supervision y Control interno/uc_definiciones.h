@@ -28,6 +28,13 @@ namespace ControlDef
       static const std::string TELEMETRY_TYPE_ID("TELEMETRY_TYPE_ID");
       static const std::string EVENT_TYPE_ID("EVENT_TYPE_ID");
     }
+    namespace NSKernel
+    {
+      static const std::tuple<int,std::string> ID_ProxyManager(1,"ProxyManager");
+      static const std::tuple<int,std::string> ID_ServerManager(2,"ServerManager");
+      static const std::tuple<int,std::string> ID_CommandProcessor(3,"CommandProcessor");
+
+    }
 }
 
 #endif // DEFINICIONES_H

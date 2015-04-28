@@ -14,11 +14,7 @@ namespace NSCommonLibs
   template<class Proxy>
   class ProxyManagerBase
   {
-  protected:
-    ProxyManagerBase()
-    {}
-    ~ProxyManagerBase()
-    {}
+  public:
     void addProxy(const std::string & aProxyID,Proxy * const aProxyPtr)
     {
       ProxyMap.insert(std::make_pair(aProxyID,aProxyPtr));
@@ -33,8 +29,14 @@ namespace NSCommonLibs
         }
       return aPtr;
     }
-  private:
-    std::unordered_map<const std::string,Proxy * const> ProxyMap;
+  protected:
+    ProxyManagerBase()
+    {}
+   virtual ~ProxyManagerBase()
+    {}
+
+
+    std::unordered_map<std::string,Proxy * const> ProxyMap;
 
   };
 }

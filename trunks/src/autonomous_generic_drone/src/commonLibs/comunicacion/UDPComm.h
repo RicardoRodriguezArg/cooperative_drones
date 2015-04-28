@@ -223,6 +223,7 @@ public:
    }
    void setFramerPaquetes( COMUNICACION::IFramer * const aFramerPtr = nullptr) noexcept(true)
    {
+     /*
        if(mFramerGenerico!=nullptr)
        {
            delete mFramerGenerico;
@@ -230,6 +231,7 @@ public:
        }
        mFramerGenerico=aFramerPtr;
        mFramerGenerico->crearFrameBuffer();
+       */
    }
 private:
 

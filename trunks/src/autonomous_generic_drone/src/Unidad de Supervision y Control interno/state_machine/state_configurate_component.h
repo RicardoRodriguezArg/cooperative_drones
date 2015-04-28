@@ -38,6 +38,7 @@ class  ConfigurateComponentState: public StateMachine<Kernel >
     {
         //configurando el server manager
         configurateServerManager(aKernelPtr,aErrorCode);
+
         KERNEL::StateMachine<Kernel>::changeState(aKernelPtr,&KERNEL::ShutdownState<Kernel>::getStateInstance(),ErrorCode);
 
     }
@@ -65,11 +66,21 @@ private:
           {
             aErrorCode=STATE_OK;
             const auto aCmdProceesorPtr=&NSCmdProcessor::CmdProcessor<void>::getInstance();
+            LOG(INFO)<<"Vinculando CommandProcessor con stream In";
            (reinterpret_cast<NSServerManager::ServerManager<void> * >(ptr))->getReactor()->make_service_tuple(aCommandServerPtr,aCmdProceesorPtr);
 
           }
         LOG(INFO)<<"Fin de creacion de servidores del sistema";
 
+    }
+    void configurateProxy(Kernel * const aKernelPtr,const std::string & aProxyID, int & aErrorCode)
+    {
+      const auto aBuilderPtr=aKernelPtr->getBuilderInterface(ControlDef::BuilderName::StreamBuilder);
+      const auto aStreammerBuilder=reinterpret_cast<NSBuilders::Builders<NSCommonsLibs::BuilderType::StreamType> *>(aBuilderPtr);
+
+      const auto aConnectorPtr=aStreammerBuilder->getComInterface(aProxyID,"out","command");//servidor de comandos
+      //Configuracion atravez del proxymanager
+      //const auto ptr=aKernelPtr->getKernelDevice("ProxyManager");
     }
     static void createInstance()
     {

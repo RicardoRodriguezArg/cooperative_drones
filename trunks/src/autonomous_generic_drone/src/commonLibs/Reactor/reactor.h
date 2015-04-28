@@ -29,15 +29,9 @@ namespace NSReactorLayer
     }
     void make_service_tuple(CommType * const aCommType, ServiceTargetInterface * const aServiceTargetInterface)
     {
-
-
       if(aCommType!=nullptr && aServiceTargetInterface!=nullptr)
         {
-          LOG(INFO)<<"Creando Tuple";
-        const auto aTuple=std::make_tuple(nullptr,nullptr);//std::make_tuple(aCommType,aServiceTargetInterface);
-        vector_reactor.emplace_back(aTuple);
-        LOG(INFO)<<"Vector Size: "<<vector_reactor.size();
-
+          vector_reactor.emplace_back(std::make_tuple(aCommType,aServiceTargetInterface));
         }
     }
     void initCommServices()
