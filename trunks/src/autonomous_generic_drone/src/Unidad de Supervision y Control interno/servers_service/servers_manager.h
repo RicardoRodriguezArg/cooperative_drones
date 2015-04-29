@@ -18,7 +18,7 @@ public:
     {}
     virtual int getID()
     {
-            return ControlDef::ClassID::SERVER_MANAGER_ID;
+            return std::get<ControlDef::ClassID::ID_VALUE>(ControlDef::ClassID::ID_ServerManager);
     }
      void init(int &)
      {
@@ -43,7 +43,7 @@ public:
 };
 
 template<class Aux>
-KERNEL::FactoryRegister<ServerManager<Aux>> ServerManager<Aux>::factory_register=KERNEL::FactoryRegister<ServerManager<Aux>>("ServerManager");
+KERNEL::FactoryRegister<ServerManager<Aux>> ServerManager<Aux>::factory_register=KERNEL::FactoryRegister<ServerManager<Aux>>(std::get<ControlDef::ClassID::ID_DESCRIPTION>(ControlDef::ClassID::ID_ServerManager));
 
 
 }

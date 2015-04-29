@@ -20,7 +20,11 @@ namespace ControlDef
     }
     namespace ClassID
     {
-    constexpr int SERVER_MANAGER_ID=1000;
+      constexpr unsigned ID_VALUE=0U;
+      constexpr unsigned ID_DESCRIPTION=1U;
+      static const std::tuple<int,std::string> ID_ProxyManager(1,"ProxyManager");
+      static const std::tuple<int,std::string> ID_ServerManager(2,"ServerManager");
+      static const std::tuple<int,std::string> ID_CommandProcessor(3,"CommandProcessor");
     }
     namespace NSProxy
     {
@@ -30,9 +34,7 @@ namespace ControlDef
     }
     namespace NSKernel
     {
-      static const std::tuple<int,std::string> ID_ProxyManager(1,"ProxyManager");
-      static const std::tuple<int,std::string> ID_ServerManager(2,"ServerManager");
-      static const std::tuple<int,std::string> ID_CommandProcessor(3,"CommandProcessor");
+
 
     }
 }
