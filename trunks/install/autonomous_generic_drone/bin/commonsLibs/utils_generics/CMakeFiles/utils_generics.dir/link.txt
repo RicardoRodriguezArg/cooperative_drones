@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11  -std=c++11  -g    CMakeFiles/utils_generics.dir/main.cpp.o  -o utils_generics -rdynamic 

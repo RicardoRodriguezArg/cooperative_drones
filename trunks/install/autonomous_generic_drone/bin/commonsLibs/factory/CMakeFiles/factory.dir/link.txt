@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11  -std=c++11 -g    CMakeFiles/factory.dir/main.cpp.o CMakeFiles/factory.dir/generic_factory.cpp.o  -o factory -rdynamic -lpthread /usr/local/lib/libglog.so -Wl,-rpath,/usr/local/lib 

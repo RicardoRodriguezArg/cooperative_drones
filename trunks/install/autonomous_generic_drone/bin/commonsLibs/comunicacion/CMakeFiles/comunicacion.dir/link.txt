@@ -1,0 +1,2 @@
+/usr/bin/ar cr libcomunicacion.a  CMakeFiles/comunicacion.dir/main.cpp.o
+/usr/bin/ranlib libcomunicacion.a

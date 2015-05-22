@@ -1,0 +1,15 @@
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/CMakeFiles/Reactor.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/CMakeFiles/builders.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/CMakeFiles/cmd_protocol.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/CMakeFiles/comunicacion.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/CMakeFiles/estimadores.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/CMakeFiles/factory.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/CMakeFiles/kernel.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/CMakeFiles/observer.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/CMakeFiles/proxy_base.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/CMakeFiles/proxy_manager.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/CMakeFiles/state_machine.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/CMakeFiles/sub_cmds.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/CMakeFiles/test_builders_proxy.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/CMakeFiles/testmodelo.dir
+/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/CMakeFiles/utils_generics.dir
