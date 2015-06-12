@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs
+CMAKE_SOURCE_DIR = /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs
+CMAKE_BINARY_DIR = /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs
 
 # Include any dependencies generated for this target.
 include factory/CMakeFiles/factory.dir/depend.make
@@ -50,18 +50,18 @@ include factory/CMakeFiles/factory.dir/progress.make
 include factory/CMakeFiles/factory.dir/flags.make
 
 factory/CMakeFiles/factory.dir/main.cpp.o: factory/CMakeFiles/factory.dir/flags.make
-factory/CMakeFiles/factory.dir/main.cpp.o: /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/CMakeFiles $(CMAKE_PROGRESS_1)
+factory/CMakeFiles/factory.dir/main.cpp.o: /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object factory/CMakeFiles/factory.dir/main.cpp.o"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/factory.dir/main.cpp.o -c /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/main.cpp
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/factory.dir/main.cpp.o -c /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/main.cpp
 
 factory/CMakeFiles/factory.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/factory.dir/main.cpp.i"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/main.cpp > CMakeFiles/factory.dir/main.cpp.i
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/main.cpp > CMakeFiles/factory.dir/main.cpp.i
 
 factory/CMakeFiles/factory.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/factory.dir/main.cpp.s"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/main.cpp -o CMakeFiles/factory.dir/main.cpp.s
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/main.cpp -o CMakeFiles/factory.dir/main.cpp.s
 
 factory/CMakeFiles/factory.dir/main.cpp.o.requires:
 .PHONY : factory/CMakeFiles/factory.dir/main.cpp.o.requires
@@ -73,18 +73,18 @@ factory/CMakeFiles/factory.dir/main.cpp.o.provides: factory/CMakeFiles/factory.d
 factory/CMakeFiles/factory.dir/main.cpp.o.provides.build: factory/CMakeFiles/factory.dir/main.cpp.o
 
 factory/CMakeFiles/factory.dir/generic_factory.cpp.o: factory/CMakeFiles/factory.dir/flags.make
-factory/CMakeFiles/factory.dir/generic_factory.cpp.o: /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/CMakeFiles $(CMAKE_PROGRESS_2)
+factory/CMakeFiles/factory.dir/generic_factory.cpp.o: /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object factory/CMakeFiles/factory.dir/generic_factory.cpp.o"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/factory.dir/generic_factory.cpp.o -c /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.cpp
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/factory.dir/generic_factory.cpp.o -c /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.cpp
 
 factory/CMakeFiles/factory.dir/generic_factory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/factory.dir/generic_factory.cpp.i"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.cpp > CMakeFiles/factory.dir/generic_factory.cpp.i
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.cpp > CMakeFiles/factory.dir/generic_factory.cpp.i
 
 factory/CMakeFiles/factory.dir/generic_factory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/factory.dir/generic_factory.cpp.s"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.cpp -o CMakeFiles/factory.dir/generic_factory.cpp.s
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.cpp -o CMakeFiles/factory.dir/generic_factory.cpp.s
 
 factory/CMakeFiles/factory.dir/generic_factory.cpp.o.requires:
 .PHONY : factory/CMakeFiles/factory.dir/generic_factory.cpp.o.requires
@@ -109,7 +109,7 @@ factory/factory: factory/CMakeFiles/factory.dir/build.make
 factory/factory: /usr/local/lib/libglog.so
 factory/factory: factory/CMakeFiles/factory.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable factory"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/factory.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/factory.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 factory/CMakeFiles/factory.dir/build: factory/factory
@@ -120,10 +120,10 @@ factory/CMakeFiles/factory.dir/requires: factory/CMakeFiles/factory.dir/generic_
 .PHONY : factory/CMakeFiles/factory.dir/requires
 
 factory/CMakeFiles/factory.dir/clean:
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && $(CMAKE_COMMAND) -P CMakeFiles/factory.dir/cmake_clean.cmake
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory && $(CMAKE_COMMAND) -P CMakeFiles/factory.dir/cmake_clean.cmake
 .PHONY : factory/CMakeFiles/factory.dir/clean
 
 factory/CMakeFiles/factory.dir/depend:
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/CMakeFiles/factory.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/CMakeFiles/factory.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : factory/CMakeFiles/factory.dir/depend
 

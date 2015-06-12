@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs
+CMAKE_SOURCE_DIR = /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs
+CMAKE_BINARY_DIR = /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs
 
 # Include any dependencies generated for this target.
 include estimadores/CMakeFiles/estimadores.dir/depend.make
@@ -50,18 +50,18 @@ include estimadores/CMakeFiles/estimadores.dir/progress.make
 include estimadores/CMakeFiles/estimadores.dir/flags.make
 
 estimadores/CMakeFiles/estimadores.dir/main.cpp.o: estimadores/CMakeFiles/estimadores.dir/flags.make
-estimadores/CMakeFiles/estimadores.dir/main.cpp.o: /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/CMakeFiles $(CMAKE_PROGRESS_1)
+estimadores/CMakeFiles/estimadores.dir/main.cpp.o: /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object estimadores/CMakeFiles/estimadores.dir/main.cpp.o"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/estimadores.dir/main.cpp.o -c /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/main.cpp
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/estimadores.dir/main.cpp.o -c /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/main.cpp
 
 estimadores/CMakeFiles/estimadores.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/estimadores.dir/main.cpp.i"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/main.cpp > CMakeFiles/estimadores.dir/main.cpp.i
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/main.cpp > CMakeFiles/estimadores.dir/main.cpp.i
 
 estimadores/CMakeFiles/estimadores.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/estimadores.dir/main.cpp.s"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/main.cpp -o CMakeFiles/estimadores.dir/main.cpp.s
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/main.cpp -o CMakeFiles/estimadores.dir/main.cpp.s
 
 estimadores/CMakeFiles/estimadores.dir/main.cpp.o.requires:
 .PHONY : estimadores/CMakeFiles/estimadores.dir/main.cpp.o.requires
@@ -84,7 +84,7 @@ estimadores/estimadores: estimadores/CMakeFiles/estimadores.dir/build.make
 estimadores/estimadores: /usr/local/lib/libglog.so
 estimadores/estimadores: estimadores/CMakeFiles/estimadores.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable estimadores"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/estimadores.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/estimadores.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 estimadores/CMakeFiles/estimadores.dir/build: estimadores/estimadores
@@ -94,10 +94,10 @@ estimadores/CMakeFiles/estimadores.dir/requires: estimadores/CMakeFiles/estimado
 .PHONY : estimadores/CMakeFiles/estimadores.dir/requires
 
 estimadores/CMakeFiles/estimadores.dir/clean:
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores && $(CMAKE_COMMAND) -P CMakeFiles/estimadores.dir/cmake_clean.cmake
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores && $(CMAKE_COMMAND) -P CMakeFiles/estimadores.dir/cmake_clean.cmake
 .PHONY : estimadores/CMakeFiles/estimadores.dir/clean
 
 estimadores/CMakeFiles/estimadores.dir/depend:
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/CMakeFiles/estimadores.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/CMakeFiles/estimadores.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : estimadores/CMakeFiles/estimadores.dir/depend
 

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs
+CMAKE_SOURCE_DIR = /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs
+CMAKE_BINARY_DIR = /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs
 
 # Include any dependencies generated for this target.
 include observer/CMakeFiles/observer.dir/depend.make
@@ -50,18 +50,18 @@ include observer/CMakeFiles/observer.dir/progress.make
 include observer/CMakeFiles/observer.dir/flags.make
 
 observer/CMakeFiles/observer.dir/main.cpp.o: observer/CMakeFiles/observer.dir/flags.make
-observer/CMakeFiles/observer.dir/main.cpp.o: /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/CMakeFiles $(CMAKE_PROGRESS_1)
+observer/CMakeFiles/observer.dir/main.cpp.o: /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object observer/CMakeFiles/observer.dir/main.cpp.o"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/observer.dir/main.cpp.o -c /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/main.cpp
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/observer.dir/main.cpp.o -c /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/main.cpp
 
 observer/CMakeFiles/observer.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/observer.dir/main.cpp.i"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/main.cpp > CMakeFiles/observer.dir/main.cpp.i
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/main.cpp > CMakeFiles/observer.dir/main.cpp.i
 
 observer/CMakeFiles/observer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/observer.dir/main.cpp.s"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/main.cpp -o CMakeFiles/observer.dir/main.cpp.s
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/main.cpp -o CMakeFiles/observer.dir/main.cpp.s
 
 observer/CMakeFiles/observer.dir/main.cpp.o.requires:
 .PHONY : observer/CMakeFiles/observer.dir/main.cpp.o.requires
@@ -83,8 +83,8 @@ observer/libobserver.a: observer/CMakeFiles/observer.dir/main.cpp.o
 observer/libobserver.a: observer/CMakeFiles/observer.dir/build.make
 observer/libobserver.a: observer/CMakeFiles/observer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libobserver.a"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && $(CMAKE_COMMAND) -P CMakeFiles/observer.dir/cmake_clean_target.cmake
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/observer.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && $(CMAKE_COMMAND) -P CMakeFiles/observer.dir/cmake_clean_target.cmake
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/observer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 observer/CMakeFiles/observer.dir/build: observer/libobserver.a
@@ -94,10 +94,10 @@ observer/CMakeFiles/observer.dir/requires: observer/CMakeFiles/observer.dir/main
 .PHONY : observer/CMakeFiles/observer.dir/requires
 
 observer/CMakeFiles/observer.dir/clean:
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && $(CMAKE_COMMAND) -P CMakeFiles/observer.dir/cmake_clean.cmake
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer && $(CMAKE_COMMAND) -P CMakeFiles/observer.dir/cmake_clean.cmake
 .PHONY : observer/CMakeFiles/observer.dir/clean
 
 observer/CMakeFiles/observer.dir/depend:
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/CMakeFiles/observer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/CMakeFiles/observer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : observer/CMakeFiles/observer.dir/depend
 

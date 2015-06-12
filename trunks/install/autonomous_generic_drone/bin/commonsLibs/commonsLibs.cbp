@@ -8,28 +8,28 @@
       <Option virtualFolders="CMake Files\;CMake Files\Reactor\;CMake Files\cmake\;CMake Files\builders\;CMake Files\cmd_protocol\;CMake Files\utils_generics\;CMake Files\comunicacion\;CMake Files\proxy_base\;CMake Files\kernel\;CMake Files\state_machine\;CMake Files\factory\;CMake Files\proxy_manager\;CMake Files\observer\;CMake Files\sub_cmds\;CMake Files\estimadores\;CMake Files\model_manager\;" />
       <Build>
       <Target title="all">
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs" />
          <Option type="4" />
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 all" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="rebuild_cache">
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs" />
          <Option type="4" />
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 rebuild_cache" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="Reactor">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Reactor" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Reactor" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -37,22 +37,22 @@
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 Reactor" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 Reactor" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="Reactor/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Reactor" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Reactor" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -60,22 +60,22 @@
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 Reactor/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 Reactor/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/Reactor/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="utils_generics">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/utils_generics" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/utils_generics" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -83,22 +83,22 @@
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 utils_generics" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 utils_generics" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="utils_generics/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/utils_generics" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/utils_generics" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -106,474 +106,474 @@
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 utils_generics/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 utils_generics/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/utils_generics/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="comunicacion">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/libcomunicacion.a" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/libcomunicacion.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion" />
          <Option object_output="./" />
          <Option type="2" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/.." />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/../netlink" />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/../utils_generics" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/../netlink" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/../utils_generics" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 comunicacion" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 comunicacion" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="comunicacion/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/libcomunicacion.a" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/libcomunicacion.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion" />
          <Option object_output="./" />
          <Option type="2" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/.." />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/../netlink" />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/../utils_generics" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/../netlink" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/../utils_generics" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 comunicacion/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 comunicacion/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="builders">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/builders" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/builders" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/.." />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../netlink" />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../tinyxml2" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../netlink" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../tinyxml2" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 builders" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 builders" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="builders/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/builders" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/builders" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/.." />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../netlink" />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../tinyxml2" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../netlink" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../tinyxml2" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 builders/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 builders/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="test_builders_proxy">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/test_builders_proxy" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/test_builders_proxy" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/.." />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../netlink" />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../tinyxml2" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../netlink" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../tinyxml2" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 test_builders_proxy" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 test_builders_proxy" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="test_builders_proxy/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/test_builders_proxy" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/test_builders_proxy" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/.." />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../netlink" />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../tinyxml2" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../netlink" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/../tinyxml2" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 test_builders_proxy/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 test_builders_proxy/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/builders/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="proxy_base">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/proxy_base" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/proxy_base" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 proxy_base" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 proxy_base" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="proxy_base/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/proxy_base" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/proxy_base" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 proxy_base/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 proxy_base/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_base/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="kernel">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/kernel" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/kernel" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/.." />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/../state_machine" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/../state_machine" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 kernel" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 kernel" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="kernel/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/kernel" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/kernel" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/.." />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/../state_machine" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/../state_machine" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 kernel/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 kernel/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/kernel/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="state_machine">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/state_machine" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/state_machine" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/.." />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../builders" />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../netlink" />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../tinyxml2" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../builders" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../netlink" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../tinyxml2" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 state_machine" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 state_machine" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="state_machine/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/state_machine" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/state_machine" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/.." />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../builders" />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../netlink" />
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../tinyxml2" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../builders" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../netlink" />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/../tinyxml2" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 state_machine/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 state_machine/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/state_machine/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="factory">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/factory" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/factory" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 factory" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 factory" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="factory/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/factory" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/factory" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 factory/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 factory/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/factory/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="proxy_manager">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/proxy_manager" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/proxy_manager" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 proxy_manager" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 proxy_manager" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="proxy_manager/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/proxy_manager" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/proxy_manager" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 proxy_manager/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 proxy_manager/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/proxy_manager/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="cmd_protocol">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/cmd_protocol" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/cmd_protocol" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 cmd_protocol" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 cmd_protocol" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="cmd_protocol/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/cmd_protocol" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/cmd_protocol" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 cmd_protocol/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 cmd_protocol/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/cmd_protocol/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="observer">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/libobserver.a" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/libobserver.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer" />
          <Option object_output="./" />
          <Option type="2" />
          <Option compiler="gcc" />
@@ -581,22 +581,22 @@
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 observer" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 observer" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="observer/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/libobserver.a" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/libobserver.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer" />
          <Option object_output="./" />
          <Option type="2" />
          <Option compiler="gcc" />
@@ -604,22 +604,22 @@
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 observer/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 observer/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/observer/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="sub_cmds">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/libsub_cmds.a" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/libsub_cmds.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds" />
          <Option object_output="./" />
          <Option type="2" />
          <Option compiler="gcc" />
@@ -627,22 +627,22 @@
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 sub_cmds" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 sub_cmds" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="sub_cmds/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/libsub_cmds.a" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/libsub_cmds.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds" />
          <Option object_output="./" />
          <Option type="2" />
          <Option compiler="gcc" />
@@ -650,339 +650,339 @@
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 sub_cmds/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 sub_cmds/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/sub_cmds/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="estimadores">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/estimadores" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/estimadores" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 estimadores" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 estimadores" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="estimadores/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/estimadores" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/estimadores" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 estimadores/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 estimadores/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/estimadores/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="testmodelo">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/testmodelo" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/testmodelo" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 testmodelo" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 testmodelo" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="testmodelo/fast">
-         <Option output="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/testmodelo" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager" />
+         <Option output="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/testmodelo" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
-            <Add directory="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/.." />
+            <Add directory="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/.." />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/4.8" />
             <Add directory="/usr/include/c++/4.8/backward" />
-            <Add directory="/usr/include/i386-linux-gnu" />
-            <Add directory="/usr/include/i386-linux-gnu/c++/4.8" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include" />
-            <Add directory="/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 testmodelo/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 testmodelo/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/model_manager/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       </Build>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/Reactor/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/Reactor/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/test_builders_proxy.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/test_builders_proxy.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/netlink/socket.cc">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/netlink/socket.cc">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/sub_cmds/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/sub_cmds/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/tinyxml2/tinyxml2.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/tinyxml2/tinyxml2.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/main.cpp">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/main.cpp">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/Reactor/reactor.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/Reactor/reactor.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/builder_options.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/builder_options.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/builder_proxy_info.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/builder_proxy_info.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/builders_proxy.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/builders_proxy.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/builders_streams.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/builders_streams.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/builders_traits.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/builders_traits.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/utils_builder.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/utils_builder.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/cmd_state_unit.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/cmd_state_unit.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/events_state_traits.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/events_state_traits.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/state_transition_unit.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/state_transition_unit.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/UDPComm.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/UDPComm.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/framercomunicacion.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/framercomunicacion.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/icomm.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/icomm.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/interfaceframer.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/interfaceframer.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/tcpcommunication.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/tcpcommunication.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/base_class.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/base_class.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/factory_register.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/factory_register.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/generic_factory.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/i_kernel_interface.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/i_kernel_interface.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/kernel.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/kernel.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/imodel_properties.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/imodel_properties.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/model_property_unit.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/model_property_unit.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/modelmanager.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/modelmanager.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/netlink/socket.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/netlink/socket.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/observer.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/observer.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/sujeto.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/sujeto.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/i_proxy_proccess.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/i_proxy_proccess.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/proxy_base.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/proxy_base.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/proxy_manager.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/proxy_manager.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/generic_state_machine.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/generic_state_machine.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/sub_cmds/sub_cmds.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/sub_cmds/sub_cmds.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/sub_cmds/sub_command_interface.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/sub_cmds/sub_command_interface.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/tinyxml2/tinyxml2.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/tinyxml2/tinyxml2.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/generics_multi_maps.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/generics_multi_maps.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/generis_strutures.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/generis_strutures.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/gpio_utils.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/gpio_utils.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/linux_uitls.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/linux_uitls.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/utils_transform_data.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/utils_transform_data.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/xml_reader.h">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/xml_reader.h">
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/Reactor/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/Reactor/CMakeLists.txt">
           <Option virtualFolder="CMake Files\Reactor\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/Reactor/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/Reactor/CMakeLists.txt">
           <Option virtualFolder="CMake Files\Reactor\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
           <Option virtualFolder="CMake Files\cmake\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
           <Option virtualFolder="CMake Files\cmake\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
           <Option virtualFolder="CMake Files\cmake\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
           <Option virtualFolder="CMake Files\cmake\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
           <Option virtualFolder="CMake Files\cmake\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
           <Option virtualFolder="CMake Files\cmake\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
           <Option virtualFolder="CMake Files\cmake\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmake/findGlog.cmake">
           <Option virtualFolder="CMake Files\cmake\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/CMakeLists.txt">
           <Option virtualFolder="CMake Files\builders\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/builders/CMakeLists.txt">
           <Option virtualFolder="CMake Files\builders\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/CMakeLists.txt">
           <Option virtualFolder="CMake Files\cmd_protocol\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/cmd_protocol/CMakeLists.txt">
           <Option virtualFolder="CMake Files\cmd_protocol\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/CMakeLists.txt">
           <Option virtualFolder="CMake Files\utils_generics\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/utils_generics/CMakeLists.txt">
           <Option virtualFolder="CMake Files\utils_generics\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/CMakeLists.txt">
           <Option virtualFolder="CMake Files\comunicacion\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/CMakeLists.txt">
           <Option virtualFolder="CMake Files\comunicacion\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/CMakeLists.txt">
           <Option virtualFolder="CMake Files\proxy_base\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_base/CMakeLists.txt">
           <Option virtualFolder="CMake Files\proxy_base\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/CMakeLists.txt">
           <Option virtualFolder="CMake Files\kernel\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/kernel/CMakeLists.txt">
           <Option virtualFolder="CMake Files\kernel\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/CMakeLists.txt">
           <Option virtualFolder="CMake Files\state_machine\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/state_machine/CMakeLists.txt">
           <Option virtualFolder="CMake Files\state_machine\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/CMakeLists.txt">
           <Option virtualFolder="CMake Files\factory\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/factory/CMakeLists.txt">
           <Option virtualFolder="CMake Files\factory\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/CMakeLists.txt">
           <Option virtualFolder="CMake Files\proxy_manager\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/proxy_manager/CMakeLists.txt">
           <Option virtualFolder="CMake Files\proxy_manager\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/CMakeLists.txt">
           <Option virtualFolder="CMake Files\observer\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/observer/CMakeLists.txt">
           <Option virtualFolder="CMake Files\observer\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/sub_cmds/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/sub_cmds/CMakeLists.txt">
           <Option virtualFolder="CMake Files\sub_cmds\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/sub_cmds/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/sub_cmds/CMakeLists.txt">
           <Option virtualFolder="CMake Files\sub_cmds\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/CMakeLists.txt">
           <Option virtualFolder="CMake Files\estimadores\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores/CMakeLists.txt">
           <Option virtualFolder="CMake Files\estimadores\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/CMakeLists.txt">
           <Option virtualFolder="CMake Files\model_manager\" />
       </Unit>
-      <Unit filename="/home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/CMakeLists.txt">
+      <Unit filename="/home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/model_manager/CMakeLists.txt">
           <Option virtualFolder="CMake Files\model_manager\" />
       </Unit>
    </Project>

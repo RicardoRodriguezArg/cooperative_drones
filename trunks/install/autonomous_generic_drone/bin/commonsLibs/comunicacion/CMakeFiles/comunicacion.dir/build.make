@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs
+CMAKE_SOURCE_DIR = /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs
+CMAKE_BINARY_DIR = /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs
 
 # Include any dependencies generated for this target.
 include comunicacion/CMakeFiles/comunicacion.dir/depend.make
@@ -50,18 +50,18 @@ include comunicacion/CMakeFiles/comunicacion.dir/progress.make
 include comunicacion/CMakeFiles/comunicacion.dir/flags.make
 
 comunicacion/CMakeFiles/comunicacion.dir/main.cpp.o: comunicacion/CMakeFiles/comunicacion.dir/flags.make
-comunicacion/CMakeFiles/comunicacion.dir/main.cpp.o: /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/CMakeFiles $(CMAKE_PROGRESS_1)
+comunicacion/CMakeFiles/comunicacion.dir/main.cpp.o: /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object comunicacion/CMakeFiles/comunicacion.dir/main.cpp.o"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/comunicacion.dir/main.cpp.o -c /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/main.cpp
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/comunicacion.dir/main.cpp.o -c /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/main.cpp
 
 comunicacion/CMakeFiles/comunicacion.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/comunicacion.dir/main.cpp.i"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/main.cpp > CMakeFiles/comunicacion.dir/main.cpp.i
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/main.cpp > CMakeFiles/comunicacion.dir/main.cpp.i
 
 comunicacion/CMakeFiles/comunicacion.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/comunicacion.dir/main.cpp.s"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/main.cpp -o CMakeFiles/comunicacion.dir/main.cpp.s
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion/main.cpp -o CMakeFiles/comunicacion.dir/main.cpp.s
 
 comunicacion/CMakeFiles/comunicacion.dir/main.cpp.o.requires:
 .PHONY : comunicacion/CMakeFiles/comunicacion.dir/main.cpp.o.requires
@@ -83,8 +83,8 @@ comunicacion/libcomunicacion.a: comunicacion/CMakeFiles/comunicacion.dir/main.cp
 comunicacion/libcomunicacion.a: comunicacion/CMakeFiles/comunicacion.dir/build.make
 comunicacion/libcomunicacion.a: comunicacion/CMakeFiles/comunicacion.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libcomunicacion.a"
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && $(CMAKE_COMMAND) -P CMakeFiles/comunicacion.dir/cmake_clean_target.cmake
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/comunicacion.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && $(CMAKE_COMMAND) -P CMakeFiles/comunicacion.dir/cmake_clean_target.cmake
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/comunicacion.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 comunicacion/CMakeFiles/comunicacion.dir/build: comunicacion/libcomunicacion.a
@@ -94,10 +94,10 @@ comunicacion/CMakeFiles/comunicacion.dir/requires: comunicacion/CMakeFiles/comun
 .PHONY : comunicacion/CMakeFiles/comunicacion.dir/requires
 
 comunicacion/CMakeFiles/comunicacion.dir/clean:
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && $(CMAKE_COMMAND) -P CMakeFiles/comunicacion.dir/cmake_clean.cmake
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion && $(CMAKE_COMMAND) -P CMakeFiles/comunicacion.dir/cmake_clean.cmake
 .PHONY : comunicacion/CMakeFiles/comunicacion.dir/clean
 
 comunicacion/CMakeFiles/comunicacion.dir/depend:
-	cd /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion /home/ricardo/Desktop/debugger/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/CMakeFiles/comunicacion.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/comunicacion /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/install/autonomous_generic_drone/bin/commonsLibs/comunicacion/CMakeFiles/comunicacion.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : comunicacion/CMakeFiles/comunicacion.dir/depend
 

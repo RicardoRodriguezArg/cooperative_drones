@@ -1,4 +1,4 @@
-# Install script for directory: /home/ricardo/Desktop/debugger/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores
+# Install script for directory: /home/ricardo/Desktop/proyecto/cooperative_drones/trunks/src/autonomous_generic_drone/src/commonLibs/estimadores
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
