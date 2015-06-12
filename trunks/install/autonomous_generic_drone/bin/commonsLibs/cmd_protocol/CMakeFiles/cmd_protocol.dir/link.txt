@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11  -std=c++11     CMakeFiles/cmd_protocol.dir/main.cpp.o  -o cmd_protocol -rdynamic 

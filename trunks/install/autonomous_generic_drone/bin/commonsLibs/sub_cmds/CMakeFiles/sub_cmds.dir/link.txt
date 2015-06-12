@@ -1,2 +1,0 @@
-/usr/bin/ar cr libsub_cmds.a  CMakeFiles/sub_cmds.dir/main.cpp.o
-/usr/bin/ranlib libsub_cmds.a

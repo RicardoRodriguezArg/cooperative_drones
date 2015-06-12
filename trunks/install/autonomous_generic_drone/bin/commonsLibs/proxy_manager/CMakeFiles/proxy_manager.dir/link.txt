@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11  -std=c++11     CMakeFiles/proxy_manager.dir/main.cpp.o  -o proxy_manager -rdynamic 
