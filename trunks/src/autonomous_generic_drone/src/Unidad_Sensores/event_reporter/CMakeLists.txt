@@ -1,0 +1,2 @@
+project(event_reporter)
+
