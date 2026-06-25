@@ -1,0 +1,30 @@
+Cargando STEP (varios minutos)...
+Cargado. Objetos: 11042
+Solidos en mundo: 1392
+  grupo base      : 1169 solidos
+  grupo wheel_fl  : 11 solidos
+  grupo wheel_fr  : 11 solidos
+  grupo wheel_ml  : 6 solidos
+  grupo wheel_mr  : 6 solidos
+  grupo wheel_rl  : 11 solidos
+  grupo wheel_rr  : 11 solidos
+  grupo pan       : 44 solidos
+  grupo tilt      : 76 solidos
+  grupo camera    : 47 solidos
+Exportando...
+  exportado base      -> base.stl (29295 KB)
+  exportado wheel_fl  -> wheel_fl.stl (1859 KB)
+  exportado wheel_fr  -> wheel_fr.stl (1859 KB)
+  exportado wheel_ml  -> wheel_ml.stl (1527 KB)
+  exportado wheel_mr  -> wheel_mr.stl (1527 KB)
+  exportado wheel_rl  -> wheel_rl.stl (1859 KB)
+  exportado wheel_rr  -> wheel_rr.stl (1859 KB)
+  exportado pan       -> pan.stl (2262 KB)
+  exportado tilt      -> tilt.stl (3095 KB)
+  exportado camera    -> camera.stl (2017 KB)
+
+=== ORIGENES DE JUNTA (m) ===
+  pan_joint  (base->pan)  xyz = 0.0087 0.0000 0.0475
+  tilt_joint (pan->tilt)  xyz = -0.0124 0.0000 0.0835
+  cam_joint  (tilt->cam)  xyz = -0.0263 0.0000 0.0210
+OK
