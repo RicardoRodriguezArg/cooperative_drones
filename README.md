@@ -1,4 +1,4 @@
-cooperative_drones
+cooperative robotics agents
 ==================
 
-Sistema de Drones cooperativos.
+Swarm agents with Llms and Vlm capabilities on the edge
