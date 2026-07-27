@@ -1,0 +1,24 @@
+# Bazel: symlinks de salida (bazel-bin, bazel-out, bazel-testlogs,
+# bazel-<nombre-repo>), apuntan al cache fuera del workspace.
+bazel-*
+
+# Checkpoints/pesos del LLM de brain (~7GB, no versionable: .safetensors,
+# .gguf, etc. superan el limite de 100MB de GitHub por archivo).
+/cpp_applications/brain/src/models/
+
+# Vendored openvino.genai: solo usamos src/cpp/include/ (headers, ver el
+# BUILD). El resto (site/, samples/, .github/, docs) es el repo de Intel
+# completo, incluye su propio .gitattributes con reglas de Git LFS para
+# imagenes que rompen el push (los objetos LFS nunca se subieron). Se
+# ignora todo el arbol y se des-ignora selectivamente solo lo que usamos.
+/cpp_applications/brain/src/resources/openvino.genai-2026.1.0.0/*
+!/cpp_applications/brain/src/resources/openvino.genai-2026.1.0.0/src/
+/cpp_applications/brain/src/resources/openvino.genai-2026.1.0.0/src/*
+!/cpp_applications/brain/src/resources/openvino.genai-2026.1.0.0/src/cpp/
+/cpp_applications/brain/src/resources/openvino.genai-2026.1.0.0/src/cpp/*
+!/cpp_applications/brain/src/resources/openvino.genai-2026.1.0.0/src/cpp/include/
+
+# Tarballs sueltos de dependencias descargadas, no referenciados por
+# ningun BUILD (el codigo que se necesita ya esta extraido arriba).
+/cpp_applications/brain/src/resources/openvino/*.tar.gz
+/cpp_applications/brain/src/resources/xml/*.tar.gz

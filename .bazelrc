@@ -1,0 +1,38 @@
+# Monorepo Bazel para practicar C++.
+#
+# Toolchains propios (gcc y clang) registrados en //toolchain, seleccionables
+# por plataforma (//platforms:linux_x86_64_gcc | linux_x86_64_clang).
+#
+# Uso:
+#   bazel build //... --config=gcc     (default si no se pasa --config)
+#   bazel build //... --config=clang
+#   bazel build //... --config=clang --config=dbg
+#   bazel build //... --config=clang --config=opt
+#
+# Perfiles opcionales de investigacion/seguridad (combinables entre si; cada
+# uno solo define un --define=X=true, ver //config:BUILD.bazel). Los flags de
+# compilador reales viven en el BUILD de cada package, que decide si los usa:
+#   bazel build //memory_management/... --config=layout    (dump de layout)
+#   bazel build //memory_management/... --config=asan
+#   bazel build //memory_management/... --config=ubsan
+#   bazel build //memory_management/... --config=hardened
+
+build --platforms=//platforms:linux_x86_64_gcc
+
+build:gcc   --platforms=//platforms:linux_x86_64_gcc
+build:clang --platforms=//platforms:linux_x86_64_clang
+
+build:dbg -c dbg
+build:opt -c opt
+
+build:layout   --define=layout=true
+build:asan     --define=asan=true
+build:ubsan    --define=ubsan=true
+build:hardened --define=hardened=true
+
+# Opciones de compilacion C++ globales del monorepo (aplican a todos los
+# packages via los toolchains; cada package puede sumar copts propios).
+build --cxxopt=-std=c++20
+
+build --verbose_failures
+test --test_output=errors

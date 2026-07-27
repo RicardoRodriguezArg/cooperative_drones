@@ -1,0 +1,145 @@
+load(":cc_toolchain_config.bzl", "cc_toolchain_config")
+
+package(default_visibility = ["//visibility:public"])
+
+filegroup(name = "empty")
+
+_COMMON_INCLUDE_DIRS = [
+    "/usr/include/c++/13",
+    "/usr/include/x86_64-linux-gnu/c++/13",
+    "/usr/include/c++/13/backward",
+    "/usr/lib/gcc/x86_64-linux-gnu/13/include",
+    "/usr/local/include",
+    "/usr/include/x86_64-linux-gnu",
+    "/usr/include",
+]
+
+_COMMON_WARNING_FLAGS = [
+    "-Wall",
+    "-Wextra",
+    "-Wshadow",
+    "-fno-omit-frame-pointer",
+]
+
+_COMMON_DBG_FLAGS = ["-g", "-O0"]
+_COMMON_OPT_FLAGS = ["-O2", "-DNDEBUG"]
+
+# ---------------------------------------------------------------------------
+# gcc
+# ---------------------------------------------------------------------------
+
+cc_toolchain_config(
+    name = "gcc_config",
+    toolchain_identifier = "gcc-toolchain",
+    compiler = "gcc",
+    target_cpu = "x86_64",
+    tool_paths = {
+        "gcc": "/usr/bin/g++",
+        "cpp": "/usr/bin/cpp",
+        "ar": "/usr/bin/gcc-ar",
+        "nm": "/usr/bin/gcc-nm",
+        "ranlib": "/usr/bin/gcc-ranlib",
+        "ld": "/usr/bin/ld",
+        "gcov": "/usr/bin/gcov",
+        "objcopy": "/usr/bin/objcopy",
+        "objdump": "/usr/bin/objdump",
+        "strip": "/usr/bin/strip",
+    },
+    builtin_include_directories = _COMMON_INCLUDE_DIRS,
+    compile_flags = _COMMON_WARNING_FLAGS,
+    cxx_flags = ["-std=c++20"],
+    link_flags = ["-lstdc++", "-lm"],
+    dbg_compile_flags = _COMMON_DBG_FLAGS,
+    opt_compile_flags = _COMMON_OPT_FLAGS,
+)
+
+cc_toolchain(
+    name = "gcc_cc_toolchain",
+    all_files = ":empty",
+    ar_files = ":empty",
+    as_files = ":empty",
+    compiler_files = ":empty",
+    dwp_files = ":empty",
+    linker_files = ":empty",
+    objcopy_files = ":empty",
+    strip_files = ":empty",
+    supports_param_files = 1,
+    toolchain_config = ":gcc_config",
+    toolchain_identifier = "gcc-toolchain",
+)
+
+toolchain(
+    name = "gcc_toolchain",
+    exec_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    target_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+        "//platforms:gcc",
+    ],
+    toolchain = ":gcc_cc_toolchain",
+    toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
+)
+
+# ---------------------------------------------------------------------------
+# clang
+# ---------------------------------------------------------------------------
+
+cc_toolchain_config(
+    name = "clang_config",
+    toolchain_identifier = "clang-toolchain",
+    compiler = "clang",
+    target_cpu = "x86_64",
+    tool_paths = {
+        "gcc": "/usr/bin/clang++",
+        "cpp": "/usr/bin/clang-cpp-18",
+        "ar": "/usr/bin/llvm-ar-18",
+        "nm": "/usr/bin/nm",
+        "ranlib": "/usr/bin/ranlib",
+        "ld": "/usr/bin/ld",
+        "gcov": "/usr/bin/llvm-cov-18",
+        "objcopy": "/usr/bin/objcopy",
+        "objdump": "/usr/bin/objdump",
+        "strip": "/usr/bin/strip",
+    },
+    builtin_include_directories = _COMMON_INCLUDE_DIRS + [
+        "/usr/lib/llvm-18/lib/clang/18/include",
+    ],
+    compile_flags = _COMMON_WARNING_FLAGS,
+    cxx_flags = ["-std=c++20"],
+    link_flags = ["-lstdc++", "-lm"],
+    dbg_compile_flags = _COMMON_DBG_FLAGS,
+    opt_compile_flags = _COMMON_OPT_FLAGS,
+)
+
+cc_toolchain(
+    name = "clang_cc_toolchain",
+    all_files = ":empty",
+    ar_files = ":empty",
+    as_files = ":empty",
+    compiler_files = ":empty",
+    dwp_files = ":empty",
+    linker_files = ":empty",
+    objcopy_files = ":empty",
+    strip_files = ":empty",
+    supports_param_files = 1,
+    toolchain_config = ":clang_config",
+    toolchain_identifier = "clang-toolchain",
+)
+
+toolchain(
+    name = "clang_toolchain",
+    exec_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    target_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+        "//platforms:clang",
+    ],
+    toolchain = ":clang_cc_toolchain",
+    toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
+)

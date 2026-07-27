@@ -1,0 +1,40 @@
+package(default_visibility = ["//visibility:public"])
+
+# Interruptores de build seleccionables desde .bazelrc (--config=asan, etc.),
+# expuestos aca como config_setting para que cada package decida, en su
+# propio BUILD, que flags concretos activa para cada uno (los copts/linkopts
+# reales NO viven aca: esto solo expone la condicion booleana).
+#
+# Uso tipico:
+#   bazel build //cpp_applications/... --config=clang --config=asan --config=ubsan
+#   bazel build //cpp_applications/... --config=hardened --config=opt
+#   bazel build //cpp_applications/... --config=layout          (dump de layout, gcc o clang)
+
+config_setting(
+    name = "asan",
+    values = {"define": "asan=true"},
+)
+
+config_setting(
+    name = "ubsan",
+    values = {"define": "ubsan=true"},
+)
+
+config_setting(
+    name = "hardened",
+    values = {"define": "hardened=true"},
+)
+
+# El dump de layout es especifico de cada compilador (gcc: -fdump-lang-class,
+# clang: -Xclang -fdump-record-layouts), asi que se resuelve por plataforma.
+config_setting(
+    name = "layout_gcc",
+    constraint_values = ["//platforms:gcc"],
+    values = {"define": "layout=true"},
+)
+
+config_setting(
+    name = "layout_clang",
+    constraint_values = ["//platforms:clang"],
+    values = {"define": "layout=true"},
+)

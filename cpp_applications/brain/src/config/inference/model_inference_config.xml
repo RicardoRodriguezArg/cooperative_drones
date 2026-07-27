@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model_inference>
+    <model_path>/home/operador/Documents/tmp/agent/models/llm/distilled-1b-robot-router/exported/openvino_int4</model_path>
+    <device>CPU</device>
+    <modelfile_path>/home/operador/Documents/brain-ws/docker/models/gpu/Modelfile</modelfile_path>
+    <generation>
+        <max_new_tokens>150</max_new_tokens>
+        <do_sample>false</do_sample>
+        <apply_chat_template>true</apply_chat_template>
+    </generation>
+</model_inference>

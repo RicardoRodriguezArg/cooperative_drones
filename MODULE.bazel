@@ -1,0 +1,13 @@
+module(
+    name = "mastering_cpp",
+    version = "0.1.0",
+)
+
+# Necesario para los constraint_value @platforms//os y @platforms//cpu
+# que usamos para distinguir los toolchains de gcc y clang.
+bazel_dep(name = "platforms", version = "0.0.10")
+
+register_toolchains(
+    "//toolchain:gcc_toolchain",
+    "//toolchain:clang_toolchain",
+)

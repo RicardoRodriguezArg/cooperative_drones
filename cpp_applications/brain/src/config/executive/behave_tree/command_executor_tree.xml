@@ -1,0 +1,199 @@
+<root BTCPP_format="4">
+
+  <!--
+    IMPORTANT FOR ORCHESTRATOR:
+    This tree processes ONE command per execution cycle.
+    The orchestrator MUST reset the tree (BT::Tree::haltTree()) after each
+    command completes or fails, before ticking it again for the next command.
+    Failing to do so will cause SequenceWithMemory to skip GetNextCommand
+    and ClearBoard on subsequent ticks, leaving stale state on the blackboard.
+  -->
+
+  <BehaviorTree ID="AgentCommandExecutorTree">
+
+    <SequenceWithMemory name="ExecuteCommandFromList">
+
+      <GetNextCommand
+        name="GetNextHighLevelCommand"
+        commands="{commands}"
+        command="{current_command}"
+        command_type="{current_command_type}" />
+
+      <ClearBoardFromPreviousCommandExecution
+        name="ClearBoardFromPreviousCommandExecution"
+        command="{current_command}"
+        feedback="{current_command_feedback}"
+        status="{current_command_status}"
+        error="{current_command_error}" />
+
+      <Switch3 name="HighLevelCommandDispatcher"
+               variable="{current_command_type}"
+               case_1="go_to_and_return"
+               case_2="go_to_wait"
+               case_3="get_state">
+
+        <!-- case_1: go_to(landmark) + wait(time) + go_to(home) -->
+        <Sequence name="GoToAndReturnHomeSequence">
+
+          <ValidateLandmark
+            name="ValidateGoToLandmark"
+            command="{current_command}"
+            landmarks="{landmarks}" />
+
+          <ExecuteCommandWithFeedback
+            name="ExecuteGoToLandmarkCommand"
+            command="{current_command}"
+            phase="go_to_landmark"
+            feedback="{current_command_feedback}"
+            status="{current_command_status}"
+            error="{current_command_error}" />
+
+          <ValidateArrivalToLandmark
+            name="ValidateArrivalToLandmark"
+            command="{current_command}"
+            landmarks="{landmarks}" />
+
+          <ExecuteCommandWithFeedback
+            name="ExecuteWaitAtLandmarkCommand"
+            command="{current_command}"
+            phase="wait"
+            feedback="{current_command_feedback}"
+            status="{current_command_status}"
+            error="{current_command_error}" />
+
+          <ExecuteCommandWithFeedback
+            name="ExecuteReturnHomeCommand"
+            command="{current_command}"
+            phase="return_home"
+            feedback="{current_command_feedback}"
+            status="{current_command_status}"
+            error="{current_command_error}" />
+
+          <ValidateArrivalToLandmark
+            name="ValidateArrivalAtHome"
+            command="{current_command}"
+            landmarks="{landmarks}" />
+
+          <CommunicateReturnHome
+            name="CommunicateReturnHome"
+            command="{current_command}"
+            landmarks="{landmarks}" />
+
+        </Sequence>
+
+        <!-- case_2: go_to(landmark) + wait indefinitely -->
+        <Sequence name="GoToSpecificLandmarkAndWaitSequence">
+
+          <ValidateLandmark
+            name="ValidateGoToLandmark"
+            command="{current_command}"
+            landmarks="{landmarks}" />
+
+          <ExecuteCommandWithFeedback
+            name="ExecuteGoToLandmarkCommand"
+            command="{current_command}"
+            phase="go_to_landmark"
+            feedback="{current_command_feedback}"
+            status="{current_command_status}"
+            error="{current_command_error}" />
+
+          <ValidateArrivalToLandmark
+            name="ValidateArrivalToLandmark"
+            command="{current_command}"
+            landmarks="{landmarks}" />
+
+          <CommunicateWaitingStatus
+            name="CommunicateWaitingStatus"
+            command="{current_command}"
+            landmarks="{landmarks}" />
+
+        </Sequence>
+
+        <!-- case_3: read state of a component -->
+        <Sequence name="GetStateFlow">
+
+          <ValidateComponent
+            name="ValidateGetStateComponent"
+            command="{current_command}"
+            components="{components}" />
+
+          <ExecuteCommandWithFeedback
+            name="ExecuteGetStateCommand"
+            command="{current_command}"
+            phase="get_state"
+            feedback="{current_command_feedback}"
+            status="{current_command_status}"
+            error="{current_command_error}" />
+
+        </Sequence>
+
+        <!-- default: command type not recognized -->
+        <Sequence name="CommandNotListed">
+
+          <CommunicateCommandWasNotListed
+            name="CommunicateCommandWasNotListed"
+            command="{current_command}" />
+
+        </Sequence>
+
+      </Switch3>
+
+    </SequenceWithMemory>
+
+  </BehaviorTree>
+
+  <TreeNodesModel>
+
+    <Action ID="GetNextCommand">
+      <input_port  name="commands"     type="std::vector&lt;Command&gt;" />
+      <output_port name="command"      type="Command" />
+      <output_port name="command_type" type="std::string" />
+    </Action>
+
+    <Action ID="ClearBoardFromPreviousCommandExecution">
+      <input_port name="command"  type="Command" />
+      <inout_port name="feedback" type="std::string" />
+      <inout_port name="status"   type="std::string" />
+      <inout_port name="error"    type="std::string" />
+    </Action>
+
+    <Action ID="ExecuteCommandWithFeedback">
+      <input_port  name="command"   type="Command" />
+      <input_port  name="phase"     type="std::string" />
+      <output_port name="feedback"  type="std::string" />
+      <output_port name="status"    type="std::string" />
+      <output_port name="error"     type="std::string" />
+    </Action>
+
+    <Condition ID="ValidateLandmark">
+      <input_port name="command"   type="Command" />
+      <input_port name="landmarks" type="std::vector&lt;Landmark&gt;" />
+    </Condition>
+
+    <Condition ID="ValidateArrivalToLandmark">
+      <input_port name="command"   type="Command" />
+      <input_port name="landmarks" type="std::vector&lt;Landmark&gt;" />
+    </Condition>
+
+    <Condition ID="ValidateComponent">
+      <input_port name="command"    type="Command" />
+      <input_port name="components" type="std::vector&lt;Component&gt;" />
+    </Condition>
+
+    <Action ID="CommunicateReturnHome">
+      <input_port name="command"   type="Command" />
+      <input_port name="landmarks" type="std::vector&lt;Landmark&gt;" />
+    </Action>
+
+    <Action ID="CommunicateWaitingStatus">
+      <input_port name="command"   type="Command" />
+      <input_port name="landmarks" type="std::vector&lt;Landmark&gt;" />
+    </Action>
+
+    <Action ID="CommunicateCommandWasNotListed">
+      <input_port name="command" type="Command" />
+    </Action>
+
+  </TreeNodesModel>
+
+</root>
